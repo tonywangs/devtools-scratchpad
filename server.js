@@ -1,0 +1,7 @@
+import http from 'node:http';
+import {readFile} from 'node:fs/promises';
+import path from 'node:path';
+const root=path.dirname(new URL(import.meta.url).pathname);
+const types={'.html':'text/html; charset=utf-8','.js':'text/javascript; charset=utf-8','.css':'text/css; charset=utf-8','.json':'application/json','.patch':'text/plain; charset=utf-8','.txt':'text/plain; charset=utf-8','.png':'image/png'};
+const server=http.createServer(async(req,res)=>{try{if(!['GET','HEAD'].includes(req.method)){res.writeHead(405).end();return;}const url=new URL(req.url,'http://localhost');const name=decodeURIComponent(url.pathname);const allowed=name==='/'||['/index.html','/style.css'].includes(name)||/^\/(src|demo|results)\/[a-zA-Z0-9_./-]+$/.test(name);if(!allowed||name.split('/').includes('..')){res.writeHead(404).end();return;}const data=await readFile(path.join(root,name==='/'?'index.html':name));res.writeHead(200,{'Content-Type':types[path.extname(name)]??(name==='/'?'text/html; charset=utf-8':'application/octet-stream'),'Content-Security-Policy':"default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'self'; img-src 'self' blob:; object-src 'none'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'",'X-Content-Type-Options':'nosniff','Cache-Control':'no-store'});res.end(req.method==='HEAD'?undefined:data);}catch{res.writeHead(404).end('Not found');}});
+server.listen(Number(process.env.PORT??4173),'127.0.0.1',()=>console.log('Patch Review Desk: http://127.0.0.1:'+server.address().port));

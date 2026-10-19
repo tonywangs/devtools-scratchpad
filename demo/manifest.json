@@ -1,0 +1,198 @@
+[
+  {
+    "id": "short-help",
+    "project": "Click",
+    "repository": "https://github.com/pallets/click",
+    "base": "6d5bac5c712195cbfa9666ba0ecbf0573cdea356",
+    "target": "f67c2bb6c2f055c1c7a57cd46c3697fc26a7742e",
+    "title": "Fix short help abbreviation",
+    "patch": "short-help/change.patch",
+    "sha256": "8adbd294453b7145af7ea514ebe683143ad23ab7f508358867921c93ccbf7e20",
+    "license": {
+      "file": "short-help/LICENSE.txt",
+      "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d",
+      "url": "https://github.com/pallets/click/blob/f67c2bb6c2f055c1c7a57cd46c3697fc26a7742e/LICENSE.txt"
+    },
+    "command": [
+      "git",
+      "-c",
+      "core.quotePath=true",
+      "diff",
+      "--no-ext-diff",
+      "--no-textconv",
+      "--binary",
+      "--full-index",
+      "--no-renames",
+      "--unified=3",
+      "6d5bac5c712195cbfa9666ba0ecbf0573cdea356",
+      "f67c2bb6c2f055c1c7a57cd46c3697fc26a7742e",
+      "--"
+    ],
+    "files": [
+      {
+        "path": "CHANGES.md",
+        "base": {
+          "file": "0-base.txt",
+          "sha256": "e8d08b9ef70734cb1d43595361438be6162a42ac3f61845473205274a97d87c7",
+          "url": "https://github.com/pallets/click/blob/6d5bac5c712195cbfa9666ba0ecbf0573cdea356/CHANGES.md"
+        },
+        "target": {
+          "file": "0-target.txt",
+          "sha256": "22633f568679351dcaab01fdf3cc6004f8dcd81508fb930c7140fb8ebf508528",
+          "url": "https://github.com/pallets/click/blob/f67c2bb6c2f055c1c7a57cd46c3697fc26a7742e/CHANGES.md"
+        }
+      },
+      {
+        "path": "src/click/utils.py",
+        "base": {
+          "file": "1-base.txt",
+          "sha256": "f43d5743dc07240e612feefa0a69d2b1697b6900149f8f809ffcd97ecb482dbf",
+          "url": "https://github.com/pallets/click/blob/6d5bac5c712195cbfa9666ba0ecbf0573cdea356/src/click/utils.py"
+        },
+        "target": {
+          "file": "1-target.txt",
+          "sha256": "4720e22c292047ff1a747546b1ba80e96d1d8e8158e2e21ff01cdddb6498db17",
+          "url": "https://github.com/pallets/click/blob/f67c2bb6c2f055c1c7a57cd46c3697fc26a7742e/src/click/utils.py"
+        }
+      },
+      {
+        "path": "tests/test_utils/test_make_default_short_help.py",
+        "base": {
+          "file": "2-base.txt",
+          "sha256": "98d79c0e96752d593c76862a23f7ed6e250c3d368fb668e70266f23c542a1785",
+          "url": "https://github.com/pallets/click/blob/6d5bac5c712195cbfa9666ba0ecbf0573cdea356/tests/test_utils/test_make_default_short_help.py"
+        },
+        "target": {
+          "file": "2-target.txt",
+          "sha256": "0aef0e5d3dc10c7ab6f2f09f3177f99d7d31664968d881b4b6f009af5bd11b2c",
+          "url": "https://github.com/pallets/click/blob/f67c2bb6c2f055c1c7a57cd46c3697fc26a7742e/tests/test_utils/test_make_default_short_help.py"
+        }
+      }
+    ],
+    "numstat": "3\t0\tCHANGES.md\n20\t32\tsrc/click/utils.py\n26\t2\ttests/test_utils/test_make_default_short_help.py\n"
+  },
+  {
+    "id": "parameter-spec",
+    "project": "Click",
+    "repository": "https://github.com/pallets/click",
+    "base": "06b2a678741131fd577ce170e23e5ca0aeba0309",
+    "target": "9f0bcdf0d868edfc71435cd0aac2dcc08cf94828",
+    "title": "Add `Parameter.spec` and deprecate `human_readable_name`",
+    "patch": "parameter-spec/change.patch",
+    "sha256": "7bed50c4f571ee6a25e67e26064eccb86b5614c489cf59ae2d93943f9fbc5e97",
+    "license": {
+      "file": "parameter-spec/LICENSE.txt",
+      "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d",
+      "url": "https://github.com/pallets/click/blob/9f0bcdf0d868edfc71435cd0aac2dcc08cf94828/LICENSE.txt"
+    },
+    "command": [
+      "git",
+      "-c",
+      "core.quotePath=true",
+      "diff",
+      "--no-ext-diff",
+      "--no-textconv",
+      "--binary",
+      "--full-index",
+      "--no-renames",
+      "--unified=3",
+      "06b2a678741131fd577ce170e23e5ca0aeba0309",
+      "9f0bcdf0d868edfc71435cd0aac2dcc08cf94828",
+      "--"
+    ],
+    "files": [
+      {
+        "path": "CHANGES.md",
+        "base": {
+          "file": "0-base.txt",
+          "sha256": "d7c39ffd494d691325c3decf2dbd69e620a9351e2d01ee0de168335b22ab6852",
+          "url": "https://github.com/pallets/click/blob/06b2a678741131fd577ce170e23e5ca0aeba0309/CHANGES.md"
+        },
+        "target": {
+          "file": "0-target.txt",
+          "sha256": "c42f8ff34c098f6afc495495dbe90a07d40910399539cbf2cf8ccbbdffca78b9",
+          "url": "https://github.com/pallets/click/blob/9f0bcdf0d868edfc71435cd0aac2dcc08cf94828/CHANGES.md"
+        }
+      },
+      {
+        "path": "docs/parameters.md",
+        "base": {
+          "file": "1-base.txt",
+          "sha256": "4a7c64f5e9a967491d4f289ca6845b524c8495c5d53fa56ae58269993cf0e060",
+          "url": "https://github.com/pallets/click/blob/06b2a678741131fd577ce170e23e5ca0aeba0309/docs/parameters.md"
+        },
+        "target": {
+          "file": "1-target.txt",
+          "sha256": "cf58f6593041032076dc5421cbd59e9e5c1b5af9156ec95e7a295589741613af",
+          "url": "https://github.com/pallets/click/blob/9f0bcdf0d868edfc71435cd0aac2dcc08cf94828/docs/parameters.md"
+        }
+      },
+      {
+        "path": "docs/upgrade-guides.md",
+        "base": {
+          "file": "2-base.txt",
+          "sha256": "1d3be4820f807779534a5adab5cdae46ee90fb5d627b6b6bf1315bc6919c52e9",
+          "url": "https://github.com/pallets/click/blob/06b2a678741131fd577ce170e23e5ca0aeba0309/docs/upgrade-guides.md"
+        },
+        "target": {
+          "file": "2-target.txt",
+          "sha256": "fa75ccf6239cb20a22a1e6f642363e9a1362ead2ed5149e32bf3a8201f496a89",
+          "url": "https://github.com/pallets/click/blob/9f0bcdf0d868edfc71435cd0aac2dcc08cf94828/docs/upgrade-guides.md"
+        }
+      },
+      {
+        "path": "src/click/core.py",
+        "base": {
+          "file": "3-base.txt",
+          "sha256": "53df54afb5deba7fd7c3a968a2a6284fc2d9dd3892e6939dfbb3092ca3fbca0f",
+          "url": "https://github.com/pallets/click/blob/06b2a678741131fd577ce170e23e5ca0aeba0309/src/click/core.py"
+        },
+        "target": {
+          "file": "3-target.txt",
+          "sha256": "26307e89b7b23e512d3a696b820197b6fd27bbbee9f6b9822f479d851523fcd9",
+          "url": "https://github.com/pallets/click/blob/9f0bcdf0d868edfc71435cd0aac2dcc08cf94828/src/click/core.py"
+        }
+      },
+      {
+        "path": "tests/test_arguments.py",
+        "base": {
+          "file": "4-base.txt",
+          "sha256": "d613bdb1502de45d1620388b5c5992e8cc6d5d1b50a61bfe1f60d8976ef0cc2c",
+          "url": "https://github.com/pallets/click/blob/06b2a678741131fd577ce170e23e5ca0aeba0309/tests/test_arguments.py"
+        },
+        "target": {
+          "file": "4-target.txt",
+          "sha256": "85c1ef2c82d5b0e25fbd3b43572456b99fe88c7215423c3bee6f0a8868624e7f",
+          "url": "https://github.com/pallets/click/blob/9f0bcdf0d868edfc71435cd0aac2dcc08cf94828/tests/test_arguments.py"
+        }
+      },
+      {
+        "path": "tests/test_deprecations.py",
+        "base": {
+          "file": "5-base.txt",
+          "sha256": "c1f29a57df095f0f506c633e58fbc1d407edef5bcd6f10cb31144b3c8e1dc66f",
+          "url": "https://github.com/pallets/click/blob/06b2a678741131fd577ce170e23e5ca0aeba0309/tests/test_deprecations.py"
+        },
+        "target": {
+          "file": "5-target.txt",
+          "sha256": "52430feeebac1765487495068d96fcfab451633cd94e56f5b7532c0c644211a0",
+          "url": "https://github.com/pallets/click/blob/9f0bcdf0d868edfc71435cd0aac2dcc08cf94828/tests/test_deprecations.py"
+        }
+      },
+      {
+        "path": "tests/test_options.py",
+        "base": {
+          "file": "6-base.txt",
+          "sha256": "e5f7304df8d108ed17f76095fb0afb57e672f2e29fb124786a3e51268a6f6aca",
+          "url": "https://github.com/pallets/click/blob/06b2a678741131fd577ce170e23e5ca0aeba0309/tests/test_options.py"
+        },
+        "target": {
+          "file": "6-target.txt",
+          "sha256": "09eb3ae3ef169801263bcb7f81a6a667cf9fedf6a42375064e3d775c91cfe005",
+          "url": "https://github.com/pallets/click/blob/9f0bcdf0d868edfc71435cd0aac2dcc08cf94828/tests/test_options.py"
+        }
+      }
+    ],
+    "numstat": "13\t0\tCHANGES.md\n34\t12\tdocs/parameters.md\n2\t1\tdocs/upgrade-guides.md\n121\t12\tsrc/click/core.py\n30\t0\ttests/test_arguments.py\n36\t0\ttests/test_deprecations.py\n30\t1\ttests/test_options.py\n"
+  }
+]
