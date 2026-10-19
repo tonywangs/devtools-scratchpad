@@ -1,0 +1,131 @@
+{
+  "preparation": "Independent recursive comparison of upstream YAML revisions, without inspecting application implementation. Whitespace excluded from semantic diff.",
+  "repository": "https://github.com/swagger-api/swagger-petstore",
+  "old_revision": "f1ed336a08b18ba4a86c496147c4f546ae965a7b",
+  "new_revision": "9fb97b14d3c9d15d99aa8e3dbe323284cceb6bee",
+  "source_path": "src/main/resources/openapi.yaml",
+  "source_sha256": {
+    "old": "7c1315ff7d191c2470e1f5fc9c9f7de1c7aacd162f24eaaf0174f88e1b7d9b1d",
+    "new": "ce2fca7e5726ddceff7b0c1b7fb9654fb784ed02c76256839a4858311d2f676b"
+  },
+  "changes": [
+    {
+      "pointer": "/paths/~1pet~1findByStatus/get/parameters/0/required",
+      "old": false,
+      "new": true,
+      "classification": "potentially-breaking",
+      "reason": "An existing client may omit this query parameter; the new contract requires it."
+    },
+    {
+      "pointer": "/paths/~1pet~1findByTags/get/parameters/0/required",
+      "old": false,
+      "new": true,
+      "classification": "potentially-breaking",
+      "reason": "An existing client may omit this query parameter; the new contract requires it."
+    }
+  ],
+  "operation_inventory": [
+    {
+      "method": "PUT",
+      "path": "/pet",
+      "operationId": "updatePet"
+    },
+    {
+      "method": "POST",
+      "path": "/pet",
+      "operationId": "addPet"
+    },
+    {
+      "method": "GET",
+      "path": "/pet/findByStatus",
+      "operationId": "findPetsByStatus"
+    },
+    {
+      "method": "GET",
+      "path": "/pet/findByTags",
+      "operationId": "findPetsByTags"
+    },
+    {
+      "method": "GET",
+      "path": "/pet/{petId}",
+      "operationId": "getPetById"
+    },
+    {
+      "method": "POST",
+      "path": "/pet/{petId}",
+      "operationId": "updatePetWithForm"
+    },
+    {
+      "method": "DELETE",
+      "path": "/pet/{petId}",
+      "operationId": "deletePet"
+    },
+    {
+      "method": "POST",
+      "path": "/pet/{petId}/uploadImage",
+      "operationId": "uploadFile"
+    },
+    {
+      "method": "GET",
+      "path": "/store/inventory",
+      "operationId": "getInventory"
+    },
+    {
+      "method": "POST",
+      "path": "/store/order",
+      "operationId": "placeOrder"
+    },
+    {
+      "method": "GET",
+      "path": "/store/order/{orderId}",
+      "operationId": "getOrderById"
+    },
+    {
+      "method": "DELETE",
+      "path": "/store/order/{orderId}",
+      "operationId": "deleteOrder"
+    },
+    {
+      "method": "POST",
+      "path": "/user",
+      "operationId": "createUser"
+    },
+    {
+      "method": "POST",
+      "path": "/user/createWithList",
+      "operationId": "createUsersWithListInput"
+    },
+    {
+      "method": "GET",
+      "path": "/user/login",
+      "operationId": "loginUser"
+    },
+    {
+      "method": "GET",
+      "path": "/user/logout",
+      "operationId": "logoutUser"
+    },
+    {
+      "method": "GET",
+      "path": "/user/{username}",
+      "operationId": "getUserByName"
+    },
+    {
+      "method": "PUT",
+      "path": "/user/{username}",
+      "operationId": "updateUser"
+    },
+    {
+      "method": "DELETE",
+      "path": "/user/{username}",
+      "operationId": "deleteUser"
+    }
+  ],
+  "operation_inventory_unchanged": true,
+  "info_license": {
+    "name": "Apache 2.0",
+    "url": "https://www.apache.org/licenses/LICENSE-2.0.html"
+  },
+  "repository_license": "Apache-2.0",
+  "license_url": "https://raw.githubusercontent.com/swagger-api/swagger-petstore/9fb97b14d3c9d15d99aa8e3dbe323284cceb6bee/LICENSE"
+}
