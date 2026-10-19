@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>API Change Review</title>
+    <link rel="stylesheet" href="/public/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="eyebrow">LOCAL CONTRACT WORKBENCH</div>
+      <h1>API Change Review</h1>
+      <p>Know what changed. Keep the evidence.</p>
+      <button id="demo">Load real Petstore revisions</button
+      ><a href="/demo/sample.html">Open saved demo report ↗</a>
+    </header>
+    <main>
+      <p class="notice">
+        Static contracts describe expectations, not observed server behavior.
+        Potentially breaking findings need client context. Unresolved coverage
+        always requires review.
+      </p>
+      <section class="imports">
+        <label
+          >Old description · OpenAPI 3.0 JSON<input
+            id="old"
+            type="file"
+            accept=".json,application/json" /></label
+        ><label
+          >New description · OpenAPI 3.0 JSON<input
+            id="new"
+            type="file"
+            accept=".json,application/json" /></label
+        ><button id="compare">Compare descriptions</button
+        ><label class="project"
+          >Resume JSON project<input
+            id="project"
+            type="file"
+            accept=".json,application/json"
+        /></label>
+      </section>
+      <p id="status" role="status">
+        Load the real demo or choose two descriptions. Files stay in this
+        browser.
+      </p>
+      <p id="storageStatus" role="status"></p>
+      <div id="workspace" hidden>
+        <section class="toolbar">
+          <label
+            >Severity<select id="severity">
+              <option value="all">All findings</option>
+              <option value="breaking">Potentially breaking</option>
+              <option value="info">Informational</option>
+              <option value="unresolved">Unresolved</option>
+            </select></label
+          ><label
+            >Search<input
+              id="query"
+              type="search"
+              placeholder="Operation, rule or pointer" /></label
+          ><button id="json">Export JSON project</button
+          ><button id="html">Export standalone HTML</button>
+        </section>
+        <p id="counts"></p>
+        <div class="layout">
+          <aside>
+            <h2>Operations</h2>
+            <button id="allOps">All operations</button>
+            <div id="operations"></div>
+          </aside>
+          <section>
+            <div id="findings"></div>
+            <div id="inspection"></div>
+          </section>
+        </div>
+        <details>
+          <summary id="coverageTitle">Unresolved coverage</summary>
+          <p>
+            These fields or constructs are outside supported rules, even when
+            unchanged. They prevent a conclusion of full compatibility.
+          </p>
+          <div id="coverage"></div>
+        </details>
+        <details>
+          <summary>Source identities and full descriptions</summary>
+          <pre id="identities"></pre>
+          <label
+            >Document<select id="sourceSide">
+              <option value="old">Old</option>
+              <option value="new">New</option>
+            </select></label
+          ><label
+            >JSON pointer<input
+              id="sourcePointer"
+              value="#"
+              placeholder="#/paths/~1pet/get" /></label
+          ><button id="inspectSource">Inspect pointer</button>
+          <pre id="sourceValue"></pre>
+        </details>
+      </div>
+      <footer>
+        2 MiB per description · 200 operations · bounded local references · no
+        external reference fetching.
+        <a href="/demo/provenance.json">Demo provenance</a>
+      </footer>
+    </main>
+    <script type="module" src="/public/app.js"></script>
+  </body>
+</html>

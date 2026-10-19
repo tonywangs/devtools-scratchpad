@@ -1,0 +1,31 @@
+{
+  "sources": {
+    "old": {
+      "name": "Swagger Petstore old",
+      "revision": "f1ed336a08b18ba4a86c496147c4f546ae965a7b",
+      "url": "https://raw.githubusercontent.com/swagger-api/swagger-petstore/f1ed336a08b18ba4a86c496147c4f546ae965a7b/src/main/resources/openapi.yaml",
+      "repository": "https://github.com/swagger-api/swagger-petstore",
+      "license": "Apache-2.0",
+      "licenseURL": "https://github.com/swagger-api/swagger-petstore/blob/f1ed336a08b18ba4a86c496147c4f546ae965a7b/LICENSE",
+      "originalSHA256": "7c1315ff7d191c2470e1f5fc9c9f7de1c7aacd162f24eaaf0174f88e1b7d9b1d",
+      "sha256": "02a99924c777b0302850ba630810b8bc56f8ba26c278424fdd4c2cfbf873f0c4",
+      "conversion": "yaml 2.8.3 parse → JSON.stringify(value,null,2) + newline; semantic content preserved"
+    },
+    "new": {
+      "name": "Swagger Petstore new",
+      "revision": "9fb97b14d3c9d15d99aa8e3dbe323284cceb6bee",
+      "url": "https://raw.githubusercontent.com/swagger-api/swagger-petstore/9fb97b14d3c9d15d99aa8e3dbe323284cceb6bee/src/main/resources/openapi.yaml",
+      "repository": "https://github.com/swagger-api/swagger-petstore",
+      "license": "Apache-2.0",
+      "licenseURL": "https://github.com/swagger-api/swagger-petstore/blob/9fb97b14d3c9d15d99aa8e3dbe323284cceb6bee/LICENSE",
+      "originalSHA256": "ce2fca7e5726ddceff7b0c1b7fb9654fb784ed02c76256839a4858311d2f676b",
+      "sha256": "bc46a154f5421303ba9caf8b0aaaeef3a46fef14450af162bb0ba2fa5ff3ab3b",
+      "conversion": "yaml 2.8.3 parse → JSON.stringify(value,null,2) + newline; semantic content preserved"
+    }
+  },
+  "license": {
+    "url": "https://raw.githubusercontent.com/swagger-api/swagger-petstore/9fb97b14d3c9d15d99aa8e3dbe323284cceb6bee/LICENSE",
+    "sha256": "b40930bbcf80744c86c46a12bc9da056641d722716c378f5659b9e555ef833e1"
+  },
+  "note": "Upstream demonstration API, genuine published revisions; not production traffic or deployed behavior evidence."
+}
