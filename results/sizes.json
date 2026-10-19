@@ -1,0 +1,16 @@
+[
+  {
+    "sample": "latin",
+    "source_bytes": 569208,
+    "subset_bytes": 9644,
+    "change_percent": -98.31,
+    "shaping_equal": true
+  },
+  {
+    "sample": "arabic",
+    "source_bytes": 178388,
+    "subset_bytes": 13532,
+    "change_percent": -92.41,
+    "shaping_equal": true
+  }
+]

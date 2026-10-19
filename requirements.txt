@@ -1,0 +1,4 @@
+fonttools[woff]==4.60.1
+brotli==1.2.0
+uharfbuzz==0.52.0
+Flask==3.1.2
