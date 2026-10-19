@@ -1,0 +1,9 @@
+.venv/
+node_modules/
+build/
+dist/
+*.egg-info/
+__pycache__/
+*.pyc
+*.log
+!results/tests.log

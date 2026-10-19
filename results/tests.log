@@ -1,0 +1,27 @@
+test_cli_exit_codes_and_output (test_inspector.InspectorTests.test_cli_exit_codes_and_output) ... error: report output must be outside the inspected root
+ok
+test_core_types_and_failures (test_inspector.InspectorTests.test_core_types_and_failures) ... ok
+test_decoding_query_index_named_anchors (test_inspector.InspectorTests.test_decoding_query_index_named_anchors) ... ok
+test_empty_resource_sources_are_not_successes (test_inspector.InspectorTests.test_empty_resource_sources_are_not_successes) ... ok
+test_external_and_external_base_not_success (test_inspector.InspectorTests.test_external_and_external_base_not_success) ... ok
+test_first_base_applies_to_all_links (test_inspector.InspectorTests.test_first_base_applies_to_all_links) ... ok
+test_index_and_trailing_slash (test_inspector.InspectorTests.test_index_and_trailing_slash) ... ok
+test_invalid_encoding_is_visible (test_inspector.InspectorTests.test_invalid_encoding_is_visible) ... ok
+test_location_and_entities (test_inspector.InspectorTests.test_location_and_entities) ... ok
+test_no_css_or_script_execution (test_inspector.InspectorTests.test_no_css_or_script_execution) ... ok
+test_report_escapes_untrusted_source (test_inspector.InspectorTests.test_report_escapes_untrusted_source) ... ok
+test_symlink_escape_and_scan_errors (test_inspector.InspectorTests.test_symlink_escape_and_scan_errors) ... ok
+test_unsupported_are_accounted_for (test_inspector.InspectorTests.test_unsupported_are_accounted_for) ... ok
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.050s
+
+OK
+{"html_files": 0, "total": 0, "counts": {"checked": 0, "skipped": 0, "unsupported": 0, "failed": 0}, "scan_errors": []}
+Report: /tmp/tmp84vmy_v6/report/index.html
+{"html_files": 1, "total": 1, "counts": {"checked": 0, "skipped": 0, "unsupported": 1, "failed": 0}, "scan_errors": []}
+Report: /tmp/tmp84vmy_v6/report/index.html
+{"html_files": 1, "total": 1, "counts": {"checked": 0, "skipped": 0, "unsupported": 1, "failed": 0}, "scan_errors": []}
+Report: /tmp/tmp84vmy_v6/report/index.html
+{"html_files": 1, "total": 1, "counts": {"checked": 0, "skipped": 0, "unsupported": 0, "failed": 1}, "scan_errors": []}
+Report: /tmp/tmp84vmy_v6/report/index.html
