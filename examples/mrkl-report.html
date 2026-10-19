@@ -1,0 +1,40 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'"><title>Prompt diff review</title><style>body{font:16px system-ui;margin:1rem;max-width:70rem;overflow-wrap:anywhere}article{border:1px solid #999;padding:1rem;margin:.75rem 0}:focus-visible,article:focus{outline:3px solid #06c;outline-offset:2px}pre{white-space:pre-wrap;overflow-wrap:anywhere}select{max-width:100%}label{display:block;margin:1rem 0}button{padding:.5rem} [hidden]{display:none}</style><main><h1>Prompt template comparison</h1><p>langchain-mrkl → langchain-mrkl: 5 changes</p><label>Filter change type <select id="filter"><option value="">All</option><option value="message-role-changed">message-role-changed</option><option value="message-template-changed">message-template-changed</option><option value="metadata-changed">metadata-changed</option><option value="variable-added">variable-added</option><option value="variable-default-changed">variable-default-changed</option></select></label><label>View <select id="view"><option value="both">Full finding</option><option value="before">Before</option><option value="after">After</option></select></label><p id="status" role="status"></p><button id="prev">Previous</button> <button id="next">Next</button><section id="findings" aria-label="Findings"></section><noscript>Enable JavaScript to review findings, or use the JSON report.</noscript></main><div id="data" hidden>[
+  {
+    &quot;after&quot;: {
+      &quot;default&quot;: &quot;en&quot;,
+      &quot;name&quot;: &quot;locale&quot;
+    },
+    &quot;name&quot;: &quot;locale&quot;,
+    &quot;type&quot;: &quot;variable-added&quot;
+  },
+  {
+    &quot;after&quot;: &quot;search, calculator, lookup&quot;,
+    &quot;before&quot;: &quot;search, calculator&quot;,
+    &quot;name&quot;: &quot;tool_names&quot;,
+    &quot;type&quot;: &quot;variable-default-changed&quot;
+  },
+  {
+    &quot;after&quot;: &quot;system&quot;,
+    &quot;before&quot;: &quot;user&quot;,
+    &quot;id&quot;: &quot;prefix&quot;,
+    &quot;type&quot;: &quot;message-role-changed&quot;
+  },
+  {
+    &quot;after&quot;: &quot;Answer the following questions as best you can. You have access to the following tools:\nIf the available tools cannot answer the question, state the limitation. Respond in {{locale}}.&quot;,
+    &quot;before&quot;: &quot;Answer the following questions as best you can. You have access to the following tools:&quot;,
+    &quot;id&quot;: &quot;prefix&quot;,
+    &quot;type&quot;: &quot;message-template-changed&quot;
+  },
+  {
+    &quot;after&quot;: 2,
+    &quot;before&quot;: 1,
+    &quot;name&quot;: &quot;revision&quot;,
+    &quot;type&quot;: &quot;metadata-changed&quot;
+  }
+]</div><script>
+const changes=JSON.parse(document.querySelector('#data').textContent);document.querySelector('#data').remove();
+const s=document.querySelector('#filter'),v=document.querySelector('#view'),section=document.querySelector('#findings'),prev=document.querySelector('#prev'),next=document.querySelector('#next');
+let page=0; const size=40;
+function draw(){const rows=changes.map((c,i)=>({c,i})).filter(x=>!s.value||x.c.type===s.value);const pages=Math.max(1,Math.ceil(rows.length/size));page=Math.min(page,pages-1);section.replaceChildren();for(const {c,i} of rows.slice(page*size,(page+1)*size)){const a=document.createElement('article');a.tabIndex=0;a.dataset.index=i;a.dataset.type=c.type;const h=document.createElement('h2');h.textContent=(i+1)+'. '+c.type+' '+(c.id||c.name||'');const pre=document.createElement('pre');let value=c;if(v.value!=='both'){const key=v.value;value=Object.hasOwn(c,key)?c[key]:Object.hasOwn(c,key+'Index')?c[key+'Index']:'(absent)';}pre.textContent=JSON.stringify(value,null,2);a.append(h,pre);section.append(a);}document.querySelector('#status').textContent=rows.length+' findings · Page '+(page+1)+' of '+pages;prev.disabled=page===0;next.disabled=page===pages-1;}
+s.onchange=()=>{page=0;draw()};v.onchange=draw;prev.onclick=()=>{page--;draw()};next.onclick=()=>{page++;draw()};
+document.onkeydown=e=>{if(e.key==='/'&&!/input|select|textarea/i.test(document.activeElement.tagName)){e.preventDefault();s.focus()}if(document.activeElement.matches('article')&&['ArrowDown','ArrowUp'].includes(e.key)){e.preventDefault();const sibling=e.key==='ArrowDown'?document.activeElement.nextElementSibling:document.activeElement.previousElementSibling;if(sibling)sibling.focus();else if(e.key==='ArrowDown'&&!next.disabled){page++;draw();section.firstElementChild.focus()}else if(e.key==='ArrowUp'&&!prev.disabled){page--;draw();section.lastElementChild.focus()}}};draw();</script></html>

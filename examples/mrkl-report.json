@@ -1,0 +1,66 @@
+{
+  "after": {
+    "id": "langchain-mrkl"
+  },
+  "before": {
+    "id": "langchain-mrkl"
+  },
+  "changes": [
+    {
+      "after": {
+        "default": "en",
+        "name": "locale"
+      },
+      "name": "locale",
+      "type": "variable-added"
+    },
+    {
+      "after": "search, calculator, lookup",
+      "before": "search, calculator",
+      "name": "tool_names",
+      "type": "variable-default-changed"
+    },
+    {
+      "after": "system",
+      "before": "user",
+      "id": "prefix",
+      "type": "message-role-changed"
+    },
+    {
+      "after": "Answer the following questions as best you can. You have access to the following tools:\nIf the available tools cannot answer the question, state the limitation. Respond in {{locale}}.",
+      "before": "Answer the following questions as best you can. You have access to the following tools:",
+      "id": "prefix",
+      "type": "message-template-changed"
+    },
+    {
+      "after": 2,
+      "before": 1,
+      "name": "revision",
+      "type": "metadata-changed"
+    }
+  ],
+  "comparator": "local-llm-prompt-diff/0.1.0",
+  "limits": {
+    "changes": 5000,
+    "inputBytes": 1048576,
+    "messages": 500,
+    "metadataKeys": 100,
+    "outputBytes": 4194304,
+    "pageSize": 40,
+    "runtimeMs": 5000,
+    "templateBytes": 65536,
+    "variables": 500,
+    "workItems": 2100
+  },
+  "schemaVersion": 1,
+  "summary": {
+    "byType": {
+      "message-role-changed": 1,
+      "message-template-changed": 1,
+      "metadata-changed": 1,
+      "variable-added": 1,
+      "variable-default-changed": 1
+    },
+    "changed": 5
+  }
+}
