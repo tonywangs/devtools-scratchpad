@@ -1,0 +1,33 @@
+{
+  "viewerRevision": "579969c6bb5537e0ddb358c6a273325eed16fe18",
+  "source": "https://github.com/janodvarko/harviewer",
+  "summary": "4 Requests55.8 KB55.7 KB(0 From Cache)(55.7 KB Uncompressed)288.70ms (onload: 304.00ms)",
+  "validation": false,
+  "reason": "Playwright failed requests use nonstandard status -1 and duration -1",
+  "rows": [
+    {
+      "text": "1GET beginner-html-site-styledhttps://mdn.github.io/beginner-html-site-styled/200 text/html; charset=utf-8mdn.github.io185.199.110.1531 KB1.1 KB 158.70ms",
+      "url": "https://mdn.github.io/beginner-html-site-styled/",
+      "time": 158.684,
+      "status": 200
+    },
+    {
+      "text": "2GET style.csshttps://mdn.github.io/beginner-html-site-styled/styles/style.css200 text/css; charset=utf-8mdn.github.io185.199.110.153438 B495 B 124.50ms",
+      "url": "https://mdn.github.io/beginner-html-site-styled/styles/style.css",
+      "time": 124.524,
+      "status": 200
+    },
+    {
+      "text": "3GET firefox-icon.pnghttps://mdn.github.io/beginner-html-site-styled/images/firefox-icon.png200 image/pngmdn.github.io185.199.110.15354.4 KB54.2 KB 126.70ms",
+      "url": "https://mdn.github.io/beginner-html-site-styled/images/firefox-icon.png",
+      "time": 126.7,
+      "status": 200
+    },
+    {
+      "text": "4GET css?family=Open+Sanshttp://fonts.googleapis.com/css?family=Open+Sansx-unknownfonts.googleapis.com?? -1.00ms",
+      "url": "http://fonts.googleapis.com/css?family=Open+Sans",
+      "time": -1,
+      "status": -1
+    }
+  ]
+}

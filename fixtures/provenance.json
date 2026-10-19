@@ -1,0 +1,48 @@
+{
+  "capturedAt": "2026-10-19T19:12:26.069Z",
+  "browser": "145.0.7632.6",
+  "sourceRevision": "6c7a360ddb4a0d75be06044bf8a914f260ff10c7",
+  "source": "https://github.com/mdn/beginner-html-site-styled",
+  "license": "CC0-1.0 (fixtures/site/LICENSE)",
+  "settings": {
+    "headless": true,
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "serviceWorkers": "block",
+    "recordHar": {
+      "mode": "full",
+      "content": "omit"
+    },
+    "freshContextPerCapture": true,
+    "externalRequests": "Only mdn.github.io allowed publicly; only 127.0.0.1 locally. External font blocked explicitly."
+  },
+  "captures": [
+    {
+      "name": "public",
+      "url": "https://mdn.github.io/beginner-html-site-styled/",
+      "blocked": [],
+      "navigationError": null,
+      "controls": [],
+      "sha256": "f87baf434eee0392a8b62cf8b9b382fa970662d9902ce502d0d366cefa587d3b"
+    },
+    {
+      "name": "local",
+      "url": "http://127.0.0.1:4174/fixtures/site/",
+      "blocked": [
+        "http://fonts.googleapis.com/css?family=Open+Sans"
+      ],
+      "navigationError": null,
+      "controls": [
+        "350ms delay",
+        "302 redirect to 503"
+      ],
+      "sha256": "f28383cda1ddd4e2cf645fd898f5a4ec42254df02481b0b583ad75dd0a263e9e"
+    }
+  ],
+  "sha256:index.html": "5d04139b754c35c258af40dbe51a8df013ae06cdab55d3c2c58f7223f309d22a",
+  "sha256:styles/style.css": "b2aa20e978f89b363ac954a327b43d44b1b2b37a37ead2f6d971f60b2af8b6b9",
+  "sha256:images/firefox-icon.png": "50f5b3a802d9318bfc8cf896585f3958b52f67bde94c08d6381befe546976be4",
+  "sha256:LICENSE": "36ffd9dc085d529a7e60e1276d73ae5a030b020313e6c5408593a6ae2af39673"
+}
