@@ -1,0 +1,1344 @@
+{
+  "format": "patch-review-desk/1",
+  "name": "Fix short help abbreviation",
+  "sha256": "8adbd294453b7145af7ea514ebe683143ad23ab7f508358867921c93ccbf7e20",
+  "patchBase64": "ZGlmZiAtLWdpdCBhL0NIQU5HRVMubWQgYi9DSEFOR0VTLm1kCmluZGV4IDFiOGE1ZmJiYWQwNTNlYWQxZmY2OWRkMTRmMmMyOGZhMjQzMmM4YzcuLjg3NGYyYmE2MzY4MzUxN2RiZjVkOTFmZWI3MDEwODU2NGZlZDQ3MGUgMTAwNjQ0Ci0tLSBhL0NIQU5HRVMubWQKKysrIGIvQ0hBTkdFUy5tZApAQCAtMTYsNiArMTYsOSBAQCBVbnJlbGVhc2VkCiAtIHtjbGFzc31gUGFyYW1ldGVyYCBhY2NlcHRzIGEgbmV3IGBoZWxwYCBhcmd1bWVudCBhbmQge2NsYXNzfWBPcHRpb25gIGFuZCB7Y2xhc3N9YEFyZ3VtZW50YAogICBpbmhlcml0cyBpdC4ge21ldGh9YFBhcmFtZXRlci50b19pbmZvX2RpY3RgIG5vdyByZXBvcnRzIGBoZWxwYCBmb3IgZXZlcnkga2luZCBvZiBwYXJhbWV0ZXIuCiAgIHtwcn1gMzg2MWAKKy0gQSBjb21tYW5kJ3Mgc2hvcnQgaGVscCBubyBsb25nZXIgc3RvcHMgYXQgYW4gYWJicmV2aWF0aW9uIHN1Y2ggYXMgYHZzLmAgb3IgYGUuZy5gCisgIGluc2lkZSB0aGUgZmlyc3Qgc2VudGVuY2UuIEEgcGVyaW9kIGVuZHMgdGhlIHNlbnRlbmNlIG9ubHkgd2hlbiBpdCBjbG9zZXMgdGhlIHRleHQKKyAgb3IgdGhlIG5leHQgd29yZCBkb2VzIG5vdCBzdGFydCBpbiBsb3dlcmNhc2UuIHtwcn1gMzg2NWAKIAogIyMgVmVyc2lvbiA4LjUuMAogCmRpZmYgLS1naXQgYS9zcmMvY2xpY2svdXRpbHMucHkgYi9zcmMvY2xpY2svdXRpbHMucHkKaW5kZXggYjUyOWViMDRiMzQxODlmMDhlMTIxMWM5NWM3YzhhMzBjYTc3ODQ5MC4uNjE3ZmY1ZWQyNzQyNDg4MzEzMzMwMDllOGM3ZTc2ZGI2NTQ4NDM1MSAxMDA2NDQKLS0tIGEvc3JjL2NsaWNrL3V0aWxzLnB5CisrKyBiL3NyYy9jbGljay91dGlscy5weQpAQCAtNjQsNTIgKzY0LDQwIEBAIGRlZiBfbWFrZV9kZWZhdWx0X3Nob3J0X2hlbHAoaGVscDogc3RyLCBtYXhfbGVuZ3RoOiBpbnQgPSA0NSkgLT4gc3RyOgogCiAgICAgOm1ldGEgcHJpdmF0ZToKICAgICAiIiIKLSAgICAjIENvbnNpZGVyIG9ubHkgdGhlIGZpcnN0IHBhcmFncmFwaC4KLSAgICBwYXJhZ3JhcGhfZW5kID0gaGVscC5maW5kKCJcblxuIikKKyAgICAjIENvbnNpZGVyIG9ubHkgdGhlIGZpcnN0IHBhcmFncmFwaCBhbmQgY29sbGFwc2UgbmV3bGluZXMsIHRhYnMgYW5kIHNwYWNlcy4KKyAgICB3b3JkcyA9IGhlbHAucGFydGl0aW9uKCJcblxuIilbMF0uc3BsaXQoKQogCi0gICAgaWYgcGFyYWdyYXBoX2VuZCAhPSAtMToKLSAgICAgICAgaGVscCA9IGhlbHBbOnBhcmFncmFwaF9lbmRdCi0KLSAgICAjIENvbGxhcHNlIG5ld2xpbmVzLCB0YWJzLCBhbmQgc3BhY2VzLgotICAgIHdvcmRzID0gaGVscC5zcGxpdCgpCisgICAgIyBUaGUgZmlyc3QgcGFyYWdyYXBoIHN0YXJ0ZWQgd2l0aCBhICJubyByZXdyYXAiIG1hcmtlciwgaWdub3JlIGl0LgorICAgIGlmIHdvcmRzIGFuZCB3b3Jkc1swXSA9PSAiXGIiOgorICAgICAgICB3b3JkcyA9IHdvcmRzWzE6XQogCiAgICAgaWYgbm90IHdvcmRzOgogICAgICAgICByZXR1cm4gIiIKIAotICAgICMgVGhlIGZpcnN0IHBhcmFncmFwaCBzdGFydGVkIHdpdGggYSAibm8gcmV3cmFwIiBtYXJrZXIsIGlnbm9yZSBpdC4KLSAgICBpZiB3b3Jkc1swXSA9PSAiXGIiOgotICAgICAgICB3b3JkcyA9IHdvcmRzWzE6XQotCi0gICAgdG90YWxfbGVuZ3RoID0gMAogICAgIGxhc3RfaW5kZXggPSBsZW4od29yZHMpIC0gMQogCisgICAgIyBBIHBlcmlvZCBlbmRzIGEgc2VudGVuY2Ugd2hlbiBpdCBjbG9zZXMgdGhlIHRleHQsIG9yIHdoZW4gdGhlIG5leHQgd29yZAorICAgICMgZG9lcyBub3Qgc3RhcnQgaW4gbG93ZXJjYXNlLiBBIGxvd2VyY2FzZSB3b3JkIGNvbnRpbnVlcyB0aGUgc2VudGVuY2UsIHNvCisgICAgIyB0aGUgcGVyaW9kIGJlbG9uZ3MgdG8gYW4gYWJicmV2aWF0aW9uIHN1Y2ggYXMgInZzLiIuCiAgICAgZm9yIGksIHdvcmQgaW4gZW51bWVyYXRlKHdvcmRzKToKLSAgICAgICAgdG90YWxfbGVuZ3RoICs9IGxlbih3b3JkKSArIChpID4gMCkKLQotICAgICAgICBpZiB0b3RhbF9sZW5ndGggPiBtYXhfbGVuZ3RoOiAgIyB0b28gbG9uZywgdHJ1bmNhdGUKKyAgICAgICAgaWYgd29yZC5lbmRzd2l0aCgiLiIpIGFuZCAoaSA9PSBsYXN0X2luZGV4IG9yIG5vdCB3b3Jkc1tpICsgMV1bMF0uaXNsb3dlcigpKToKKyAgICAgICAgICAgIHdvcmRzID0gd29yZHNbOiBpICsgMV0KICAgICAgICAgICAgIGJyZWFrCiAKLSAgICAgICAgaWYgd29yZFstMV0gPT0gIi4iOiAgIyBzZW50ZW5jZSBlbmQsIHRydW5jYXRlIHdpdGhvdXQgIi4uLiIKLSAgICAgICAgICAgIHJldHVybiAiICIuam9pbih3b3Jkc1s6IGkgKyAxXSkKLQotICAgICAgICBpZiB0b3RhbF9sZW5ndGggPT0gbWF4X2xlbmd0aCBhbmQgaSAhPSBsYXN0X2luZGV4OgotICAgICAgICAgICAgYnJlYWsgICMgbm90IGF0IHNlbnRlbmNlIGVuZCwgdHJ1bmNhdGUgd2l0aCAiLi4uIgotICAgIGVsc2U6Ci0gICAgICAgIHJldHVybiAiICIuam9pbih3b3JkcykgICMgbm8gdHJ1bmNhdGlvbiBuZWVkZWQKKyAgICB0ZXh0ID0gIiAiLmpvaW4od29yZHMpCiAKLSAgICAjIEFjY291bnQgZm9yIHRoZSBsZW5ndGggb2YgdGhlIHN1ZmZpeC4KLSAgICB0b3RhbF9sZW5ndGggKz0gbGVuKCIuLi4iKQorICAgIGlmIGxlbih0ZXh0KSA8PSBtYXhfbGVuZ3RoOgorICAgICAgICByZXR1cm4gdGV4dAogCi0gICAgIyByZW1vdmUgd29yZHMgdW50aWwgdGhlIGxlbmd0aCBpcyBzaG9ydCBlbm91Z2gKLSAgICB3aGlsZSBpID4gMDoKLSAgICAgICAgdG90YWxfbGVuZ3RoIC09IGxlbih3b3Jkc1tpXSkgKyAoaSA+IDApCi0KLSAgICAgICAgaWYgdG90YWxfbGVuZ3RoIDw9IG1heF9sZW5ndGg6Ci0gICAgICAgICAgICBicmVhaworICAgICMgVGhlIHN1ZmZpeCBhbG9uZSBkb2VzIG5vdCBmaXQsIGFuZCBzaG9ydGVuKCkgcmVqZWN0cyBzdWNoIGEgd2lkdGguCisgICAgaWYgbWF4X2xlbmd0aCA8IGxlbigiLi4uIik6CisgICAgICAgIHJldHVybiAiLi4uIgogCi0gICAgICAgIGkgLT0gMQorICAgICMgSW1wb3J0ZWQgbGF0ZSB0byBrZWVwIHRoZSBpbXBvcnQgZm9vdHByaW50IHNtYWxsLgorICAgIGltcG9ydCB0ZXh0d3JhcAogCi0gICAgcmV0dXJuICIgIi5qb2luKHdvcmRzWzppXSkgKyAiLi4uIgorICAgICMgRG8gbm90IHNwbGl0IGh5cGhlbmF0ZWQgd29yZHMuCisgICAgcmV0dXJuIHRleHR3cmFwLnNob3J0ZW4odGV4dCwgbWF4X2xlbmd0aCwgcGxhY2Vob2xkZXI9Ii4uLiIsIGJyZWFrX29uX2h5cGhlbnM9RmFsc2UpCiAKIAogY2xhc3MgX0xhenlGaWxlOgpkaWZmIC0tZ2l0IGEvdGVzdHMvdGVzdF91dGlscy90ZXN0X21ha2VfZGVmYXVsdF9zaG9ydF9oZWxwLnB5IGIvdGVzdHMvdGVzdF91dGlscy90ZXN0X21ha2VfZGVmYXVsdF9zaG9ydF9oZWxwLnB5CmluZGV4IGMyYTFmOGVmMDY1NDhiNWIxOWUwNTA4MTZkY2M1ZjFhZjQxNzY4OTkuLjM0MjU5ZDFkODUzMmRjMzY2YmE3YTYyNjgzY2Y2NDEwMjNiY2FkNDkgMTAwNjQ0Ci0tLSBhL3Rlc3RzL3Rlc3RfdXRpbHMvdGVzdF9tYWtlX2RlZmF1bHRfc2hvcnRfaGVscC5weQorKysgYi90ZXN0cy90ZXN0X3V0aWxzL3Rlc3RfbWFrZV9kZWZhdWx0X3Nob3J0X2hlbHAucHkKQEAgLTgsNyArOCw4IEBAIGltcG9ydCBjbGljawogICAgIFsKICAgICAgICAgcHl0ZXN0LnBhcmFtKCIiLCAxMCwgIiIsIGlkPSJlbXB0eSIpLAogICAgICAgICBweXRlc3QucGFyYW0oIjEyMyA1NjcgOTAiLCAxMCwgIjEyMyA1NjcgOTAiLCBpZD0iZXF1YWwgbGVuZ3RoLCBubyBkb3QiKSwKLSAgICAgICAgcHl0ZXN0LnBhcmFtKCIxMjMgNTY3IDkuIGFhYWEgYmJiIiwgMTAsICIxMjMgNTY3IDkuIiwgaWQ9InNlbnRlbmNlIDwgbWF4IiksCisgICAgICAgIHB5dGVzdC5wYXJhbSgiMTIzIDU2NyA5LiBBYWFhIGJiYiIsIDEwLCAiMTIzIDU2NyA5LiIsIGlkPSJzZW50ZW5jZSA8IG1heCIpLAorICAgICAgICBweXRlc3QucGFyYW0oIjEyMyA1NjcgOS4iLCAxMCwgIjEyMyA1NjcgOS4iLCBpZD0iZG90IGVuZHMgdGV4dCIpLAogICAgICAgICBweXRlc3QucGFyYW0oIjEyMyA1NjdcblxuIDkuIGFhYWEgYmJiIiwgMTAsICIxMjMgNTY3IiwgaWQ9InBhcmFncmFwaCA8IG1heCIpLAogICAgICAgICBweXRlc3QucGFyYW0oIjEyMyA1NjcgOTAxMjMuIiwgMTAsICIxMjMgNTY3Li4uIiwgaWQ9InRydW5jYXRlIiksCiAgICAgICAgIHB5dGVzdC5wYXJhbSgiMTIzIDU2NzggeHh4eHh4IiwgMTAsICIxMjMuLi4iLCBpZD0ibGVuZ3RoIGluY2x1ZGVzIHN1ZmZpeCIpLApAQCAtMTgsNiArMTksMjggQEAgaW1wb3J0IGNsaWNrCiAgICAgICAgICAgICAidG9rZW4gaW4gfi8ubmV0cmMuLi4iLAogICAgICAgICAgICAgaWQ9Imlnbm9yZSBkb3QgaW4gd29yZCIsCiAgICAgICAgICksCisgICAgICAgIHB5dGVzdC5wYXJhbSgKKyAgICAgICAgICAgICJXZWlnaCBhcHBsZXMgdnMuIHBlYXJzLiIsCisgICAgICAgICAgICAzMCwKKyAgICAgICAgICAgICJXZWlnaCBhcHBsZXMgdnMuIHBlYXJzLiIsCisgICAgICAgICAgICBpZD0iYWJicmV2aWF0aW9uIGluc2lkZSBzZW50ZW5jZSIsCisgICAgICAgICksCisgICAgICAgIHB5dGVzdC5wYXJhbSgKKyAgICAgICAgICAgICJXZWlnaCBhcHBsZXMgdnMuIHBlYXJzIGFuZCBwbHVtcy4iLAorICAgICAgICAgICAgMjAsCisgICAgICAgICAgICAiV2VpZ2ggYXBwbGVzIHZzLi4uLiIsCisgICAgICAgICAgICBpZD0iYWJicmV2aWF0aW9uIGluc2lkZSB0cnVuY2F0ZWQgc2VudGVuY2UiLAorICAgICAgICApLAorICAgICAgICBweXRlc3QucGFyYW0oIjEyMyA1NjcgOS4gYWFhYSBiYmIiLCAxMCwgIjEyMyA1NjcuLi4iLCBpZD0ibG93ZXJjYXNlIGFmdGVyIGRvdCIpLAorICAgICAgICBweXRlc3QucGFyYW0oCisgICAgICAgICAgICAiUGljayBhIGZydWl0LiAzIHJlbWFpbi4iLCAyMCwgIlBpY2sgYSBmcnVpdC4iLCBpZD0iZGlnaXQgYWZ0ZXIgZG90IgorICAgICAgICApLAorICAgICAgICBweXRlc3QucGFyYW0oIndlbGwtYmVoYXZlZC4iLCA4LCAiLi4uIiwgaWQ9Im5ldmVyIHNwbGl0IGEgaHlwaGVuYXRlZCB3b3JkIiksCisgICAgICAgIHB5dGVzdC5wYXJhbSgic3VwZXJjYWxpZnJhZ2lsaXN0aWMiLCAxMCwgIi4uLiIsIGlkPSJuZXZlciBzcGxpdCBhIGxvbmcgd29yZCIpLAorICAgICAgICBweXRlc3QucGFyYW0oImFiIGNkIiwgMywgIi4uLiIsIGlkPSJ3aWR0aCBmaXRzIHRoZSBzdWZmaXggb25seSIpLAorICAgICAgICBweXRlc3QucGFyYW0oImFiIGNkIiwgMiwgIi4uLiIsIGlkPSJ3aWR0aCBiZWxvdyB0aGUgc3VmZml4IiksCisgICAgICAgIHB5dGVzdC5wYXJhbSgiYWIiLCAyLCAiYWIiLCBpZD0idGV4dCBzaG9ydGVyIHRoYW4gdGhlIHN1ZmZpeCIpLAorICAgICAgICBweXRlc3QucGFyYW0oImFiIGNkIiwgLTEsICIuLi4iLCBpZD0ibmVnYXRpdmUgd2lkdGgiKSwKICAgICBdLAogKQogQHB5dGVzdC5tYXJrLnBhcmFtZXRyaXplKApAQCAtMzAsNyArNTMsOCBAQCBpbXBvcnQgY2xpY2sKICAgICBdLAogKQogZGVmIHRlc3RfbWFrZV9kZWZhdWx0X3Nob3J0X2hlbHAodmFsdWUsIG1heF9sZW5ndGgsIGFsdGVyLCBleHBlY3QpOgotICAgIGFzc2VydCBsZW4oZXhwZWN0KSA8PSBtYXhfbGVuZ3RoCisgICAgIyBBIHdpZHRoIHRvbyBuYXJyb3cgZm9yIHRoZSBzdWZmaXggc3RpbGwgcmV0dXJucyB0aGUgd2hvbGUgc3VmZml4LgorICAgIGFzc2VydCBsZW4oZXhwZWN0KSA8PSBtYXgobWF4X2xlbmd0aCwgbGVuKCIuLi4iKSkKIAogICAgIGlmIGFsdGVyOgogICAgICAgICB2YWx1ZSA9IGFsdGVyKHZhbHVlKQo=",
+  "source": {
+    "id": "short-help",
+    "project": "Click",
+    "repository": "https://github.com/pallets/click",
+    "base": "6d5bac5c712195cbfa9666ba0ecbf0573cdea356",
+    "target": "f67c2bb6c2f055c1c7a57cd46c3697fc26a7742e",
+    "title": "Fix short help abbreviation",
+    "patch": "short-help/change.patch",
+    "sha256": "8adbd294453b7145af7ea514ebe683143ad23ab7f508358867921c93ccbf7e20",
+    "license": {
+      "file": "short-help/LICENSE.txt",
+      "sha256": "9a8ad106a394e853bfe21f42f4e72d592819a22805d991b5f3275029292b658d",
+      "url": "https://github.com/pallets/click/blob/f67c2bb6c2f055c1c7a57cd46c3697fc26a7742e/LICENSE.txt"
+    },
+    "command": [
+      "git",
+      "-c",
+      "core.quotePath=true",
+      "diff",
+      "--no-ext-diff",
+      "--no-textconv",
+      "--binary",
+      "--full-index",
+      "--no-renames",
+      "--unified=3",
+      "6d5bac5c712195cbfa9666ba0ecbf0573cdea356",
+      "f67c2bb6c2f055c1c7a57cd46c3697fc26a7742e",
+      "--"
+    ],
+    "files": [
+      {
+        "path": "CHANGES.md",
+        "base": {
+          "file": "0-base.txt",
+          "sha256": "e8d08b9ef70734cb1d43595361438be6162a42ac3f61845473205274a97d87c7",
+          "url": "https://github.com/pallets/click/blob/6d5bac5c712195cbfa9666ba0ecbf0573cdea356/CHANGES.md"
+        },
+        "target": {
+          "file": "0-target.txt",
+          "sha256": "22633f568679351dcaab01fdf3cc6004f8dcd81508fb930c7140fb8ebf508528",
+          "url": "https://github.com/pallets/click/blob/f67c2bb6c2f055c1c7a57cd46c3697fc26a7742e/CHANGES.md"
+        }
+      },
+      {
+        "path": "src/click/utils.py",
+        "base": {
+          "file": "1-base.txt",
+          "sha256": "f43d5743dc07240e612feefa0a69d2b1697b6900149f8f809ffcd97ecb482dbf",
+          "url": "https://github.com/pallets/click/blob/6d5bac5c712195cbfa9666ba0ecbf0573cdea356/src/click/utils.py"
+        },
+        "target": {
+          "file": "1-target.txt",
+          "sha256": "4720e22c292047ff1a747546b1ba80e96d1d8e8158e2e21ff01cdddb6498db17",
+          "url": "https://github.com/pallets/click/blob/f67c2bb6c2f055c1c7a57cd46c3697fc26a7742e/src/click/utils.py"
+        }
+      },
+      {
+        "path": "tests/test_utils/test_make_default_short_help.py",
+        "base": {
+          "file": "2-base.txt",
+          "sha256": "98d79c0e96752d593c76862a23f7ed6e250c3d368fb668e70266f23c542a1785",
+          "url": "https://github.com/pallets/click/blob/6d5bac5c712195cbfa9666ba0ecbf0573cdea356/tests/test_utils/test_make_default_short_help.py"
+        },
+        "target": {
+          "file": "2-target.txt",
+          "sha256": "0aef0e5d3dc10c7ab6f2f09f3177f99d7d31664968d881b4b6f009af5bd11b2c",
+          "url": "https://github.com/pallets/click/blob/f67c2bb6c2f055c1c7a57cd46c3697fc26a7742e/tests/test_utils/test_make_default_short_help.py"
+        }
+      }
+    ],
+    "numstat": "3\t0\tCHANGES.md\n20\t32\tsrc/click/utils.py\n26\t2\ttests/test_utils/test_make_default_short_help.py\n"
+  },
+  "notes": {},
+  "reviewed": {},
+  "parsed": {
+    "files": [
+      {
+        "id": "f0",
+        "header": "diff --git a/CHANGES.md b/CHANGES.md",
+        "patchLine": 1,
+        "oldPath": "CHANGES.md",
+        "newPath": "CHANGES.md",
+        "metadata": [
+          "index 1b8a5fbbad053ead1ff69dd14f2c28fa2432c8c7..874f2ba63683517dbf5d91feb70108564fed470e 100644",
+          "--- a/CHANGES.md",
+          "+++ b/CHANGES.md"
+        ],
+        "hunks": [
+          {
+            "id": "f0h0",
+            "header": "@@ -16,6 +16,9 @@ Unreleased",
+            "patchLine": 5,
+            "oldStart": 16,
+            "oldCount": 6,
+            "newStart": 16,
+            "newCount": 9,
+            "oldSeen": 6,
+            "newSeen": 9,
+            "lines": [
+              {
+                "id": "f0h0l0",
+                "kind": " ",
+                "text": "- {class}`Parameter` accepts a new `help` argument and {class}`Option` and {class}`Argument`",
+                "old": 16,
+                "new": 16,
+                "patchLine": 6,
+                "noNewline": false
+              },
+              {
+                "id": "f0h0l1",
+                "kind": " ",
+                "text": "  inherits it. {meth}`Parameter.to_info_dict` now reports `help` for every kind of parameter.",
+                "old": 17,
+                "new": 17,
+                "patchLine": 7,
+                "noNewline": false
+              },
+              {
+                "id": "f0h0l2",
+                "kind": " ",
+                "text": "  {pr}`3861`",
+                "old": 18,
+                "new": 18,
+                "patchLine": 8,
+                "noNewline": false
+              },
+              {
+                "id": "f0h0l3",
+                "kind": "+",
+                "text": "- A command's short help no longer stops at an abbreviation such as `vs.` or `e.g.`",
+                "old": null,
+                "new": 19,
+                "patchLine": 9,
+                "noNewline": false
+              },
+              {
+                "id": "f0h0l4",
+                "kind": "+",
+                "text": "  inside the first sentence. A period ends the sentence only when it closes the text",
+                "old": null,
+                "new": 20,
+                "patchLine": 10,
+                "noNewline": false
+              },
+              {
+                "id": "f0h0l5",
+                "kind": "+",
+                "text": "  or the next word does not start in lowercase. {pr}`3865`",
+                "old": null,
+                "new": 21,
+                "patchLine": 11,
+                "noNewline": false
+              },
+              {
+                "id": "f0h0l6",
+                "kind": " ",
+                "text": "",
+                "old": 19,
+                "new": 22,
+                "patchLine": 12,
+                "noNewline": false
+              },
+              {
+                "id": "f0h0l7",
+                "kind": " ",
+                "text": "## Version 8.5.0",
+                "old": 20,
+                "new": 23,
+                "patchLine": 13,
+                "noNewline": false
+              },
+              {
+                "id": "f0h0l8",
+                "kind": " ",
+                "text": "",
+                "old": 21,
+                "new": 24,
+                "patchLine": 14,
+                "noNewline": false
+              }
+            ]
+          }
+        ],
+        "oldMarker": true,
+        "newMarker": true
+      },
+      {
+        "id": "f1",
+        "header": "diff --git a/src/click/utils.py b/src/click/utils.py",
+        "patchLine": 15,
+        "oldPath": "src/click/utils.py",
+        "newPath": "src/click/utils.py",
+        "metadata": [
+          "index b529eb04b34189f08e1211c95c7c8a30ca778490..617ff5ed274248831333009e8c7e76db65484351 100644",
+          "--- a/src/click/utils.py",
+          "+++ b/src/click/utils.py"
+        ],
+        "hunks": [
+          {
+            "id": "f1h0",
+            "header": "@@ -64,52 +64,40 @@ def _make_default_short_help(help: str, max_length: int = 45) -> str:",
+            "patchLine": 19,
+            "oldStart": 64,
+            "oldCount": 52,
+            "newStart": 64,
+            "newCount": 40,
+            "oldSeen": 52,
+            "newSeen": 40,
+            "lines": [
+              {
+                "id": "f1h0l0",
+                "kind": " ",
+                "text": "",
+                "old": 64,
+                "new": 64,
+                "patchLine": 20,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l1",
+                "kind": " ",
+                "text": "    :meta private:",
+                "old": 65,
+                "new": 65,
+                "patchLine": 21,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l2",
+                "kind": " ",
+                "text": "    \"\"\"",
+                "old": 66,
+                "new": 66,
+                "patchLine": 22,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l3",
+                "kind": "-",
+                "text": "    # Consider only the first paragraph.",
+                "old": 67,
+                "new": null,
+                "patchLine": 23,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l4",
+                "kind": "-",
+                "text": "    paragraph_end = help.find(\"\\n\\n\")",
+                "old": 68,
+                "new": null,
+                "patchLine": 24,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l5",
+                "kind": "+",
+                "text": "    # Consider only the first paragraph and collapse newlines, tabs and spaces.",
+                "old": null,
+                "new": 67,
+                "patchLine": 25,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l6",
+                "kind": "+",
+                "text": "    words = help.partition(\"\\n\\n\")[0].split()",
+                "old": null,
+                "new": 68,
+                "patchLine": 26,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l7",
+                "kind": " ",
+                "text": "",
+                "old": 69,
+                "new": 69,
+                "patchLine": 27,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l8",
+                "kind": "-",
+                "text": "    if paragraph_end != -1:",
+                "old": 70,
+                "new": null,
+                "patchLine": 28,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l9",
+                "kind": "-",
+                "text": "        help = help[:paragraph_end]",
+                "old": 71,
+                "new": null,
+                "patchLine": 29,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l10",
+                "kind": "-",
+                "text": "",
+                "old": 72,
+                "new": null,
+                "patchLine": 30,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l11",
+                "kind": "-",
+                "text": "    # Collapse newlines, tabs, and spaces.",
+                "old": 73,
+                "new": null,
+                "patchLine": 31,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l12",
+                "kind": "-",
+                "text": "    words = help.split()",
+                "old": 74,
+                "new": null,
+                "patchLine": 32,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l13",
+                "kind": "+",
+                "text": "    # The first paragraph started with a \"no rewrap\" marker, ignore it.",
+                "old": null,
+                "new": 70,
+                "patchLine": 33,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l14",
+                "kind": "+",
+                "text": "    if words and words[0] == \"\\b\":",
+                "old": null,
+                "new": 71,
+                "patchLine": 34,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l15",
+                "kind": "+",
+                "text": "        words = words[1:]",
+                "old": null,
+                "new": 72,
+                "patchLine": 35,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l16",
+                "kind": " ",
+                "text": "",
+                "old": 75,
+                "new": 73,
+                "patchLine": 36,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l17",
+                "kind": " ",
+                "text": "    if not words:",
+                "old": 76,
+                "new": 74,
+                "patchLine": 37,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l18",
+                "kind": " ",
+                "text": "        return \"\"",
+                "old": 77,
+                "new": 75,
+                "patchLine": 38,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l19",
+                "kind": " ",
+                "text": "",
+                "old": 78,
+                "new": 76,
+                "patchLine": 39,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l20",
+                "kind": "-",
+                "text": "    # The first paragraph started with a \"no rewrap\" marker, ignore it.",
+                "old": 79,
+                "new": null,
+                "patchLine": 40,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l21",
+                "kind": "-",
+                "text": "    if words[0] == \"\\b\":",
+                "old": 80,
+                "new": null,
+                "patchLine": 41,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l22",
+                "kind": "-",
+                "text": "        words = words[1:]",
+                "old": 81,
+                "new": null,
+                "patchLine": 42,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l23",
+                "kind": "-",
+                "text": "",
+                "old": 82,
+                "new": null,
+                "patchLine": 43,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l24",
+                "kind": "-",
+                "text": "    total_length = 0",
+                "old": 83,
+                "new": null,
+                "patchLine": 44,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l25",
+                "kind": " ",
+                "text": "    last_index = len(words) - 1",
+                "old": 84,
+                "new": 77,
+                "patchLine": 45,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l26",
+                "kind": " ",
+                "text": "",
+                "old": 85,
+                "new": 78,
+                "patchLine": 46,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l27",
+                "kind": "+",
+                "text": "    # A period ends a sentence when it closes the text, or when the next word",
+                "old": null,
+                "new": 79,
+                "patchLine": 47,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l28",
+                "kind": "+",
+                "text": "    # does not start in lowercase. A lowercase word continues the sentence, so",
+                "old": null,
+                "new": 80,
+                "patchLine": 48,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l29",
+                "kind": "+",
+                "text": "    # the period belongs to an abbreviation such as \"vs.\".",
+                "old": null,
+                "new": 81,
+                "patchLine": 49,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l30",
+                "kind": " ",
+                "text": "    for i, word in enumerate(words):",
+                "old": 86,
+                "new": 82,
+                "patchLine": 50,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l31",
+                "kind": "-",
+                "text": "        total_length += len(word) + (i > 0)",
+                "old": 87,
+                "new": null,
+                "patchLine": 51,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l32",
+                "kind": "-",
+                "text": "",
+                "old": 88,
+                "new": null,
+                "patchLine": 52,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l33",
+                "kind": "-",
+                "text": "        if total_length > max_length:  # too long, truncate",
+                "old": 89,
+                "new": null,
+                "patchLine": 53,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l34",
+                "kind": "+",
+                "text": "        if word.endswith(\".\") and (i == last_index or not words[i + 1][0].islower()):",
+                "old": null,
+                "new": 83,
+                "patchLine": 54,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l35",
+                "kind": "+",
+                "text": "            words = words[: i + 1]",
+                "old": null,
+                "new": 84,
+                "patchLine": 55,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l36",
+                "kind": " ",
+                "text": "            break",
+                "old": 90,
+                "new": 85,
+                "patchLine": 56,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l37",
+                "kind": " ",
+                "text": "",
+                "old": 91,
+                "new": 86,
+                "patchLine": 57,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l38",
+                "kind": "-",
+                "text": "        if word[-1] == \".\":  # sentence end, truncate without \"...\"",
+                "old": 92,
+                "new": null,
+                "patchLine": 58,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l39",
+                "kind": "-",
+                "text": "            return \" \".join(words[: i + 1])",
+                "old": 93,
+                "new": null,
+                "patchLine": 59,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l40",
+                "kind": "-",
+                "text": "",
+                "old": 94,
+                "new": null,
+                "patchLine": 60,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l41",
+                "kind": "-",
+                "text": "        if total_length == max_length and i != last_index:",
+                "old": 95,
+                "new": null,
+                "patchLine": 61,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l42",
+                "kind": "-",
+                "text": "            break  # not at sentence end, truncate with \"...\"",
+                "old": 96,
+                "new": null,
+                "patchLine": 62,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l43",
+                "kind": "-",
+                "text": "    else:",
+                "old": 97,
+                "new": null,
+                "patchLine": 63,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l44",
+                "kind": "-",
+                "text": "        return \" \".join(words)  # no truncation needed",
+                "old": 98,
+                "new": null,
+                "patchLine": 64,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l45",
+                "kind": "+",
+                "text": "    text = \" \".join(words)",
+                "old": null,
+                "new": 87,
+                "patchLine": 65,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l46",
+                "kind": " ",
+                "text": "",
+                "old": 99,
+                "new": 88,
+                "patchLine": 66,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l47",
+                "kind": "-",
+                "text": "    # Account for the length of the suffix.",
+                "old": 100,
+                "new": null,
+                "patchLine": 67,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l48",
+                "kind": "-",
+                "text": "    total_length += len(\"...\")",
+                "old": 101,
+                "new": null,
+                "patchLine": 68,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l49",
+                "kind": "+",
+                "text": "    if len(text) <= max_length:",
+                "old": null,
+                "new": 89,
+                "patchLine": 69,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l50",
+                "kind": "+",
+                "text": "        return text",
+                "old": null,
+                "new": 90,
+                "patchLine": 70,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l51",
+                "kind": " ",
+                "text": "",
+                "old": 102,
+                "new": 91,
+                "patchLine": 71,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l52",
+                "kind": "-",
+                "text": "    # remove words until the length is short enough",
+                "old": 103,
+                "new": null,
+                "patchLine": 72,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l53",
+                "kind": "-",
+                "text": "    while i > 0:",
+                "old": 104,
+                "new": null,
+                "patchLine": 73,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l54",
+                "kind": "-",
+                "text": "        total_length -= len(words[i]) + (i > 0)",
+                "old": 105,
+                "new": null,
+                "patchLine": 74,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l55",
+                "kind": "-",
+                "text": "",
+                "old": 106,
+                "new": null,
+                "patchLine": 75,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l56",
+                "kind": "-",
+                "text": "        if total_length <= max_length:",
+                "old": 107,
+                "new": null,
+                "patchLine": 76,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l57",
+                "kind": "-",
+                "text": "            break",
+                "old": 108,
+                "new": null,
+                "patchLine": 77,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l58",
+                "kind": "+",
+                "text": "    # The suffix alone does not fit, and shorten() rejects such a width.",
+                "old": null,
+                "new": 92,
+                "patchLine": 78,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l59",
+                "kind": "+",
+                "text": "    if max_length < len(\"...\"):",
+                "old": null,
+                "new": 93,
+                "patchLine": 79,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l60",
+                "kind": "+",
+                "text": "        return \"...\"",
+                "old": null,
+                "new": 94,
+                "patchLine": 80,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l61",
+                "kind": " ",
+                "text": "",
+                "old": 109,
+                "new": 95,
+                "patchLine": 81,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l62",
+                "kind": "-",
+                "text": "        i -= 1",
+                "old": 110,
+                "new": null,
+                "patchLine": 82,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l63",
+                "kind": "+",
+                "text": "    # Imported late to keep the import footprint small.",
+                "old": null,
+                "new": 96,
+                "patchLine": 83,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l64",
+                "kind": "+",
+                "text": "    import textwrap",
+                "old": null,
+                "new": 97,
+                "patchLine": 84,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l65",
+                "kind": " ",
+                "text": "",
+                "old": 111,
+                "new": 98,
+                "patchLine": 85,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l66",
+                "kind": "-",
+                "text": "    return \" \".join(words[:i]) + \"...\"",
+                "old": 112,
+                "new": null,
+                "patchLine": 86,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l67",
+                "kind": "+",
+                "text": "    # Do not split hyphenated words.",
+                "old": null,
+                "new": 99,
+                "patchLine": 87,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l68",
+                "kind": "+",
+                "text": "    return textwrap.shorten(text, max_length, placeholder=\"...\", break_on_hyphens=False)",
+                "old": null,
+                "new": 100,
+                "patchLine": 88,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l69",
+                "kind": " ",
+                "text": "",
+                "old": 113,
+                "new": 101,
+                "patchLine": 89,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l70",
+                "kind": " ",
+                "text": "",
+                "old": 114,
+                "new": 102,
+                "patchLine": 90,
+                "noNewline": false
+              },
+              {
+                "id": "f1h0l71",
+                "kind": " ",
+                "text": "class _LazyFile:",
+                "old": 115,
+                "new": 103,
+                "patchLine": 91,
+                "noNewline": false
+              }
+            ]
+          }
+        ],
+        "oldMarker": true,
+        "newMarker": true
+      },
+      {
+        "id": "f2",
+        "header": "diff --git a/tests/test_utils/test_make_default_short_help.py b/tests/test_utils/test_make_default_short_help.py",
+        "patchLine": 92,
+        "oldPath": "tests/test_utils/test_make_default_short_help.py",
+        "newPath": "tests/test_utils/test_make_default_short_help.py",
+        "metadata": [
+          "index c2a1f8ef06548b5b19e050816dcc5f1af4176899..34259d1d8532dc366ba7a62683cf641023bcad49 100644",
+          "--- a/tests/test_utils/test_make_default_short_help.py",
+          "+++ b/tests/test_utils/test_make_default_short_help.py"
+        ],
+        "hunks": [
+          {
+            "id": "f2h0",
+            "header": "@@ -8,7 +8,8 @@ import click",
+            "patchLine": 96,
+            "oldStart": 8,
+            "oldCount": 7,
+            "newStart": 8,
+            "newCount": 8,
+            "oldSeen": 7,
+            "newSeen": 8,
+            "lines": [
+              {
+                "id": "f2h0l0",
+                "kind": " ",
+                "text": "    [",
+                "old": 8,
+                "new": 8,
+                "patchLine": 97,
+                "noNewline": false
+              },
+              {
+                "id": "f2h0l1",
+                "kind": " ",
+                "text": "        pytest.param(\"\", 10, \"\", id=\"empty\"),",
+                "old": 9,
+                "new": 9,
+                "patchLine": 98,
+                "noNewline": false
+              },
+              {
+                "id": "f2h0l2",
+                "kind": " ",
+                "text": "        pytest.param(\"123 567 90\", 10, \"123 567 90\", id=\"equal length, no dot\"),",
+                "old": 10,
+                "new": 10,
+                "patchLine": 99,
+                "noNewline": false
+              },
+              {
+                "id": "f2h0l3",
+                "kind": "-",
+                "text": "        pytest.param(\"123 567 9. aaaa bbb\", 10, \"123 567 9.\", id=\"sentence < max\"),",
+                "old": 11,
+                "new": null,
+                "patchLine": 100,
+                "noNewline": false
+              },
+              {
+                "id": "f2h0l4",
+                "kind": "+",
+                "text": "        pytest.param(\"123 567 9. Aaaa bbb\", 10, \"123 567 9.\", id=\"sentence < max\"),",
+                "old": null,
+                "new": 11,
+                "patchLine": 101,
+                "noNewline": false
+              },
+              {
+                "id": "f2h0l5",
+                "kind": "+",
+                "text": "        pytest.param(\"123 567 9.\", 10, \"123 567 9.\", id=\"dot ends text\"),",
+                "old": null,
+                "new": 12,
+                "patchLine": 102,
+                "noNewline": false
+              },
+              {
+                "id": "f2h0l6",
+                "kind": " ",
+                "text": "        pytest.param(\"123 567\\n\\n 9. aaaa bbb\", 10, \"123 567\", id=\"paragraph < max\"),",
+                "old": 12,
+                "new": 13,
+                "patchLine": 103,
+                "noNewline": false
+              },
+              {
+                "id": "f2h0l7",
+                "kind": " ",
+                "text": "        pytest.param(\"123 567 90123.\", 10, \"123 567...\", id=\"truncate\"),",
+                "old": 13,
+                "new": 14,
+                "patchLine": 104,
+                "noNewline": false
+              },
+              {
+                "id": "f2h0l8",
+                "kind": " ",
+                "text": "        pytest.param(\"123 5678 xxxxxx\", 10, \"123...\", id=\"length includes suffix\"),",
+                "old": 14,
+                "new": 15,
+                "patchLine": 105,
+                "noNewline": false
+              }
+            ]
+          },
+          {
+            "id": "f2h1",
+            "header": "@@ -18,6 +19,28 @@ import click",
+            "patchLine": 106,
+            "oldStart": 18,
+            "oldCount": 6,
+            "newStart": 19,
+            "newCount": 28,
+            "oldSeen": 6,
+            "newSeen": 28,
+            "lines": [
+              {
+                "id": "f2h1l0",
+                "kind": " ",
+                "text": "            \"token in ~/.netrc...\",",
+                "old": 18,
+                "new": 19,
+                "patchLine": 107,
+                "noNewline": false
+              },
+              {
+                "id": "f2h1l1",
+                "kind": " ",
+                "text": "            id=\"ignore dot in word\",",
+                "old": 19,
+                "new": 20,
+                "patchLine": 108,
+                "noNewline": false
+              },
+              {
+                "id": "f2h1l2",
+                "kind": " ",
+                "text": "        ),",
+                "old": 20,
+                "new": 21,
+                "patchLine": 109,
+                "noNewline": false
+              },
+              {
+                "id": "f2h1l3",
+                "kind": "+",
+                "text": "        pytest.param(",
+                "old": null,
+                "new": 22,
+                "patchLine": 110,
+                "noNewline": false
+              },
+              {
+                "id": "f2h1l4",
+                "kind": "+",
+                "text": "            \"Weigh apples vs. pears.\",",
+                "old": null,
+                "new": 23,
+                "patchLine": 111,
+                "noNewline": false
+              },
+              {
+                "id": "f2h1l5",
+                "kind": "+",
+                "text": "            30,",
+                "old": null,
+                "new": 24,
+                "patchLine": 112,
+                "noNewline": false
+              },
+              {
+                "id": "f2h1l6",
+                "kind": "+",
+                "text": "            \"Weigh apples vs. pears.\",",
+                "old": null,
+                "new": 25,
+                "patchLine": 113,
+                "noNewline": false
+              },
+              {
+                "id": "f2h1l7",
+                "kind": "+",
+                "text": "            id=\"abbreviation inside sentence\",",
+                "old": null,
+                "new": 26,
+                "patchLine": 114,
+                "noNewline": false
+              },
+              {
+                "id": "f2h1l8",
+                "kind": "+",
+                "text": "        ),",
+                "old": null,
+                "new": 27,
+                "patchLine": 115,
+                "noNewline": false
+              },
+              {
+                "id": "f2h1l9",
+                "kind": "+",
+                "text": "        pytest.param(",
+                "old": null,
+                "new": 28,
+                "patchLine": 116,
+                "noNewline": false
+              },
+              {
+                "id": "f2h1l10",
+                "kind": "+",
+                "text": "            \"Weigh apples vs. pears and plums.\",",
+                "old": null,
+                "new": 29,
+                "patchLine": 117,
+                "noNewline": false
+              },
+              {
+                "id": "f2h1l11",
+                "kind": "+",
+                "text": "            20,",
+                "old": null,
+                "new": 30,
+                "patchLine": 118,
+                "noNewline": false
+              },
+              {
+                "id": "f2h1l12",
+                "kind": "+",
+                "text": "            \"Weigh apples vs....\",",
+                "old": null,
+                "new": 31,
+                "patchLine": 119,
+                "noNewline": false
+              },
+              {
+                "id": "f2h1l13",
+                "kind": "+",
+                "text": "            id=\"abbreviation inside truncated sentence\",",
+                "old": null,
+                "new": 32,
+                "patchLine": 120,
+                "noNewline": false
+              },
+              {
+                "id": "f2h1l14",
+                "kind": "+",
+                "text": "        ),",
+                "old": null,
+                "new": 33,
+                "patchLine": 121,
+                "noNewline": false
+              },
+              {
+                "id": "f2h1l15",
+                "kind": "+",
+                "text": "        pytest.param(\"123 567 9. aaaa bbb\", 10, \"123 567...\", id=\"lowercase after dot\"),",
+                "old": null,
+                "new": 34,
+                "patchLine": 122,
+                "noNewline": false
+              },
+              {
+                "id": "f2h1l16",
+                "kind": "+",
+                "text": "        pytest.param(",
+                "old": null,
+                "new": 35,
+                "patchLine": 123,
+                "noNewline": false
+              },
+              {
+                "id": "f2h1l17",
+                "kind": "+",
+                "text": "            \"Pick a fruit. 3 remain.\", 20, \"Pick a fruit.\", id=\"digit after dot\"",
+                "old": null,
+                "new": 36,
+                "patchLine": 124,
+                "noNewline": false
+              },
+              {
+                "id": "f2h1l18",
+                "kind": "+",
+                "text": "        ),",
+                "old": null,
+                "new": 37,
+                "patchLine": 125,
+                "noNewline": false
+              },
+              {
+                "id": "f2h1l19",
+                "kind": "+",
+                "text": "        pytest.param(\"well-behaved.\", 8, \"...\", id=\"never split a hyphenated word\"),",
+                "old": null,
+                "new": 38,
+                "patchLine": 126,
+                "noNewline": false
+              },
+              {
+                "id": "f2h1l20",
+                "kind": "+",
+                "text": "        pytest.param(\"supercalifragilistic\", 10, \"...\", id=\"never split a long word\"),",
+                "old": null,
+                "new": 39,
+                "patchLine": 127,
+                "noNewline": false
+              },
+              {
+                "id": "f2h1l21",
+                "kind": "+",
+                "text": "        pytest.param(\"ab cd\", 3, \"...\", id=\"width fits the suffix only\"),",
+                "old": null,
+                "new": 40,
+                "patchLine": 128,
+                "noNewline": false
+              },
+              {
+                "id": "f2h1l22",
+                "kind": "+",
+                "text": "        pytest.param(\"ab cd\", 2, \"...\", id=\"width below the suffix\"),",
+                "old": null,
+                "new": 41,
+                "patchLine": 129,
+                "noNewline": false
+              },
+              {
+                "id": "f2h1l23",
+                "kind": "+",
+                "text": "        pytest.param(\"ab\", 2, \"ab\", id=\"text shorter than the suffix\"),",
+                "old": null,
+                "new": 42,
+                "patchLine": 130,
+                "noNewline": false
+              },
+              {
+                "id": "f2h1l24",
+                "kind": "+",
+                "text": "        pytest.param(\"ab cd\", -1, \"...\", id=\"negative width\"),",
+                "old": null,
+                "new": 43,
+                "patchLine": 131,
+                "noNewline": false
+              },
+              {
+                "id": "f2h1l25",
+                "kind": " ",
+                "text": "    ],",
+                "old": 21,
+                "new": 44,
+                "patchLine": 132,
+                "noNewline": false
+              },
+              {
+                "id": "f2h1l26",
+                "kind": " ",
+                "text": ")",
+                "old": 22,
+                "new": 45,
+                "patchLine": 133,
+                "noNewline": false
+              },
+              {
+                "id": "f2h1l27",
+                "kind": " ",
+                "text": "@pytest.mark.parametrize(",
+                "old": 23,
+                "new": 46,
+                "patchLine": 134,
+                "noNewline": false
+              }
+            ]
+          },
+          {
+            "id": "f2h2",
+            "header": "@@ -30,7 +53,8 @@ import click",
+            "patchLine": 135,
+            "oldStart": 30,
+            "oldCount": 7,
+            "newStart": 53,
+            "newCount": 8,
+            "oldSeen": 7,
+            "newSeen": 8,
+            "lines": [
+              {
+                "id": "f2h2l0",
+                "kind": " ",
+                "text": "    ],",
+                "old": 30,
+                "new": 53,
+                "patchLine": 136,
+                "noNewline": false
+              },
+              {
+                "id": "f2h2l1",
+                "kind": " ",
+                "text": ")",
+                "old": 31,
+                "new": 54,
+                "patchLine": 137,
+                "noNewline": false
+              },
+              {
+                "id": "f2h2l2",
+                "kind": " ",
+                "text": "def test_make_default_short_help(value, max_length, alter, expect):",
+                "old": 32,
+                "new": 55,
+                "patchLine": 138,
+                "noNewline": false
+              },
+              {
+                "id": "f2h2l3",
+                "kind": "-",
+                "text": "    assert len(expect) <= max_length",
+                "old": 33,
+                "new": null,
+                "patchLine": 139,
+                "noNewline": false
+              },
+              {
+                "id": "f2h2l4",
+                "kind": "+",
+                "text": "    # A width too narrow for the suffix still returns the whole suffix.",
+                "old": null,
+                "new": 56,
+                "patchLine": 140,
+                "noNewline": false
+              },
+              {
+                "id": "f2h2l5",
+                "kind": "+",
+                "text": "    assert len(expect) <= max(max_length, len(\"...\"))",
+                "old": null,
+                "new": 57,
+                "patchLine": 141,
+                "noNewline": false
+              },
+              {
+                "id": "f2h2l6",
+                "kind": " ",
+                "text": "",
+                "old": 34,
+                "new": 58,
+                "patchLine": 142,
+                "noNewline": false
+              },
+              {
+                "id": "f2h2l7",
+                "kind": " ",
+                "text": "    if alter:",
+                "old": 35,
+                "new": 59,
+                "patchLine": 143,
+                "noNewline": false
+              },
+              {
+                "id": "f2h2l8",
+                "kind": " ",
+                "text": "        value = alter(value)",
+                "old": 36,
+                "new": 60,
+                "patchLine": 144,
+                "noNewline": false
+              }
+            ]
+          }
+        ],
+        "oldMarker": true,
+        "newMarker": true
+      }
+    ],
+    "warnings": [],
+    "lineCount": 144,
+    "coverage": "Patch excerpts only. Surrounding source is unavailable. Reviewed means a personal decision, not proof of correctness. Warnings indicate incomplete or unsupported interpretation; raw input is retained.",
+    "complete": true
+  }
+}

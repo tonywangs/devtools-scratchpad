@@ -1,0 +1,28 @@
+{
+  "executedAt": "2026-10-19T23:19:41.367Z",
+  "git": "git version 2.43.0",
+  "checks": [
+    {
+      "demo": "short-help",
+      "sha256": "8adbd294453b7145af7ea514ebe683143ad23ab7f508358867921c93ccbf7e20",
+      "files": 3,
+      "hunks": 5,
+      "includedLines": 127,
+      "changedLines": 83,
+      "oracle": "git apply --numstat -z (accounting only; never applies a patch)",
+      "sourceValidation": "Every old/new displayed line compared to hash-verified base/target snapshots",
+      "passed": true
+    },
+    {
+      "demo": "parameter-spec",
+      "sha256": "7bed50c4f571ee6a25e67e26064eccb86b5614c489cf59ae2d93943f9fbc5e97",
+      "files": 7,
+      "hunks": 21,
+      "includedLines": 435,
+      "changedLines": 292,
+      "oracle": "git apply --numstat -z (accounting only; never applies a patch)",
+      "sourceValidation": "Every old/new displayed line compared to hash-verified base/target snapshots",
+      "passed": true
+    }
+  ]
+}
