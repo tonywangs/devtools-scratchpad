@@ -1,0 +1,19 @@
+# Sources, prior work and reproduction
+
+Inspected primary sources on 2026-10-19:
+
+- [fontTools subset documentation](https://fonttools.readthedocs.io/en/stable/subset/): layout closure, Unicode input, preservation options, WOFF2 output, name records and default missing-character behavior. The app explicitly blocks missing coverage rather than silently accepting fontTools' default missing-Unicode behavior. It keeps all features and preserves `.notdef` outlines and hints.
+- [W3C WOFF2 Recommendation, 8 August 2024](https://www.w3.org/TR/2024/REC-WOFF2-20240808/): compressed font packaging. We rely on fontTools/Brotli for encoding and decode the actual export before shaping checks.
+- [HarfBuzz shaping model](https://harfbuzz.github.io/shaping-and-shape-plans.html) and [script-specific shaping](https://harfbuzz.github.io/script-specific-shaping.html): character mapping differs from substitutions, positioning and language/script shaping. Comparison uses all advances/offsets and actual outlines, never glyph numbers across subsets.
+- [glyphhanger](https://github.com/zachleat/glyphhanger): existing website-text discovery, Unicode range and fontTools-powered subset utility. This project does not invent font subsetting; its scope is a small local inspection/recovery/export desk with explicit preservation evidence. It does not crawl websites.
+- [SIL OFL 1.1](https://openfontlicense.org/open-font-license-official-text/): modification, redistribution, notices and reserved-name obligations.
+
+## Demo fixtures
+
+[demo/sources.json](demo/sources.json) records URL, source revision, bytes and SHA-256 for every acquired file and hash/size for derived text and notices. Reproduction: `python3 scripts/acquire.py`. The script downloads only public HTTPS resources and never uses credentials.
+
+**Fonts:** Noto repository revision `ffebf8c1ee449e544955a7e813c54f9b73848eac`, [source tree](https://github.com/notofonts/noto-fonts/tree/ffebf8c1ee449e544955a7e813c54f9b73848eac). `hinted/ttf/NotoSans/NotoSans-Regular.ttf` and `hinted/ttf/NotoNaskhArabic/NotoNaskhArabic-Regular.ttf`, with the repository's complete `LICENSE` retained as [OFL.txt](demo/OFL.txt). Copyright 2018 The Noto Project Authors. Source fonts are redistributed unmodified. Modified exports are renamed `SubsetDesk<hash>` and retain copyright/license name records as well as a separate notice. Font software cannot be sold by itself; modified fonts remain under OFL, must retain notices, and cannot use reserved names without permission. OFL does not require website/document content to use that license.
+
+**Text:** [Unicode UDHR XML](https://github.com/unicode-org/udhr/tree/588b3f4b2d0467aff54842a4b926551b69d5a66a), revision `588b3f4b2d0467aff54842a4b926551b69d5a66a`, English/French/Arabic. The bounded full XML files preserve the source; only Article 1 paragraph text is extracted, with no Unicode normalization. [Unicode's project notice](https://www.unicode.org/udhr/) confirms it stopped hosting the collection in January 2024. These historical transcriptions are real text, not a claim of authoritative or current translations. The associated [Unicode data license](https://www.unicode.org/license.txt) is retained verbatim with retrieval date/hash in the manifest and included in demo exports. It permits redistribution with the copyright and permission notice. The archival repository does not itself contain a LICENSE file; the included Unicode notice is the data publisher's general notice, not an assertion of separately verified UN translation rights. No text-license inference applies to user inputs.
+
+The demos illustrate Latin accented text and right-to-left Arabic. Labeled synthetic controls in the tests separately cover ligatures, combining marks, kerning and Arabic marks/joining; they are not presented as real website traffic or production delivery data.
