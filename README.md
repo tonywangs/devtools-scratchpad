@@ -4,14 +4,32 @@ An offline, dependency-free CLI for comparing two JSON prompt-template bundles. 
 
 ## Quick start
 
-Requires Node.js 20+. From this checkout:
+Requires Node.js 20+. From this checkout, pack and install locally (no global install needed):
 
 ```sh
-npm test
-node bin/prompt-diff.js compare examples/before.json examples/after.json --json /tmp/report.json --html /tmp/report.html
+npm pack --pack-destination /tmp
+install_dir=$(mktemp -d)
+npm install --offline --ignore-scripts --no-audit --no-fund --prefix "$install_dir" /tmp/local-llm-prompt-diff-0.1.0.tgz
+report_dir=$(mktemp -d)
+"$install_dir/node_modules/.bin/prompt-diff" compare examples/mrkl-before.json examples/mrkl-after.json --json "$report_dir/report.json" --html "$report_dir/report.html"
+open "$report_dir/report.html"          # macOS
+# xdg-open "$report_dir/report.html"    # Linux with a desktop
 ```
 
-The package exposes the same command as `prompt-diff` after installation. Output JSON is canonical (object keys are sorted), while change ordering is stable: variables, messages, and metadata are each compared by identifier/key.
+On Windows or a headless machine, open the generated `report.html` file from your browser's
+File → Open dialog (copy the file to your desktop if necessary). Fresh temporary directories
+make this sequence repeatable without overwriting reports. Installation and comparison need
+no model credentials or network access.
+
+For an immediate preview, open [the included report](examples/mrkl-report.html) locally.
+The [example provenance](examples/README.md) describes its real public LangChain source
+and the deliberately authored revision. Use the type filter and Before/After view to inspect
+five changes. The CLI never runs the source prompt.
+
+Without installation, run `node bin/prompt-diff.js compare examples/mrkl-before.json
+examples/mrkl-after.json` on one line to print JSON. Output JSON is canonical (object keys
+are sorted), while change ordering is stable: variables, messages, and metadata are each
+compared by identifier/key.
 
 ## Bundle format
 
@@ -60,7 +78,13 @@ npm ci --cache /tmp/prompt-diff-npm
 PLAYWRIGHT_BROWSERS_PATH=/tmp/prompt-diff-browsers node node_modules/playwright/cli.js install chromium
 ```
 
-Then run one verification command:
+For the public-source example only, including a clean offline package install and browser checks:
+
+```sh
+PLAYWRIGHT_BROWSERS_PATH=/tmp/prompt-diff-browsers node scripts/verify-example.mjs
+```
+
+Then run the full verification command:
 
 ```sh
 PLAYWRIGHT_BROWSERS_PATH=/tmp/prompt-diff-browsers npm run verify
