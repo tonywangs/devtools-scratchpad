@@ -1,0 +1,152 @@
+{
+  "format": "har-waterfall-report-1",
+  "sourceHash": "f87baf434eee0392a8b62cf8b9b382fa970662d9902ce502d0d366cefa587d3b",
+  "warning": "May contain sensitive URLs and notes. Timing correlations do not prove causes. Elapsed request activity is not user-perceived load time.",
+  "accounting": {
+    "total": 4,
+    "supported": 4,
+    "rejected": [],
+    "complete": true
+  },
+  "filters": {},
+  "summary": {
+    "count": 4,
+    "statuses": {
+      "200": 3,
+      "-1": 1
+    },
+    "summedKnownDuration": 409.90799999999996,
+    "unknownDurations": 1,
+    "elapsedKnownActivity": 288.699951171875,
+    "excludedFromActivity": 1
+  },
+  "requests": [
+    {
+      "ordinal": 1,
+      "url": "https://mdn.github.io/beginner-html-site-styled/",
+      "method": "GET",
+      "status": 200,
+      "type": "text/html; charset=utf-8",
+      "page": "page@2986668710c52e75826cb4874f6fd266",
+      "start": 1792437146355,
+      "duration": 158.684,
+      "timings": {
+        "blocked": null,
+        "dns": 5.585,
+        "connect": 12.407,
+        "send": 0,
+        "wait": 114.114,
+        "receive": 16.053,
+        "ssl": 10.525
+      },
+      "knownTotal": 148.159,
+      "warnings": [
+        "Some timing phases unavailable; unknown is not zero",
+        "Available timing sum differs from reported duration; missing phases may explain the difference"
+      ],
+      "size": 1039,
+      "redirect": null,
+      "cache": {
+        "status304": false,
+        "har": {},
+        "fromCache": null
+      },
+      "annotation": ""
+    },
+    {
+      "ordinal": 2,
+      "url": "https://mdn.github.io/beginner-html-site-styled/styles/style.css",
+      "method": "GET",
+      "status": 200,
+      "type": "text/css; charset=utf-8",
+      "page": "page@2986668710c52e75826cb4874f6fd266",
+      "start": 1792437146516,
+      "duration": 124.524,
+      "timings": {
+        "blocked": null,
+        "dns": null,
+        "connect": null,
+        "send": 0,
+        "wait": 107.036,
+        "receive": 17.488,
+        "ssl": null
+      },
+      "knownTotal": 124.524,
+      "warnings": [
+        "Some timing phases unavailable; unknown is not zero"
+      ],
+      "size": 438,
+      "redirect": null,
+      "cache": {
+        "status304": false,
+        "har": {},
+        "fromCache": null
+      },
+      "annotation": ""
+    },
+    {
+      "ordinal": 3,
+      "url": "https://mdn.github.io/beginner-html-site-styled/images/firefox-icon.png",
+      "method": "GET",
+      "status": 200,
+      "type": "image/png",
+      "page": "page@2986668710c52e75826cb4874f6fd266",
+      "start": 1792437146517,
+      "duration": 126.7,
+      "timings": {
+        "blocked": null,
+        "dns": null,
+        "connect": null,
+        "send": 0,
+        "wait": 107.2,
+        "receive": 19.5,
+        "ssl": null
+      },
+      "knownTotal": 126.7,
+      "warnings": [
+        "Some timing phases unavailable; unknown is not zero"
+      ],
+      "size": 55657,
+      "redirect": null,
+      "cache": {
+        "status304": false,
+        "har": {},
+        "fromCache": null
+      },
+      "annotation": ""
+    },
+    {
+      "ordinal": 4,
+      "url": "http://fonts.googleapis.com/css?family=Open+Sans",
+      "method": "GET",
+      "status": -1,
+      "type": "x-unknown",
+      "page": "page@2986668710c52e75826cb4874f6fd266",
+      "start": 1792437146525,
+      "duration": null,
+      "timings": {
+        "blocked": null,
+        "dns": null,
+        "connect": null,
+        "send": null,
+        "wait": null,
+        "receive": null,
+        "ssl": null
+      },
+      "knownTotal": 0,
+      "warnings": [
+        "Browser-specific failure sentinel -1; not an HTTP status",
+        "Unknown request duration",
+        "Some timing phases unavailable; unknown is not zero"
+      ],
+      "size": null,
+      "redirect": null,
+      "cache": {
+        "status304": false,
+        "har": {},
+        "fromCache": null
+      },
+      "annotation": ""
+    }
+  ]
+}

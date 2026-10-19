@@ -1,0 +1,250 @@
+{
+  "format": "har-waterfall-report-1",
+  "sourceHash": "f28383cda1ddd4e2cf645fd898f5a4ec42254df02481b0b583ad75dd0a263e9e",
+  "warning": "May contain sensitive URLs and notes. Timing correlations do not prove causes. Elapsed request activity is not user-perceived load time.",
+  "accounting": {
+    "total": 7,
+    "supported": 7,
+    "rejected": [],
+    "complete": true
+  },
+  "filters": {},
+  "summary": {
+    "count": 7,
+    "statuses": {
+      "200": 4,
+      "302": 1,
+      "503": 1,
+      "-1": 1
+    },
+    "summedKnownDuration": 571.9659999999999,
+    "unknownDurations": 1,
+    "elapsedKnownActivity": 1044.193115234375,
+    "excludedFromActivity": 1
+  },
+  "requests": [
+    {
+      "ordinal": 1,
+      "url": "http://127.0.0.1:4174/fixtures/site/",
+      "method": "GET",
+      "status": 200,
+      "type": "text/html",
+      "page": "page@f6054910f2507fd42bc33f70fa9e6ac6",
+      "start": 1792437147267,
+      "duration": 69.124,
+      "timings": {
+        "blocked": null,
+        "dns": 0.008,
+        "connect": 0.263,
+        "send": 0,
+        "wait": 9.447,
+        "receive": 57.278,
+        "ssl": 2.128
+      },
+      "knownTotal": 66.996,
+      "warnings": [
+        "Some timing phases unavailable; unknown is not zero",
+        "Available timing sum differs from reported duration; missing phases may explain the difference",
+        "SSL nesting inconsistent or connection unavailable"
+      ],
+      "size": 1092,
+      "redirect": null,
+      "cache": {
+        "status304": false,
+        "har": {},
+        "fromCache": null
+      },
+      "annotation": ""
+    },
+    {
+      "ordinal": 2,
+      "url": "http://fonts.googleapis.com/css?family=Open+Sans",
+      "method": "GET",
+      "status": -1,
+      "type": "x-unknown",
+      "page": "page@f6054910f2507fd42bc33f70fa9e6ac6",
+      "start": 1792437147349,
+      "duration": null,
+      "timings": {
+        "blocked": null,
+        "dns": null,
+        "connect": null,
+        "send": null,
+        "wait": null,
+        "receive": null,
+        "ssl": null
+      },
+      "knownTotal": 0,
+      "warnings": [
+        "Browser-specific failure sentinel -1; not an HTTP status",
+        "Unknown request duration",
+        "Some timing phases unavailable; unknown is not zero"
+      ],
+      "size": null,
+      "redirect": null,
+      "cache": {
+        "status304": false,
+        "har": {},
+        "fromCache": null
+      },
+      "annotation": ""
+    },
+    {
+      "ordinal": 3,
+      "url": "http://127.0.0.1:4174/fixtures/site/styles/style.css",
+      "method": "GET",
+      "status": 200,
+      "type": "text/css",
+      "page": "page@f6054910f2507fd42bc33f70fa9e6ac6",
+      "start": 1792437147351,
+      "duration": 28.412999999999997,
+      "timings": {
+        "blocked": null,
+        "dns": null,
+        "connect": null,
+        "send": 0,
+        "wait": 6.298,
+        "receive": 22.115,
+        "ssl": null
+      },
+      "knownTotal": 28.412999999999997,
+      "warnings": [
+        "Some timing phases unavailable; unknown is not zero"
+      ],
+      "size": 495,
+      "redirect": null,
+      "cache": {
+        "status304": false,
+        "har": {},
+        "fromCache": null
+      },
+      "annotation": ""
+    },
+    {
+      "ordinal": 4,
+      "url": "http://127.0.0.1:4174/fixtures/site/images/firefox-icon.png",
+      "method": "GET",
+      "status": 200,
+      "type": "image/png",
+      "page": "page@f6054910f2507fd42bc33f70fa9e6ac6",
+      "start": 1792437147356,
+      "duration": 91.504,
+      "timings": {
+        "blocked": null,
+        "dns": 0.009,
+        "connect": 0.269,
+        "send": 0,
+        "wait": 6.704,
+        "receive": 82.828,
+        "ssl": 1.694
+      },
+      "knownTotal": 89.81,
+      "warnings": [
+        "Some timing phases unavailable; unknown is not zero",
+        "Available timing sum differs from reported duration; missing phases may explain the difference",
+        "SSL nesting inconsistent or connection unavailable"
+      ],
+      "size": 55480,
+      "redirect": null,
+      "cache": {
+        "status304": false,
+        "har": {},
+        "fromCache": null
+      },
+      "annotation": ""
+    },
+    {
+      "ordinal": 5,
+      "url": "http://127.0.0.1:4174/control/slow",
+      "method": "GET",
+      "status": 200,
+      "type": "x-unknown",
+      "page": "page@f6054910f2507fd42bc33f70fa9e6ac6",
+      "start": 1792437147958,
+      "duration": 353.193,
+      "timings": {
+        "blocked": null,
+        "dns": null,
+        "connect": null,
+        "send": 0,
+        "wait": 353.193,
+        "receive": null,
+        "ssl": null
+      },
+      "knownTotal": 353.193,
+      "warnings": [
+        "Some timing phases unavailable; unknown is not zero"
+      ],
+      "size": null,
+      "redirect": null,
+      "cache": {
+        "status304": false,
+        "har": {},
+        "fromCache": null
+      },
+      "annotation": ""
+    },
+    {
+      "ordinal": 6,
+      "url": "http://127.0.0.1:4174/control/redirect",
+      "method": "GET",
+      "status": 302,
+      "type": "x-unknown",
+      "page": "page@f6054910f2507fd42bc33f70fa9e6ac6",
+      "start": 1792437147961,
+      "duration": 19.862000000000002,
+      "timings": {
+        "blocked": null,
+        "dns": null,
+        "connect": null,
+        "send": 0,
+        "wait": 1.602,
+        "receive": 18.26,
+        "ssl": null
+      },
+      "knownTotal": 19.862000000000002,
+      "warnings": [
+        "Some timing phases unavailable; unknown is not zero"
+      ],
+      "size": 0,
+      "redirect": "http://127.0.0.1:4174/control/failure",
+      "cache": {
+        "status304": false,
+        "har": {},
+        "fromCache": null
+      },
+      "annotation": ""
+    },
+    {
+      "ordinal": 7,
+      "url": "http://127.0.0.1:4174/control/failure",
+      "method": "GET",
+      "status": 503,
+      "type": "x-unknown",
+      "page": "page@f6054910f2507fd42bc33f70fa9e6ac6",
+      "start": 1792437147981,
+      "duration": 9.87,
+      "timings": {
+        "blocked": null,
+        "dns": null,
+        "connect": null,
+        "send": 0,
+        "wait": 3.147,
+        "receive": 6.723,
+        "ssl": null
+      },
+      "knownTotal": 9.87,
+      "warnings": [
+        "Some timing phases unavailable; unknown is not zero"
+      ],
+      "size": 55,
+      "redirect": null,
+      "cache": {
+        "status304": false,
+        "har": {},
+        "fromCache": null
+      },
+      "annotation": ""
+    }
+  ]
+}
