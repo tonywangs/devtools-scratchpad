@@ -1,0 +1,13 @@
+{
+  "repository": "https://github.com/mdn/beginner-html-site-styled",
+  "revision": "6c7a360ddb4a0d75be06044bf8a914f260ff10c7",
+  "license": "CC0-1.0",
+  "license_file": "mdn/LICENSE",
+  "build": "Exact copy of index.html, images/firefox-icon.png, styles/style.css; upstream is hand-written static HTML/CSS, with no compiler or package dependencies.",
+  "sha256": {
+    "LICENSE": "36ffd9dc085d529a7e60e1276d73ae5a030b020313e6c5408593a6ae2af39673",
+    "images/firefox-icon.png": "50f5b3a802d9318bfc8cf896585f3958b52f67bde94c08d6381befe546976be4",
+    "index.html": "5d04139b754c35c258af40dbe51a8df013ae06cdab55d3c2c58f7223f309d22a",
+    "styles/style.css": "b2aa20e978f89b363ac954a327b43d44b1b2b37a37ead2f6d971f60b2af8b6b9"
+  }
+}

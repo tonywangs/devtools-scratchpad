@@ -1,0 +1,57 @@
+{
+  "browser": "149.0.7827.55",
+  "oracle": [
+    {
+      "url": "missing-page.html",
+      "reason": "missing_target"
+    },
+    {
+      "url": "images/missing-image.png",
+      "reason": "missing_target"
+    },
+    {
+      "url": "#absent-anchor",
+      "reason": "missing_anchor"
+    },
+    {
+      "url": "#known-anchor",
+      "reason": "local_target_exists"
+    },
+    {
+      "url": "/styles/style.css?v=1",
+      "reason": "local_target_exists"
+    },
+    {
+      "url": "guide/#chapter",
+      "reason": "local_target_exists"
+    },
+    {
+      "url": "scripts/control.js",
+      "reason": "local_target_exists"
+    },
+    {
+      "url": "docs/hello%20world.html#caf%C3%A9",
+      "reason": "local_target_exists"
+    }
+  ],
+  "real_site": {
+    "html_loaded": true,
+    "image_loaded": true,
+    "stylesheet_status": 200
+  },
+  "offline_workflow": [
+    "demo navigation",
+    "all occurrences",
+    "status filter",
+    "search",
+    "finding expansion",
+    "source context",
+    "resolution evidence",
+    "reset",
+    "skipped filter",
+    "empty result",
+    "JSON download",
+    "mobile layout"
+  ],
+  "page_errors": []
+}
