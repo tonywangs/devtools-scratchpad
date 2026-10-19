@@ -1,0 +1,44 @@
+{
+  "project": "Commander.js",
+  "repository": "https://github.com/tj/commander.js",
+  "commit": "970ecae402b253de691e6a9066fea22f38fe7431",
+  "tag": "v12.1.0",
+  "license": "MIT; original LICENSE preserved",
+  "sources": [
+    {
+      "path": "demo/source/package.json",
+      "url": "https://raw.githubusercontent.com/tj/commander.js/970ecae402b253de691e6a9066fea22f38fe7431/package.json",
+      "sha256": "4ee3239971f47b1be752b2a9510184a5ece7c2d888890772b6ab69443ce089de"
+    },
+    {
+      "path": "demo/source/package-lock.json",
+      "url": "https://raw.githubusercontent.com/tj/commander.js/970ecae402b253de691e6a9066fea22f38fe7431/package-lock.json",
+      "sha256": "59bdd785d95f78a74af99cd46cd759737281b215db7365147fa0e406893db758"
+    },
+    {
+      "path": "demo/source/LICENSE",
+      "url": "https://raw.githubusercontent.com/tj/commander.js/970ecae402b253de691e6a9066fea22f38fe7431/LICENSE",
+      "sha256": "04512a63dce4d2d506ad612dc0bd7681ccf6e3655f7b6eaef7dfac8323d1ec0b"
+    }
+  ],
+  "installation": [
+    "npm",
+    "ci",
+    "--ignore-scripts",
+    "--no-audit",
+    "--no-fund",
+    "--cache",
+    "/tmp/license-desk-npm"
+  ],
+  "installationCwd": "demo/source",
+  "node": "v24.20.0",
+  "npm": "11.19.0",
+  "coverage": {
+    "present": 485,
+    "missing": 10,
+    "linked": 0,
+    "unsupported": 0,
+    "failed": 0
+  },
+  "scope": "Unmodified upstream manifest and lockfile; full dev + production installation, no lifecycle scripts; only metadata and license source files vendored."
+}

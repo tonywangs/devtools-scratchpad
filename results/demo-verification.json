@@ -1,0 +1,28 @@
+{
+  "independent": {
+    "independentLockEntries": 495,
+    "independentEvidenceFiles": 941,
+    "result": "matched every entry, declaration, version, evidence path, hash and text"
+  },
+  "baseline": "license-checker-rseidelsohn@4.4.2",
+  "scope": "Root plus full installed production/dev tree; missing optional packages excluded from baseline; instances compared individually to name/version keys",
+  "instancesCompared": 485,
+  "baselineUniqueNameVersions": 465,
+  "exactRawMatches": 484,
+  "differences": [
+    {
+      "path": "node_modules/exit",
+      "key": "exit@0.1.2",
+      "raw": null,
+      "baseline": "MIT",
+      "legacyLicenses": [
+        {
+          "type": "MIT",
+          "url": "https://github.com/cowboy/node-exit/blob/master/LICENSE-MIT"
+        }
+      ],
+      "explanation": "Checker interprets the legacy licenses field; Desk retains it separately and reports the primary license field absent."
+    }
+  ],
+  "extra": []
+}
