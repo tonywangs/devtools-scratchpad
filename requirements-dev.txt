@@ -1,0 +1,3 @@
+-r requirements.txt
+croniter==6.0.0
+playwright==1.55.0
