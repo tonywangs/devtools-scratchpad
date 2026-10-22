@@ -1,0 +1,65 @@
+{
+  "acquired_utc": "2026-10-22",
+  "sources": [
+    {
+      "repository": "pallets/flask",
+      "revision": "d086db856be187255b8ec61ef409357393020f32",
+      "path": "LICENSE.txt",
+      "url": "https://raw.githubusercontent.com/pallets/flask/d086db856be187255b8ec61ef409357393020f32/LICENSE.txt",
+      "local": "fixtures/sources/pallets-flask/LICENSE.txt",
+      "sha256": "489a8e1108509ed98a37bb983e11e0f7e1d31f0bd8f99a79c8448e7ff37d07ea",
+      "kind": "license",
+      "license": "BSD-3-Clause",
+      "license_path": "LICENSE.txt",
+      "original_timezone": null
+    },
+    {
+      "repository": "pallets/flask",
+      "revision": "d086db856be187255b8ec61ef409357393020f32",
+      "path": ".github/workflows/lock.yaml",
+      "url": "https://raw.githubusercontent.com/pallets/flask/d086db856be187255b8ec61ef409357393020f32/.github/workflows/lock.yaml",
+      "local": "fixtures/sources/pallets-flask/lock.yaml",
+      "sha256": "e05f221702cb1f6eb8548c2c9c7e7a296228f5eabb7bb3d5e7c9e34f766936a6",
+      "kind": "workflow",
+      "license": "BSD-3-Clause",
+      "license_path": "LICENSE.txt",
+      "original_timezone": "UTC"
+    },
+    {
+      "repository": "psf/requests",
+      "revision": "611c6162cbc4ac2020a2f91c7cfa4f3abf9bbb60",
+      "path": "LICENSE",
+      "url": "https://raw.githubusercontent.com/psf/requests/611c6162cbc4ac2020a2f91c7cfa4f3abf9bbb60/LICENSE",
+      "local": "fixtures/sources/psf-requests/LICENSE",
+      "sha256": "09e8a9bcec8067104652c168685ab0931e7868f9c8284b66f5ae6edae5f1130b",
+      "kind": "license",
+      "license": "Apache-2.0",
+      "license_path": "LICENSE",
+      "original_timezone": null
+    },
+    {
+      "repository": "psf/requests",
+      "revision": "611c6162cbc4ac2020a2f91c7cfa4f3abf9bbb60",
+      "path": ".github/workflows/codeql-analysis.yml",
+      "url": "https://raw.githubusercontent.com/psf/requests/611c6162cbc4ac2020a2f91c7cfa4f3abf9bbb60/.github/workflows/codeql-analysis.yml",
+      "local": "fixtures/sources/psf-requests/codeql-analysis.yml",
+      "sha256": "621837a2cb5c3aedc2a047a712235196f3d5f28508dcdb2b2f9160f67d078b9a",
+      "kind": "workflow",
+      "license": "Apache-2.0",
+      "license_path": "LICENSE",
+      "original_timezone": "UTC"
+    },
+    {
+      "repository": "psf/requests",
+      "revision": "611c6162cbc4ac2020a2f91c7cfa4f3abf9bbb60",
+      "path": ".github/workflows/lock-issues.yml",
+      "url": "https://raw.githubusercontent.com/psf/requests/611c6162cbc4ac2020a2f91c7cfa4f3abf9bbb60/.github/workflows/lock-issues.yml",
+      "local": "fixtures/sources/psf-requests/lock-issues.yml",
+      "sha256": "c97a0fb5242dfc6ea4b37ddd18dfe90f9b0c7b7aa8cb3a7575deeed9729bfe5b",
+      "kind": "workflow",
+      "license": "Apache-2.0",
+      "license_path": "LICENSE",
+      "original_timezone": "UTC"
+    }
+  ]
+}

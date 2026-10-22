@@ -1,0 +1,21 @@
+{
+  "frozen_before_evaluation": "2026-10-22",
+  "contract": "Complete sets, [start,end), UTC-minute oracle; expected counts fixed from calendar reasoning before running either evaluator.",
+  "cases": [
+    {"id":"flask-real-daily", "source":"pallets/flask", "expression":"0 0 * * *", "timezone":"UTC", "start":"2026-10-24T00:00:00Z", "end":"2026-11-03T00:00:00Z", "expected_count":10},
+    {"id":"requests-real-codeql", "source":"psf/requests", "expression":"0 23 * * 0", "timezone":"UTC", "start":"2026-10-24T00:00:00Z", "end":"2026-11-03T00:00:00Z", "expected_count":2},
+    {"id":"requests-real-lock", "source":"psf/requests", "expression":"0 0 * * *", "timezone":"UTC", "start":"2026-10-24T00:00:00Z", "end":"2026-11-03T00:00:00Z", "expected_count":10},
+    {"id":"spring-gap", "expression":"30 2 * * *", "timezone":"America/New_York", "start":"2026-03-08T00:00:00Z", "end":"2026-03-09T00:00:00Z", "expected_count":0},
+    {"id":"autumn-fold", "expression":"30 1 * * *", "timezone":"America/New_York", "start":"2026-11-01T00:00:00Z", "end":"2026-11-02T00:00:00Z", "expected_count":2,"expected_utc":["2026-11-01T05:30:00Z","2026-11-01T06:30:00Z"]},
+    {"id":"half-hour-fold", "expression":"45 1 * * *", "timezone":"Australia/Lord_Howe", "start":"2026-04-04T12:00:00Z", "end":"2026-04-05T12:00:00Z", "expected_count":2},
+    {"id":"non-hour-offset", "expression":"0 9 * * *", "timezone":"Asia/Kathmandu", "start":"2026-01-01T00:00:00Z", "end":"2026-01-02T00:00:00Z", "expected_count":1,"expected_utc":["2026-01-01T03:15:00Z"]},
+    {"id":"leap-day", "expression":"0 0 29 2 *", "timezone":"UTC", "start":"2024-02-28T00:00:00Z", "end":"2024-03-02T00:00:00Z", "expected_count":1},
+    {"id":"month-boundary", "expression":"0 0 1 * *", "timezone":"UTC", "start":"2026-01-31T00:00:00Z", "end":"2026-02-02T00:00:00Z", "expected_count":1},
+    {"id":"day-fields-or", "expression":"0 0 1 * 1", "timezone":"UTC", "start":"2026-01-01T00:00:00Z", "end":"2026-02-01T00:00:00Z", "expected_count":5},
+    {"id":"wildcard-step-and", "expression":"0 0 */2 * 1", "timezone":"UTC", "start":"2026-01-01T00:00:00Z", "end":"2026-02-01T00:00:00Z", "expected_count":2},
+    {"id":"list-range-step", "expression":"0,15,30 8-10/2 * * 1-5", "timezone":"UTC", "start":"2026-01-05T00:00:00Z", "end":"2026-01-06T00:00:00Z", "expected_count":6},
+    {"id":"sunday-seven", "expression":"0 0 * * 7", "timezone":"UTC", "start":"2026-01-04T00:00:00Z", "end":"2026-01-05T00:00:00Z", "expected_count":1},
+    {"id":"impossible", "expression":"0 0 30 2 *", "timezone":"UTC", "start":"2026-02-01T00:00:00Z", "end":"2026-03-01T00:00:00Z", "expected_count":0},
+    {"id":"possible-but-outside", "expression":"0 0 29 2 *", "timezone":"UTC", "start":"2026-02-01T00:00:00Z", "end":"2026-03-01T00:00:00Z", "expected_count":0}
+  ]
+}

@@ -1,0 +1,1 @@
+"""Cron Schedule Atlas."""

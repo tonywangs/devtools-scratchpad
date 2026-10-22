@@ -1,0 +1,345 @@
+{
+  "schema": "atlas-report-v1",
+  "project": {
+    "schema": "atlas-project-v1",
+    "title": "Real workflows · timezone comparison",
+    "start": "2026-10-24T00:00:00Z",
+    "end": "2026-11-03T00:00:00Z",
+    "annotation": "Pinned Flask and Requests workflows. UTC is the original hosted setting. Duplicate a schedule to simulate another timezone.",
+    "sources": [
+      {
+        "name": "pallets/flask / lock.yaml",
+        "url": "https://raw.githubusercontent.com/pallets/flask/d086db856be187255b8ec61ef409357393020f32/.github/workflows/lock.yaml",
+        "revision": "d086db856be187255b8ec61ef409357393020f32",
+        "license": "BSD-3-Clause",
+        "license_url": "https://github.com/pallets/flask/blob/d086db856be187255b8ec61ef409357393020f32/LICENSE.txt",
+        "format": "workflow",
+        "id": "source-1",
+        "content": "name: Lock inactive closed issues\n# Lock closed issues that have not received any further activity for two weeks.\n# This does not close open issues, only humans may do that. It is easier to\n# respond to new issues with fresh examples rather than continuing discussions\n# on old issues.\n\non:\n  schedule:\n    - cron: '0 0 * * *'\npermissions: {}\nconcurrency:\n  group: lock\n  cancel-in-progress: true\njobs:\n  lock:\n    runs-on: ubuntu-latest\n    permissions:\n      issues: write\n      pull-requests: write\n      discussions: write\n    steps:\n      - uses: dessant/lock-threads@89ae32b08ed1a541efecbab17912962a5e38981c # v6.0.2\n        with:\n          issue-inactive-days: 14\n          pr-inactive-days: 14\n          discussion-inactive-days: 14\n",
+        "sha256": "e05f221702cb1f6eb8548c2c9c7e7a296228f5eabb7bb3d5e7c9e34f766936a6",
+        "actual_sha256": "e05f221702cb1f6eb8548c2c9c7e7a296228f5eabb7bb3d5e7c9e34f766936a6",
+        "integrity": "verified"
+      },
+      {
+        "name": "psf/requests / codeql-analysis.yml",
+        "url": "https://raw.githubusercontent.com/psf/requests/611c6162cbc4ac2020a2f91c7cfa4f3abf9bbb60/.github/workflows/codeql-analysis.yml",
+        "revision": "611c6162cbc4ac2020a2f91c7cfa4f3abf9bbb60",
+        "license": "Apache-2.0",
+        "license_url": "https://github.com/psf/requests/blob/611c6162cbc4ac2020a2f91c7cfa4f3abf9bbb60/LICENSE",
+        "format": "workflow",
+        "id": "source-2",
+        "content": "# For most projects, this workflow file will not need changing; you simply need\n# to commit it to your repository.\n#\n# You may wish to alter this file to override the set of languages analyzed,\n# or to provide custom queries or build logic.\nname: \"CodeQL\"\n\non:\n  push:\n    branches: [main]\n  pull_request:\n    # The branches below must be a subset of the branches above\n    branches: [main]\n  schedule:\n    - cron: '0 23 * * 0'\n\npermissions:\n  contents: read\n\njobs:\n  analyze:\n    permissions:\n      actions: read  # for github/codeql-action/init to get workflow details\n      contents: read  # for actions/checkout to fetch code\n      security-events: write  # for github/codeql-action/autobuild to send a status report\n    name: Analyze\n    runs-on: ubuntu-latest\n\n    strategy:\n      fail-fast: false\n\n\n    steps:\n    - name: Checkout repository\n      uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0\n      with:\n        # We must fetch at least the immediate parents so that if this is\n        # a pull request then we can checkout the head.\n        fetch-depth: 2\n        persist-credentials: false\n\n    # If this run was triggered by a pull request event, then checkout\n    # the head of the pull request instead of the merge commit.\n    - run: git checkout HEAD^2\n      if: ${{ github.event_name == 'pull_request' }}\n\n    # Initializes the CodeQL tools for scanning.\n    - name: Initialize CodeQL\n      uses: github/codeql-action/init@b96794f015dfd88f77b49b1c93e0fa7110f94c63 # v4.38.0\n      with:\n        languages: \"python\"\n        # If you wish to specify custom queries, you can do so here or in a config file.\n        # By default, queries listed here will override any specified in a config file.\n        # Prefix the list here with \"+\" to use these queries and those in the config file.\n        # queries: ./path/to/local/query, your-org/your-repo/queries@main\n\n    # Autobuild attempts to build any compiled languages  (C/C++, C#, or Java).\n    # If this step fails, then you should remove it and run the build manually (see below)\n    - name: Autobuild\n      uses: github/codeql-action/autobuild@b96794f015dfd88f77b49b1c93e0fa7110f94c63 # v4.38.0\n\n    # ℹ️ Command-line programs to run using the OS shell.\n    # 📚 https://git.io/JvXDl\n\n    # ✏️ If the Autobuild fails above, remove it and uncomment the following three lines\n    #    and modify them (or add more) to build your code if your project\n    #    uses a compiled language\n\n    #- run: |\n    #   make bootstrap\n    #   make release\n\n    - name: Perform CodeQL Analysis\n      uses: github/codeql-action/analyze@b96794f015dfd88f77b49b1c93e0fa7110f94c63 # v4.38.0\n",
+        "sha256": "621837a2cb5c3aedc2a047a712235196f3d5f28508dcdb2b2f9160f67d078b9a",
+        "actual_sha256": "621837a2cb5c3aedc2a047a712235196f3d5f28508dcdb2b2f9160f67d078b9a",
+        "integrity": "verified"
+      },
+      {
+        "name": "psf/requests / lock-issues.yml",
+        "url": "https://raw.githubusercontent.com/psf/requests/611c6162cbc4ac2020a2f91c7cfa4f3abf9bbb60/.github/workflows/lock-issues.yml",
+        "revision": "611c6162cbc4ac2020a2f91c7cfa4f3abf9bbb60",
+        "license": "Apache-2.0",
+        "license_url": "https://github.com/psf/requests/blob/611c6162cbc4ac2020a2f91c7cfa4f3abf9bbb60/LICENSE",
+        "format": "workflow",
+        "id": "source-3",
+        "content": "name: 'Lock Threads'\n\non:\n  schedule:\n    - cron: '0 0 * * *'\n\npermissions:\n  issues: write\n  pull-requests: write\n\njobs:\n  action:\n    if: github.repository_owner == 'psf'\n    runs-on: ubuntu-latest\n    steps:\n      - uses: dessant/lock-threads@89ae32b08ed1a541efecbab17912962a5e38981c # v6.0.2\n        with:\n            issue-lock-inactive-days: 90\n            pr-lock-inactive-days: 90\n",
+        "sha256": "c97a0fb5242dfc6ea4b37ddd18dfe90f9b0c7b7aa8cb3a7575deeed9729bfe5b",
+        "actual_sha256": "c97a0fb5242dfc6ea4b37ddd18dfe90f9b0c7b7aa8cb3a7575deeed9729bfe5b",
+        "integrity": "verified"
+      }
+    ],
+    "schedules": [
+      {
+        "name": "pallets/flask / lock.yaml #1",
+        "expression": "0 0 * * *",
+        "timezone": "UTC",
+        "annotation": "",
+        "source_id": "source-1",
+        "original_expression": "0 0 * * *",
+        "original_timezone": "UTC",
+        "source_locator": "on.schedule[0]",
+        "import_status": "supported",
+        "import_message": "",
+        "id": "schedule-1"
+      },
+      {
+        "name": "psf/requests / codeql-analysis.yml #1",
+        "expression": "0 23 * * 0",
+        "timezone": "UTC",
+        "annotation": "",
+        "source_id": "source-2",
+        "original_expression": "0 23 * * 0",
+        "original_timezone": "UTC",
+        "source_locator": "on.schedule[0]",
+        "import_status": "supported",
+        "import_message": "",
+        "id": "schedule-2"
+      },
+      {
+        "name": "psf/requests / lock-issues.yml #1",
+        "expression": "0 0 * * *",
+        "timezone": "UTC",
+        "annotation": "",
+        "source_id": "source-3",
+        "original_expression": "0 0 * * *",
+        "original_timezone": "UTC",
+        "source_locator": "on.schedule[0]",
+        "import_status": "supported",
+        "import_message": "",
+        "id": "schedule-3"
+      }
+    ]
+  },
+  "policy": {
+    "dialect": "atlas-five-field-v1",
+    "day_fields": "AND when either field starts with *; OR otherwise",
+    "gap": "nonexistent wall minutes yield zero instants",
+    "fold": "repeated wall minutes yield both distinct UTC instants",
+    "interval": "[start, end), minute-aligned UTC boundaries",
+    "warning": "Simulation only: daemon and hosted scheduler behavior may differ; matching instants do not guarantee execution. No commands are executed.",
+    "calendar": "proleptic Gregorian; no leap seconds; 2000–2100 UTC"
+  },
+  "versions": {
+    "engine": "1.0.0",
+    "python": "3.12.3",
+    "timezone_engine": "Python zoneinfo",
+    "tzdb": "2026e",
+    "zone_sha256": {
+      "UTC": "8b85846791ab2c8a5463c83a5be3c043e2570d7448434d41398969ed47e3e6f2"
+    }
+  },
+  "limits": {
+    "days": 366,
+    "schedules": 24,
+    "occurrences": 10000,
+    "seconds": 8,
+    "source_bytes": 131072,
+    "request_bytes": 1048576
+  },
+  "complete": true,
+  "status": "complete",
+  "reason": null,
+  "source_integrity": "verified",
+  "results": [
+    {
+      "id": "schedule-1",
+      "status": "supported",
+      "complete": true,
+      "count": 10,
+      "message": "searched entire interval"
+    },
+    {
+      "id": "schedule-2",
+      "status": "supported",
+      "complete": true,
+      "count": 2,
+      "message": "searched entire interval"
+    },
+    {
+      "id": "schedule-3",
+      "status": "supported",
+      "complete": true,
+      "count": 10,
+      "message": "searched entire interval"
+    }
+  ],
+  "occurrences": [
+    {
+      "schedule_id": "schedule-1",
+      "utc": "2026-10-24T00:00:00Z",
+      "local": "2026-10-24T00:00:00+00:00",
+      "offset_seconds": 0,
+      "fold": 0,
+      "timezone": "UTC",
+      "simultaneous": 2
+    },
+    {
+      "schedule_id": "schedule-3",
+      "utc": "2026-10-24T00:00:00Z",
+      "local": "2026-10-24T00:00:00+00:00",
+      "offset_seconds": 0,
+      "fold": 0,
+      "timezone": "UTC",
+      "simultaneous": 2
+    },
+    {
+      "schedule_id": "schedule-1",
+      "utc": "2026-10-25T00:00:00Z",
+      "local": "2026-10-25T00:00:00+00:00",
+      "offset_seconds": 0,
+      "fold": 0,
+      "timezone": "UTC",
+      "simultaneous": 2
+    },
+    {
+      "schedule_id": "schedule-3",
+      "utc": "2026-10-25T00:00:00Z",
+      "local": "2026-10-25T00:00:00+00:00",
+      "offset_seconds": 0,
+      "fold": 0,
+      "timezone": "UTC",
+      "simultaneous": 2
+    },
+    {
+      "schedule_id": "schedule-2",
+      "utc": "2026-10-25T23:00:00Z",
+      "local": "2026-10-25T23:00:00+00:00",
+      "offset_seconds": 0,
+      "fold": 0,
+      "timezone": "UTC",
+      "simultaneous": 1
+    },
+    {
+      "schedule_id": "schedule-1",
+      "utc": "2026-10-26T00:00:00Z",
+      "local": "2026-10-26T00:00:00+00:00",
+      "offset_seconds": 0,
+      "fold": 0,
+      "timezone": "UTC",
+      "simultaneous": 2
+    },
+    {
+      "schedule_id": "schedule-3",
+      "utc": "2026-10-26T00:00:00Z",
+      "local": "2026-10-26T00:00:00+00:00",
+      "offset_seconds": 0,
+      "fold": 0,
+      "timezone": "UTC",
+      "simultaneous": 2
+    },
+    {
+      "schedule_id": "schedule-1",
+      "utc": "2026-10-27T00:00:00Z",
+      "local": "2026-10-27T00:00:00+00:00",
+      "offset_seconds": 0,
+      "fold": 0,
+      "timezone": "UTC",
+      "simultaneous": 2
+    },
+    {
+      "schedule_id": "schedule-3",
+      "utc": "2026-10-27T00:00:00Z",
+      "local": "2026-10-27T00:00:00+00:00",
+      "offset_seconds": 0,
+      "fold": 0,
+      "timezone": "UTC",
+      "simultaneous": 2
+    },
+    {
+      "schedule_id": "schedule-1",
+      "utc": "2026-10-28T00:00:00Z",
+      "local": "2026-10-28T00:00:00+00:00",
+      "offset_seconds": 0,
+      "fold": 0,
+      "timezone": "UTC",
+      "simultaneous": 2
+    },
+    {
+      "schedule_id": "schedule-3",
+      "utc": "2026-10-28T00:00:00Z",
+      "local": "2026-10-28T00:00:00+00:00",
+      "offset_seconds": 0,
+      "fold": 0,
+      "timezone": "UTC",
+      "simultaneous": 2
+    },
+    {
+      "schedule_id": "schedule-1",
+      "utc": "2026-10-29T00:00:00Z",
+      "local": "2026-10-29T00:00:00+00:00",
+      "offset_seconds": 0,
+      "fold": 0,
+      "timezone": "UTC",
+      "simultaneous": 2
+    },
+    {
+      "schedule_id": "schedule-3",
+      "utc": "2026-10-29T00:00:00Z",
+      "local": "2026-10-29T00:00:00+00:00",
+      "offset_seconds": 0,
+      "fold": 0,
+      "timezone": "UTC",
+      "simultaneous": 2
+    },
+    {
+      "schedule_id": "schedule-1",
+      "utc": "2026-10-30T00:00:00Z",
+      "local": "2026-10-30T00:00:00+00:00",
+      "offset_seconds": 0,
+      "fold": 0,
+      "timezone": "UTC",
+      "simultaneous": 2
+    },
+    {
+      "schedule_id": "schedule-3",
+      "utc": "2026-10-30T00:00:00Z",
+      "local": "2026-10-30T00:00:00+00:00",
+      "offset_seconds": 0,
+      "fold": 0,
+      "timezone": "UTC",
+      "simultaneous": 2
+    },
+    {
+      "schedule_id": "schedule-1",
+      "utc": "2026-10-31T00:00:00Z",
+      "local": "2026-10-31T00:00:00+00:00",
+      "offset_seconds": 0,
+      "fold": 0,
+      "timezone": "UTC",
+      "simultaneous": 2
+    },
+    {
+      "schedule_id": "schedule-3",
+      "utc": "2026-10-31T00:00:00Z",
+      "local": "2026-10-31T00:00:00+00:00",
+      "offset_seconds": 0,
+      "fold": 0,
+      "timezone": "UTC",
+      "simultaneous": 2
+    },
+    {
+      "schedule_id": "schedule-1",
+      "utc": "2026-11-01T00:00:00Z",
+      "local": "2026-11-01T00:00:00+00:00",
+      "offset_seconds": 0,
+      "fold": 0,
+      "timezone": "UTC",
+      "simultaneous": 2
+    },
+    {
+      "schedule_id": "schedule-3",
+      "utc": "2026-11-01T00:00:00Z",
+      "local": "2026-11-01T00:00:00+00:00",
+      "offset_seconds": 0,
+      "fold": 0,
+      "timezone": "UTC",
+      "simultaneous": 2
+    },
+    {
+      "schedule_id": "schedule-2",
+      "utc": "2026-11-01T23:00:00Z",
+      "local": "2026-11-01T23:00:00+00:00",
+      "offset_seconds": 0,
+      "fold": 0,
+      "timezone": "UTC",
+      "simultaneous": 1
+    },
+    {
+      "schedule_id": "schedule-1",
+      "utc": "2026-11-02T00:00:00Z",
+      "local": "2026-11-02T00:00:00+00:00",
+      "offset_seconds": 0,
+      "fold": 0,
+      "timezone": "UTC",
+      "simultaneous": 2
+    },
+    {
+      "schedule_id": "schedule-3",
+      "utc": "2026-11-02T00:00:00Z",
+      "local": "2026-11-02T00:00:00+00:00",
+      "offset_seconds": 0,
+      "fold": 0,
+      "timezone": "UTC",
+      "simultaneous": 2
+    }
+  ]
+}
