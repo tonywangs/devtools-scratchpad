@@ -1,0 +1,238 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src 'unsafe-inline'"><title>HAR diagnostic report</title><style>body{font:16px system-ui;max-width:1100px;margin:40px auto;padding:20px}pre{white-space:pre-wrap;overflow-wrap:anywhere}article{border-top:1px solid #ccc;padding:20px 0}</style><h1>HAR diagnostic report</h1><p>May contain sensitive URLs and notes. Timing correlations do not prove causes. Elapsed request activity is not user-perceived load time.</p><p>Source SHA-256: f28383cda1ddd4e2cf645fd898f5a4ec42254df02481b0b583ad75dd0a263e9e</p><h2>Accounting and scope</h2><pre>{
+  &quot;accounting&quot;: {
+    &quot;total&quot;: 7,
+    &quot;supported&quot;: 7,
+    &quot;rejected&quot;: [],
+    &quot;complete&quot;: true
+  },
+  &quot;filters&quot;: {},
+  &quot;summary&quot;: {
+    &quot;count&quot;: 7,
+    &quot;statuses&quot;: {
+      &quot;200&quot;: 4,
+      &quot;302&quot;: 1,
+      &quot;503&quot;: 1,
+      &quot;-1&quot;: 1
+    },
+    &quot;summedKnownDuration&quot;: 571.9659999999999,
+    &quot;unknownDurations&quot;: 1,
+    &quot;elapsedKnownActivity&quot;: 1044.193115234375,
+    &quot;excludedFromActivity&quot;: 1
+  }
+}</pre><article><h2>Original entry #1 · 200 GET</h2><p>http://127.0.0.1:4174/fixtures/site/</p><pre>{
+  &quot;ordinal&quot;: 1,
+  &quot;url&quot;: &quot;http://127.0.0.1:4174/fixtures/site/&quot;,
+  &quot;method&quot;: &quot;GET&quot;,
+  &quot;status&quot;: 200,
+  &quot;type&quot;: &quot;text/html&quot;,
+  &quot;page&quot;: &quot;page@f6054910f2507fd42bc33f70fa9e6ac6&quot;,
+  &quot;start&quot;: 1792437147267,
+  &quot;duration&quot;: 69.124,
+  &quot;timings&quot;: {
+    &quot;blocked&quot;: null,
+    &quot;dns&quot;: 0.008,
+    &quot;connect&quot;: 0.263,
+    &quot;send&quot;: 0,
+    &quot;wait&quot;: 9.447,
+    &quot;receive&quot;: 57.278,
+    &quot;ssl&quot;: 2.128
+  },
+  &quot;knownTotal&quot;: 66.996,
+  &quot;warnings&quot;: [
+    &quot;Some timing phases unavailable; unknown is not zero&quot;,
+    &quot;Available timing sum differs from reported duration; missing phases may explain the difference&quot;,
+    &quot;SSL nesting inconsistent or connection unavailable&quot;
+  ],
+  &quot;size&quot;: 1092,
+  &quot;redirect&quot;: null,
+  &quot;cache&quot;: {
+    &quot;status304&quot;: false,
+    &quot;har&quot;: {},
+    &quot;fromCache&quot;: null
+  },
+  &quot;annotation&quot;: &quot;&quot;
+}</pre></article><article><h2>Original entry #2 · -1 GET</h2><p>http://fonts.googleapis.com/css?family=Open+Sans</p><pre>{
+  &quot;ordinal&quot;: 2,
+  &quot;url&quot;: &quot;http://fonts.googleapis.com/css?family=Open+Sans&quot;,
+  &quot;method&quot;: &quot;GET&quot;,
+  &quot;status&quot;: -1,
+  &quot;type&quot;: &quot;x-unknown&quot;,
+  &quot;page&quot;: &quot;page@f6054910f2507fd42bc33f70fa9e6ac6&quot;,
+  &quot;start&quot;: 1792437147349,
+  &quot;duration&quot;: null,
+  &quot;timings&quot;: {
+    &quot;blocked&quot;: null,
+    &quot;dns&quot;: null,
+    &quot;connect&quot;: null,
+    &quot;send&quot;: null,
+    &quot;wait&quot;: null,
+    &quot;receive&quot;: null,
+    &quot;ssl&quot;: null
+  },
+  &quot;knownTotal&quot;: 0,
+  &quot;warnings&quot;: [
+    &quot;Browser-specific failure sentinel -1; not an HTTP status&quot;,
+    &quot;Unknown request duration&quot;,
+    &quot;Some timing phases unavailable; unknown is not zero&quot;
+  ],
+  &quot;size&quot;: null,
+  &quot;redirect&quot;: null,
+  &quot;cache&quot;: {
+    &quot;status304&quot;: false,
+    &quot;har&quot;: {},
+    &quot;fromCache&quot;: null
+  },
+  &quot;annotation&quot;: &quot;&quot;
+}</pre></article><article><h2>Original entry #3 · 200 GET</h2><p>http://127.0.0.1:4174/fixtures/site/styles/style.css</p><pre>{
+  &quot;ordinal&quot;: 3,
+  &quot;url&quot;: &quot;http://127.0.0.1:4174/fixtures/site/styles/style.css&quot;,
+  &quot;method&quot;: &quot;GET&quot;,
+  &quot;status&quot;: 200,
+  &quot;type&quot;: &quot;text/css&quot;,
+  &quot;page&quot;: &quot;page@f6054910f2507fd42bc33f70fa9e6ac6&quot;,
+  &quot;start&quot;: 1792437147351,
+  &quot;duration&quot;: 28.412999999999997,
+  &quot;timings&quot;: {
+    &quot;blocked&quot;: null,
+    &quot;dns&quot;: null,
+    &quot;connect&quot;: null,
+    &quot;send&quot;: 0,
+    &quot;wait&quot;: 6.298,
+    &quot;receive&quot;: 22.115,
+    &quot;ssl&quot;: null
+  },
+  &quot;knownTotal&quot;: 28.412999999999997,
+  &quot;warnings&quot;: [
+    &quot;Some timing phases unavailable; unknown is not zero&quot;
+  ],
+  &quot;size&quot;: 495,
+  &quot;redirect&quot;: null,
+  &quot;cache&quot;: {
+    &quot;status304&quot;: false,
+    &quot;har&quot;: {},
+    &quot;fromCache&quot;: null
+  },
+  &quot;annotation&quot;: &quot;&quot;
+}</pre></article><article><h2>Original entry #4 · 200 GET</h2><p>http://127.0.0.1:4174/fixtures/site/images/firefox-icon.png</p><pre>{
+  &quot;ordinal&quot;: 4,
+  &quot;url&quot;: &quot;http://127.0.0.1:4174/fixtures/site/images/firefox-icon.png&quot;,
+  &quot;method&quot;: &quot;GET&quot;,
+  &quot;status&quot;: 200,
+  &quot;type&quot;: &quot;image/png&quot;,
+  &quot;page&quot;: &quot;page@f6054910f2507fd42bc33f70fa9e6ac6&quot;,
+  &quot;start&quot;: 1792437147356,
+  &quot;duration&quot;: 91.504,
+  &quot;timings&quot;: {
+    &quot;blocked&quot;: null,
+    &quot;dns&quot;: 0.009,
+    &quot;connect&quot;: 0.269,
+    &quot;send&quot;: 0,
+    &quot;wait&quot;: 6.704,
+    &quot;receive&quot;: 82.828,
+    &quot;ssl&quot;: 1.694
+  },
+  &quot;knownTotal&quot;: 89.81,
+  &quot;warnings&quot;: [
+    &quot;Some timing phases unavailable; unknown is not zero&quot;,
+    &quot;Available timing sum differs from reported duration; missing phases may explain the difference&quot;,
+    &quot;SSL nesting inconsistent or connection unavailable&quot;
+  ],
+  &quot;size&quot;: 55480,
+  &quot;redirect&quot;: null,
+  &quot;cache&quot;: {
+    &quot;status304&quot;: false,
+    &quot;har&quot;: {},
+    &quot;fromCache&quot;: null
+  },
+  &quot;annotation&quot;: &quot;&quot;
+}</pre></article><article><h2>Original entry #5 · 200 GET</h2><p>http://127.0.0.1:4174/control/slow</p><pre>{
+  &quot;ordinal&quot;: 5,
+  &quot;url&quot;: &quot;http://127.0.0.1:4174/control/slow&quot;,
+  &quot;method&quot;: &quot;GET&quot;,
+  &quot;status&quot;: 200,
+  &quot;type&quot;: &quot;x-unknown&quot;,
+  &quot;page&quot;: &quot;page@f6054910f2507fd42bc33f70fa9e6ac6&quot;,
+  &quot;start&quot;: 1792437147958,
+  &quot;duration&quot;: 353.193,
+  &quot;timings&quot;: {
+    &quot;blocked&quot;: null,
+    &quot;dns&quot;: null,
+    &quot;connect&quot;: null,
+    &quot;send&quot;: 0,
+    &quot;wait&quot;: 353.193,
+    &quot;receive&quot;: null,
+    &quot;ssl&quot;: null
+  },
+  &quot;knownTotal&quot;: 353.193,
+  &quot;warnings&quot;: [
+    &quot;Some timing phases unavailable; unknown is not zero&quot;
+  ],
+  &quot;size&quot;: null,
+  &quot;redirect&quot;: null,
+  &quot;cache&quot;: {
+    &quot;status304&quot;: false,
+    &quot;har&quot;: {},
+    &quot;fromCache&quot;: null
+  },
+  &quot;annotation&quot;: &quot;&quot;
+}</pre></article><article><h2>Original entry #6 · 302 GET</h2><p>http://127.0.0.1:4174/control/redirect</p><pre>{
+  &quot;ordinal&quot;: 6,
+  &quot;url&quot;: &quot;http://127.0.0.1:4174/control/redirect&quot;,
+  &quot;method&quot;: &quot;GET&quot;,
+  &quot;status&quot;: 302,
+  &quot;type&quot;: &quot;x-unknown&quot;,
+  &quot;page&quot;: &quot;page@f6054910f2507fd42bc33f70fa9e6ac6&quot;,
+  &quot;start&quot;: 1792437147961,
+  &quot;duration&quot;: 19.862000000000002,
+  &quot;timings&quot;: {
+    &quot;blocked&quot;: null,
+    &quot;dns&quot;: null,
+    &quot;connect&quot;: null,
+    &quot;send&quot;: 0,
+    &quot;wait&quot;: 1.602,
+    &quot;receive&quot;: 18.26,
+    &quot;ssl&quot;: null
+  },
+  &quot;knownTotal&quot;: 19.862000000000002,
+  &quot;warnings&quot;: [
+    &quot;Some timing phases unavailable; unknown is not zero&quot;
+  ],
+  &quot;size&quot;: 0,
+  &quot;redirect&quot;: &quot;http://127.0.0.1:4174/control/failure&quot;,
+  &quot;cache&quot;: {
+    &quot;status304&quot;: false,
+    &quot;har&quot;: {},
+    &quot;fromCache&quot;: null
+  },
+  &quot;annotation&quot;: &quot;&quot;
+}</pre></article><article><h2>Original entry #7 · 503 GET</h2><p>http://127.0.0.1:4174/control/failure</p><pre>{
+  &quot;ordinal&quot;: 7,
+  &quot;url&quot;: &quot;http://127.0.0.1:4174/control/failure&quot;,
+  &quot;method&quot;: &quot;GET&quot;,
+  &quot;status&quot;: 503,
+  &quot;type&quot;: &quot;x-unknown&quot;,
+  &quot;page&quot;: &quot;page@f6054910f2507fd42bc33f70fa9e6ac6&quot;,
+  &quot;start&quot;: 1792437147981,
+  &quot;duration&quot;: 9.87,
+  &quot;timings&quot;: {
+    &quot;blocked&quot;: null,
+    &quot;dns&quot;: null,
+    &quot;connect&quot;: null,
+    &quot;send&quot;: 0,
+    &quot;wait&quot;: 3.147,
+    &quot;receive&quot;: 6.723,
+    &quot;ssl&quot;: null
+  },
+  &quot;knownTotal&quot;: 9.87,
+  &quot;warnings&quot;: [
+    &quot;Some timing phases unavailable; unknown is not zero&quot;
+  ],
+  &quot;size&quot;: 55,
+  &quot;redirect&quot;: null,
+  &quot;cache&quot;: {
+    &quot;status304&quot;: false,
+    &quot;har&quot;: {},
+    &quot;fromCache&quot;: null
+  },
+  &quot;annotation&quot;: &quot;&quot;
+}</pre></article></html>

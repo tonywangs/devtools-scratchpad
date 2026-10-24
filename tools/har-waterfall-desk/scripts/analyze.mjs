@@ -1,0 +1,2 @@
+import {readFile,writeFile} from 'node:fs/promises';import {createHash} from 'node:crypto';import {parse,report,htmlReport} from '../web/model.mjs';
+for(const name of ['public','local']){const bytes=await readFile(`fixtures/${name}.har`);const m=parse(bytes.toString());const r=report(m,createHash('sha256').update(bytes).digest('hex'),{},{});await writeFile(`results/${name}-report.json`,JSON.stringify(r,null,2)+'\n');await writeFile(`results/${name}-report.html`,htmlReport(r));console.log(name,r.summary);}
