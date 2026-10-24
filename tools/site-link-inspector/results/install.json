@@ -1,0 +1,18 @@
+{
+  "command": [
+    "site-link-inspector",
+    "examples/mdn",
+    "--output",
+    "TEMP/report",
+    "--strict"
+  ],
+  "working_directory": "temporary directory outside source checkout",
+  "exit_code": 0,
+  "counts": {
+    "checked": 2,
+    "skipped": 2,
+    "unsupported": 0,
+    "failed": 0
+  },
+  "packaged_template_rendered": true
+}
