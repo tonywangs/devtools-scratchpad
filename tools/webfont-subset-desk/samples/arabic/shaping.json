@@ -1,0 +1,3033 @@
+{
+  "engine": "uharfbuzz 0.52.0",
+  "harfbuzz": "12.1.0",
+  "fonttools": "4.60.1",
+  "method": "Per-line, per-tab explicit script/language/direction; decomposed outline SHA-256, clusters, missing-glyph flags, x/y advances and offsets in font units. No raw glyph ID comparison.",
+  "equal": true,
+  "missing_glyphs": 0,
+  "glyph_count": 116,
+  "original": [
+    [
+      {
+        "outline": "b032226d2ee114d883ccb18d63bc233f41ac6b35ec1030b7b9c13ae9cfed80a4",
+        "cluster": 115,
+        "missing": false,
+        "advance": [
+          206,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "6740ac506f9f9bd9f9f7f72c642672da956b09d57835b71d49e760d40e2639ba",
+        "cluster": 114,
+        "missing": false,
+        "advance": [
+          437,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4267730fec6cef26c2101d55fd7ff9db97dc6e2a9a8522caeadefd2639a6dfc3",
+        "cluster": 113,
+        "missing": false,
+        "advance": [
+          253,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b5a8b18fdb5081c7bf724ad9530b5ddf95b921a37cc3d30e1609446ee2b1b010",
+        "cluster": 112,
+        "missing": false,
+        "advance": [
+          636,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "539693133e858b3ade300151e63de3dce136a922e8761faf5a079ada890bcd2b",
+        "cluster": 111,
+        "missing": false,
+        "advance": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "116187dd1da29d284ddd36a4b467fb12233e974258a37ce836e5c89e9a544381",
+        "cluster": 110,
+        "missing": false,
+        "advance": [
+          518,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b1415359b4ee574238f09d8102bd2ff0763b19ed6a82c2dfb90a2a7c588b24da",
+        "cluster": 109,
+        "missing": false,
+        "advance": [
+          238,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 108,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "1bb0f9bc0a60d9ce9b82b6b0f0b1fc3cdca3b7cc5f5a71e4abfe3ddcefdc68c3",
+        "cluster": 107,
+        "missing": false,
+        "advance": [
+          636,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "671e49b2c859b8d99e15eff6b28256942586e6566135d8991686e4c5f81e1a52",
+        "cluster": 106,
+        "missing": false,
+        "advance": [
+          468,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "09c67a08d9caa66344ea0159d5e05ad89767496367616f522affe44653498e6d",
+        "cluster": 105,
+        "missing": false,
+        "advance": [
+          404,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "bd1077da71eebf4f7ae858a460020ef39d50e8d8360fb3a25a266315cef56674",
+        "cluster": 104,
+        "missing": false,
+        "advance": [
+          275,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 103,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4267730fec6cef26c2101d55fd7ff9db97dc6e2a9a8522caeadefd2639a6dfc3",
+        "cluster": 102,
+        "missing": false,
+        "advance": [
+          253,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4a6cc4962d4333c89571ce3deea49cf27cc1f6ca0d76b77d0de043ba2f9779ef",
+        "cluster": 100,
+        "missing": false,
+        "advance": [
+          0,
+          0
+        ],
+        "offset": [
+          307,
+          181
+        ]
+      },
+      {
+        "outline": "db434b0236f11a480596d04fb36aaf716e7cb2130542df2716857931826a4465",
+        "cluster": 100,
+        "missing": false,
+        "advance": [
+          778,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "675ff7534c4bfd2bc063ffb8a6292e337b3cf023aa7549ebc12d394af302d74a",
+        "cluster": 99,
+        "missing": false,
+        "advance": [
+          414,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "bd1077da71eebf4f7ae858a460020ef39d50e8d8360fb3a25a266315cef56674",
+        "cluster": 98,
+        "missing": false,
+        "advance": [
+          275,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 97,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "3762dd2e8908d6636078a38bddfe0f578f16818f9dd59238864f04994b69164e",
+        "cluster": 96,
+        "missing": false,
+        "advance": [
+          528,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "27a1e0c33fb4a4c30733d3d34a8da146f455b9ee302c5ce5fff835de8e976c13",
+        "cluster": 95,
+        "missing": false,
+        "advance": [
+          381,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "db434b0236f11a480596d04fb36aaf716e7cb2130542df2716857931826a4465",
+        "cluster": 94,
+        "missing": false,
+        "advance": [
+          778,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "675ff7534c4bfd2bc063ffb8a6292e337b3cf023aa7549ebc12d394af302d74a",
+        "cluster": 93,
+        "missing": false,
+        "advance": [
+          414,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "bd1077da71eebf4f7ae858a460020ef39d50e8d8360fb3a25a266315cef56674",
+        "cluster": 92,
+        "missing": false,
+        "advance": [
+          275,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 91,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "2e46053910cbcfc733756d37110a3ff9fa7100d0d4c779970a7afc8d53658a1e",
+        "cluster": 90,
+        "missing": false,
+        "advance": [
+          591,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "85b8656824dda5d133a3913ae0478a20ce651b55ea7114ad1da7f5ecf883f451",
+        "cluster": 89,
+        "missing": false,
+        "advance": [
+          456,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4267730fec6cef26c2101d55fd7ff9db97dc6e2a9a8522caeadefd2639a6dfc3",
+        "cluster": 88,
+        "missing": false,
+        "advance": [
+          253,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "675ff7534c4bfd2bc063ffb8a6292e337b3cf023aa7549ebc12d394af302d74a",
+        "cluster": 87,
+        "missing": false,
+        "advance": [
+          414,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b91fa393931cbb31ba4e862609fa8fd8578c6d10068e27f12add156f194b995b",
+        "cluster": 86,
+        "missing": false,
+        "advance": [
+          343,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 85,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "01603f4f8322e5fecd67ad0da36149b57cc30a564806389308b3abf8562ad73a",
+        "cluster": 84,
+        "missing": false,
+        "advance": [
+          586,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "65804c69c657a19c62ccf42664c075cd56aeb0b3a7986e51040947cfbd2010dd",
+        "cluster": 83,
+        "missing": false,
+        "advance": [
+          238,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 82,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "3762dd2e8908d6636078a38bddfe0f578f16818f9dd59238864f04994b69164e",
+        "cluster": 81,
+        "missing": false,
+        "advance": [
+          528,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "27a1e0c33fb4a4c30733d3d34a8da146f455b9ee302c5ce5fff835de8e976c13",
+        "cluster": 80,
+        "missing": false,
+        "advance": [
+          381,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b2d910d2817f11808852d9c6adc89add237eec9fe05b491bba2fdd5347727c8c",
+        "cluster": 79,
+        "missing": false,
+        "advance": [
+          360,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "93dfd37929657084990ba9b4a118ab4ad1651881d9890a2248bb21306efff402",
+        "cluster": 78,
+        "missing": false,
+        "advance": [
+          245,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "9e712e9ecbc26b43872b555aa055c2cef4dc354051c6e13d986e1b4977ace689",
+        "cluster": 77,
+        "missing": false,
+        "advance": [
+          505,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "671e49b2c859b8d99e15eff6b28256942586e6566135d8991686e4c5f81e1a52",
+        "cluster": 76,
+        "missing": false,
+        "advance": [
+          468,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 75,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b1415359b4ee574238f09d8102bd2ff0763b19ed6a82c2dfb90a2a7c588b24da",
+        "cluster": 74,
+        "missing": false,
+        "advance": [
+          238,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4a6cc4962d4333c89571ce3deea49cf27cc1f6ca0d76b77d0de043ba2f9779ef",
+        "cluster": 72,
+        "missing": false,
+        "advance": [
+          0,
+          0
+        ],
+        "offset": [
+          116,
+          88
+        ]
+      },
+      {
+        "outline": "09c67a08d9caa66344ea0159d5e05ad89767496367616f522affe44653498e6d",
+        "cluster": 72,
+        "missing": false,
+        "advance": [
+          404,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b2d910d2817f11808852d9c6adc89add237eec9fe05b491bba2fdd5347727c8c",
+        "cluster": 71,
+        "missing": false,
+        "advance": [
+          360,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b6a2fc23e5e946fd892ff5b8994a7b66283934b4f295659d845ccb10ed217997",
+        "cluster": 70,
+        "missing": false,
+        "advance": [
+          413,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "0a29adbe5d6955d6ffe4d8b7a2cde28a11fa46eaa32324a37a25f05df6aae6a7",
+        "cluster": 69,
+        "missing": false,
+        "advance": [
+          786,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "671e49b2c859b8d99e15eff6b28256942586e6566135d8991686e4c5f81e1a52",
+        "cluster": 68,
+        "missing": false,
+        "advance": [
+          468,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 67,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4a6cc4962d4333c89571ce3deea49cf27cc1f6ca0d76b77d0de043ba2f9779ef",
+        "cluster": 65,
+        "missing": false,
+        "advance": [
+          0,
+          0
+        ],
+        "offset": [
+          4,
+          130
+        ]
+      },
+      {
+        "outline": "d3b0f36b62ffb309da21400e468034a2c893d38f3ef52df3a582889f208a14aa",
+        "cluster": 65,
+        "missing": false,
+        "advance": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "3e20754aaf0e3afcedc1b911f458d7a5d5b525c4e1fa9b68acae6dc41a0ea119",
+        "cluster": 64,
+        "missing": false,
+        "advance": [
+          610,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "72740f62986eafc773f69810182ee0cbdacc138677c8ada0879188f1c16ce153",
+        "cluster": 63,
+        "missing": false,
+        "advance": [
+          387,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "9e712e9ecbc26b43872b555aa055c2cef4dc354051c6e13d986e1b4977ace689",
+        "cluster": 62,
+        "missing": false,
+        "advance": [
+          505,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 61,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b1415359b4ee574238f09d8102bd2ff0763b19ed6a82c2dfb90a2a7c588b24da",
+        "cluster": 60,
+        "missing": false,
+        "advance": [
+          238,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b88f1822527f9f5e5c16667287a829042d8efd15936e7a4aa649c9425b661b1c",
+        "cluster": 59,
+        "missing": false,
+        "advance": [
+          468,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "266b3889dc417bc8f6beeb95d214da5cd8575f16517a91f8998dfecf2dc4c866",
+        "cluster": 58,
+        "missing": false,
+        "advance": [
+          292,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b88bfcdb3af8bf8ae32f387cbaf51814647ed2dc1efee7a29c854cc63a182be6",
+        "cluster": 57,
+        "missing": false,
+        "advance": [
+          508,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "671e49b2c859b8d99e15eff6b28256942586e6566135d8991686e4c5f81e1a52",
+        "cluster": 56,
+        "missing": false,
+        "advance": [
+          468,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 55,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "384f42ec7d1c640ca52e7eb6ed94c9f72a03bfc0ecb691e3571bd9afb3a3a079",
+        "cluster": 54,
+        "missing": false,
+        "advance": [
+          474,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "23a1f250ff3f3c82b4bb01853fd16e46731341beaaa06bacef25fe8c2a94d8de",
+        "cluster": 53,
+        "missing": false,
+        "advance": [
+          420,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "671e49b2c859b8d99e15eff6b28256942586e6566135d8991686e4c5f81e1a52",
+        "cluster": 52,
+        "missing": false,
+        "advance": [
+          468,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 51,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b032226d2ee114d883ccb18d63bc233f41ac6b35ec1030b7b9c13ae9cfed80a4",
+        "cluster": 50,
+        "missing": false,
+        "advance": [
+          206,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4965a46f8c9fb735128965c1d119a0de46f943e1f7ce40af4a61437b8261d0a8",
+        "cluster": 49,
+        "missing": false,
+        "advance": [
+          647,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b88f1822527f9f5e5c16667287a829042d8efd15936e7a4aa649c9425b661b1c",
+        "cluster": 48,
+        "missing": false,
+        "advance": [
+          468,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "72740f62986eafc773f69810182ee0cbdacc138677c8ada0879188f1c16ce153",
+        "cluster": 47,
+        "missing": false,
+        "advance": [
+          387,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "0510c8ac198260c504ae13ea3ef2d809645349282b6215ef340ed8f9411bad66",
+        "cluster": 46,
+        "missing": false,
+        "advance": [
+          666,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "3ff39aecca2d54d69f6a82d79b3d90fa31131070085999b05c21f614558fa913",
+        "cluster": 45,
+        "missing": false,
+        "advance": [
+          212,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b1415359b4ee574238f09d8102bd2ff0763b19ed6a82c2dfb90a2a7c588b24da",
+        "cluster": 44,
+        "missing": false,
+        "advance": [
+          238,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "671e49b2c859b8d99e15eff6b28256942586e6566135d8991686e4c5f81e1a52",
+        "cluster": 43,
+        "missing": false,
+        "advance": [
+          468,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 42,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "be3c23420c6e9030d5ef25b36b25e7dec4abe5ef569f80fd388a235a118ecfc4",
+        "cluster": 41,
+        "missing": false,
+        "advance": [
+          467,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "85b8656824dda5d133a3913ae0478a20ce651b55ea7114ad1da7f5ecf883f451",
+        "cluster": 40,
+        "missing": false,
+        "advance": [
+          456,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b1415359b4ee574238f09d8102bd2ff0763b19ed6a82c2dfb90a2a7c588b24da",
+        "cluster": 39,
+        "missing": false,
+        "advance": [
+          238,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "09c67a08d9caa66344ea0159d5e05ad89767496367616f522affe44653498e6d",
+        "cluster": 38,
+        "missing": false,
+        "advance": [
+          404,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "440a739ca0e79f48a3bba2eaa55d246794b9b3ba614d55f9928cb1ab3cc242ef",
+        "cluster": 37,
+        "missing": false,
+        "advance": [
+          459,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "3ff39aecca2d54d69f6a82d79b3d90fa31131070085999b05c21f614558fa913",
+        "cluster": 36,
+        "missing": false,
+        "advance": [
+          212,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b1415359b4ee574238f09d8102bd2ff0763b19ed6a82c2dfb90a2a7c588b24da",
+        "cluster": 35,
+        "missing": false,
+        "advance": [
+          238,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 34,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4d9979a2d7cb7f10dd6a522aa7478fcd8e356cb52e743b3153398a979f101d59",
+        "cluster": 33,
+        "missing": false,
+        "advance": [
+          687,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "74c103014ef47d9edb811e80aeb2559a7fc9b626c366bd6890de8b4ac750a053",
+        "cluster": 32,
+        "missing": false,
+        "advance": [
+          420,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 31,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "bbe9aefdf0d3066e27cd901c1a43c0389485593a9f894efe640cd10b90f9fc1b",
+        "cluster": 30,
+        "missing": false,
+        "advance": [
+          585,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b91fa393931cbb31ba4e862609fa8fd8578c6d10068e27f12add156f194b995b",
+        "cluster": 29,
+        "missing": false,
+        "advance": [
+          343,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "671e49b2c859b8d99e15eff6b28256942586e6566135d8991686e4c5f81e1a52",
+        "cluster": 28,
+        "missing": false,
+        "advance": [
+          468,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4267730fec6cef26c2101d55fd7ff9db97dc6e2a9a8522caeadefd2639a6dfc3",
+        "cluster": 27,
+        "missing": false,
+        "advance": [
+          253,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "460d022710c113a68cb0ba83c556d76da2c51cf23a359554bff29a82b29cc8bc",
+        "cluster": 26,
+        "missing": false,
+        "advance": [
+          663,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "bf8798183e9fa21a3f5b4ed646ac1ce83fc3bcc6aff7a8e48cd1ccc3e97691ee",
+        "cluster": 25,
+        "missing": false,
+        "advance": [
+          360,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "85b8656824dda5d133a3913ae0478a20ce651b55ea7114ad1da7f5ecf883f451",
+        "cluster": 24,
+        "missing": false,
+        "advance": [
+          456,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 23,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b1415359b4ee574238f09d8102bd2ff0763b19ed6a82c2dfb90a2a7c588b24da",
+        "cluster": 22,
+        "missing": false,
+        "advance": [
+          238,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4a6cc4962d4333c89571ce3deea49cf27cc1f6ca0d76b77d0de043ba2f9779ef",
+        "cluster": 20,
+        "missing": false,
+        "advance": [
+          0,
+          0
+        ],
+        "offset": [
+          116,
+          88
+        ]
+      },
+      {
+        "outline": "84d9b44a2c967e6176c9781033dc0c0b674a013a392326b79c7fefc1e8fbfb58",
+        "cluster": 20,
+        "missing": false,
+        "advance": [
+          386,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b1415359b4ee574238f09d8102bd2ff0763b19ed6a82c2dfb90a2a7c588b24da",
+        "cluster": 19,
+        "missing": false,
+        "advance": [
+          238,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "09c67a08d9caa66344ea0159d5e05ad89767496367616f522affe44653498e6d",
+        "cluster": 18,
+        "missing": false,
+        "advance": [
+          404,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "aaef6d5e032495431c85b5b3e62a6cb904085924858b5ec3bb0170495f24f907",
+        "cluster": 17,
+        "missing": false,
+        "advance": [
+          636,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "65804c69c657a19c62ccf42664c075cd56aeb0b3a7986e51040947cfbd2010dd",
+        "cluster": 16,
+        "missing": false,
+        "advance": [
+          238,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 15,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "d5322c515c094330cbaa8c2525a2873c217e041647f75d08cd3316bd8c016be7",
+        "cluster": 14,
+        "missing": false,
+        "advance": [
+          1013,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4267730fec6cef26c2101d55fd7ff9db97dc6e2a9a8522caeadefd2639a6dfc3",
+        "cluster": 13,
+        "missing": false,
+        "advance": [
+          253,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "d675168cac05f68f3af32e87c13aab4e230d2b649e085447b749354cf9b02806",
+        "cluster": 12,
+        "missing": false,
+        "advance": [
+          292,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "3ff39aecca2d54d69f6a82d79b3d90fa31131070085999b05c21f614558fa913",
+        "cluster": 11,
+        "missing": false,
+        "advance": [
+          212,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b1415359b4ee574238f09d8102bd2ff0763b19ed6a82c2dfb90a2a7c588b24da",
+        "cluster": 10,
+        "missing": false,
+        "advance": [
+          238,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 9,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "5dfbb623f63c2a910d059efd0cae26fdd0b2d11de97499382b2412ccc4fa3d75",
+        "cluster": 8,
+        "missing": false,
+        "advance": [
+          477,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b2d910d2817f11808852d9c6adc89add237eec9fe05b491bba2fdd5347727c8c",
+        "cluster": 7,
+        "missing": false,
+        "advance": [
+          360,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b6a2fc23e5e946fd892ff5b8994a7b66283934b4f295659d845ccb10ed217997",
+        "cluster": 6,
+        "missing": false,
+        "advance": [
+          413,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "544fc7c37df607e33442a0e0946bd610a24c139abb300f1b94abf3b773c68f58",
+        "cluster": 5,
+        "missing": false,
+        "advance": [
+          636,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 4,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "384f42ec7d1c640ca52e7eb6ed94c9f72a03bfc0ecb691e3571bd9afb3a3a079",
+        "cluster": 3,
+        "missing": false,
+        "advance": [
+          474,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "3ff39aecca2d54d69f6a82d79b3d90fa31131070085999b05c21f614558fa913",
+        "cluster": 2,
+        "missing": false,
+        "advance": [
+          212,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b88f1822527f9f5e5c16667287a829042d8efd15936e7a4aa649c9425b661b1c",
+        "cluster": 1,
+        "missing": false,
+        "advance": [
+          468,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b91fa393931cbb31ba4e862609fa8fd8578c6d10068e27f12add156f194b995b",
+        "cluster": 0,
+        "missing": false,
+        "advance": [
+          343,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      }
+    ]
+  ],
+  "subset": [
+    [
+      {
+        "outline": "b032226d2ee114d883ccb18d63bc233f41ac6b35ec1030b7b9c13ae9cfed80a4",
+        "cluster": 115,
+        "missing": false,
+        "advance": [
+          206,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "6740ac506f9f9bd9f9f7f72c642672da956b09d57835b71d49e760d40e2639ba",
+        "cluster": 114,
+        "missing": false,
+        "advance": [
+          437,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4267730fec6cef26c2101d55fd7ff9db97dc6e2a9a8522caeadefd2639a6dfc3",
+        "cluster": 113,
+        "missing": false,
+        "advance": [
+          253,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b5a8b18fdb5081c7bf724ad9530b5ddf95b921a37cc3d30e1609446ee2b1b010",
+        "cluster": 112,
+        "missing": false,
+        "advance": [
+          636,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "539693133e858b3ade300151e63de3dce136a922e8761faf5a079ada890bcd2b",
+        "cluster": 111,
+        "missing": false,
+        "advance": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "116187dd1da29d284ddd36a4b467fb12233e974258a37ce836e5c89e9a544381",
+        "cluster": 110,
+        "missing": false,
+        "advance": [
+          518,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b1415359b4ee574238f09d8102bd2ff0763b19ed6a82c2dfb90a2a7c588b24da",
+        "cluster": 109,
+        "missing": false,
+        "advance": [
+          238,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 108,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "1bb0f9bc0a60d9ce9b82b6b0f0b1fc3cdca3b7cc5f5a71e4abfe3ddcefdc68c3",
+        "cluster": 107,
+        "missing": false,
+        "advance": [
+          636,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "671e49b2c859b8d99e15eff6b28256942586e6566135d8991686e4c5f81e1a52",
+        "cluster": 106,
+        "missing": false,
+        "advance": [
+          468,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "09c67a08d9caa66344ea0159d5e05ad89767496367616f522affe44653498e6d",
+        "cluster": 105,
+        "missing": false,
+        "advance": [
+          404,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "bd1077da71eebf4f7ae858a460020ef39d50e8d8360fb3a25a266315cef56674",
+        "cluster": 104,
+        "missing": false,
+        "advance": [
+          275,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 103,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4267730fec6cef26c2101d55fd7ff9db97dc6e2a9a8522caeadefd2639a6dfc3",
+        "cluster": 102,
+        "missing": false,
+        "advance": [
+          253,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4a6cc4962d4333c89571ce3deea49cf27cc1f6ca0d76b77d0de043ba2f9779ef",
+        "cluster": 100,
+        "missing": false,
+        "advance": [
+          0,
+          0
+        ],
+        "offset": [
+          307,
+          181
+        ]
+      },
+      {
+        "outline": "db434b0236f11a480596d04fb36aaf716e7cb2130542df2716857931826a4465",
+        "cluster": 100,
+        "missing": false,
+        "advance": [
+          778,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "675ff7534c4bfd2bc063ffb8a6292e337b3cf023aa7549ebc12d394af302d74a",
+        "cluster": 99,
+        "missing": false,
+        "advance": [
+          414,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "bd1077da71eebf4f7ae858a460020ef39d50e8d8360fb3a25a266315cef56674",
+        "cluster": 98,
+        "missing": false,
+        "advance": [
+          275,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 97,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "3762dd2e8908d6636078a38bddfe0f578f16818f9dd59238864f04994b69164e",
+        "cluster": 96,
+        "missing": false,
+        "advance": [
+          528,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "27a1e0c33fb4a4c30733d3d34a8da146f455b9ee302c5ce5fff835de8e976c13",
+        "cluster": 95,
+        "missing": false,
+        "advance": [
+          381,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "db434b0236f11a480596d04fb36aaf716e7cb2130542df2716857931826a4465",
+        "cluster": 94,
+        "missing": false,
+        "advance": [
+          778,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "675ff7534c4bfd2bc063ffb8a6292e337b3cf023aa7549ebc12d394af302d74a",
+        "cluster": 93,
+        "missing": false,
+        "advance": [
+          414,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "bd1077da71eebf4f7ae858a460020ef39d50e8d8360fb3a25a266315cef56674",
+        "cluster": 92,
+        "missing": false,
+        "advance": [
+          275,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 91,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "2e46053910cbcfc733756d37110a3ff9fa7100d0d4c779970a7afc8d53658a1e",
+        "cluster": 90,
+        "missing": false,
+        "advance": [
+          591,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "85b8656824dda5d133a3913ae0478a20ce651b55ea7114ad1da7f5ecf883f451",
+        "cluster": 89,
+        "missing": false,
+        "advance": [
+          456,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4267730fec6cef26c2101d55fd7ff9db97dc6e2a9a8522caeadefd2639a6dfc3",
+        "cluster": 88,
+        "missing": false,
+        "advance": [
+          253,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "675ff7534c4bfd2bc063ffb8a6292e337b3cf023aa7549ebc12d394af302d74a",
+        "cluster": 87,
+        "missing": false,
+        "advance": [
+          414,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b91fa393931cbb31ba4e862609fa8fd8578c6d10068e27f12add156f194b995b",
+        "cluster": 86,
+        "missing": false,
+        "advance": [
+          343,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 85,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "01603f4f8322e5fecd67ad0da36149b57cc30a564806389308b3abf8562ad73a",
+        "cluster": 84,
+        "missing": false,
+        "advance": [
+          586,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "65804c69c657a19c62ccf42664c075cd56aeb0b3a7986e51040947cfbd2010dd",
+        "cluster": 83,
+        "missing": false,
+        "advance": [
+          238,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 82,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "3762dd2e8908d6636078a38bddfe0f578f16818f9dd59238864f04994b69164e",
+        "cluster": 81,
+        "missing": false,
+        "advance": [
+          528,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "27a1e0c33fb4a4c30733d3d34a8da146f455b9ee302c5ce5fff835de8e976c13",
+        "cluster": 80,
+        "missing": false,
+        "advance": [
+          381,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b2d910d2817f11808852d9c6adc89add237eec9fe05b491bba2fdd5347727c8c",
+        "cluster": 79,
+        "missing": false,
+        "advance": [
+          360,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "93dfd37929657084990ba9b4a118ab4ad1651881d9890a2248bb21306efff402",
+        "cluster": 78,
+        "missing": false,
+        "advance": [
+          245,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "9e712e9ecbc26b43872b555aa055c2cef4dc354051c6e13d986e1b4977ace689",
+        "cluster": 77,
+        "missing": false,
+        "advance": [
+          505,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "671e49b2c859b8d99e15eff6b28256942586e6566135d8991686e4c5f81e1a52",
+        "cluster": 76,
+        "missing": false,
+        "advance": [
+          468,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 75,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b1415359b4ee574238f09d8102bd2ff0763b19ed6a82c2dfb90a2a7c588b24da",
+        "cluster": 74,
+        "missing": false,
+        "advance": [
+          238,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4a6cc4962d4333c89571ce3deea49cf27cc1f6ca0d76b77d0de043ba2f9779ef",
+        "cluster": 72,
+        "missing": false,
+        "advance": [
+          0,
+          0
+        ],
+        "offset": [
+          116,
+          88
+        ]
+      },
+      {
+        "outline": "09c67a08d9caa66344ea0159d5e05ad89767496367616f522affe44653498e6d",
+        "cluster": 72,
+        "missing": false,
+        "advance": [
+          404,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b2d910d2817f11808852d9c6adc89add237eec9fe05b491bba2fdd5347727c8c",
+        "cluster": 71,
+        "missing": false,
+        "advance": [
+          360,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b6a2fc23e5e946fd892ff5b8994a7b66283934b4f295659d845ccb10ed217997",
+        "cluster": 70,
+        "missing": false,
+        "advance": [
+          413,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "0a29adbe5d6955d6ffe4d8b7a2cde28a11fa46eaa32324a37a25f05df6aae6a7",
+        "cluster": 69,
+        "missing": false,
+        "advance": [
+          786,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "671e49b2c859b8d99e15eff6b28256942586e6566135d8991686e4c5f81e1a52",
+        "cluster": 68,
+        "missing": false,
+        "advance": [
+          468,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 67,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4a6cc4962d4333c89571ce3deea49cf27cc1f6ca0d76b77d0de043ba2f9779ef",
+        "cluster": 65,
+        "missing": false,
+        "advance": [
+          0,
+          0
+        ],
+        "offset": [
+          4,
+          130
+        ]
+      },
+      {
+        "outline": "d3b0f36b62ffb309da21400e468034a2c893d38f3ef52df3a582889f208a14aa",
+        "cluster": 65,
+        "missing": false,
+        "advance": [
+          0,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "3e20754aaf0e3afcedc1b911f458d7a5d5b525c4e1fa9b68acae6dc41a0ea119",
+        "cluster": 64,
+        "missing": false,
+        "advance": [
+          610,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "72740f62986eafc773f69810182ee0cbdacc138677c8ada0879188f1c16ce153",
+        "cluster": 63,
+        "missing": false,
+        "advance": [
+          387,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "9e712e9ecbc26b43872b555aa055c2cef4dc354051c6e13d986e1b4977ace689",
+        "cluster": 62,
+        "missing": false,
+        "advance": [
+          505,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 61,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b1415359b4ee574238f09d8102bd2ff0763b19ed6a82c2dfb90a2a7c588b24da",
+        "cluster": 60,
+        "missing": false,
+        "advance": [
+          238,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b88f1822527f9f5e5c16667287a829042d8efd15936e7a4aa649c9425b661b1c",
+        "cluster": 59,
+        "missing": false,
+        "advance": [
+          468,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "266b3889dc417bc8f6beeb95d214da5cd8575f16517a91f8998dfecf2dc4c866",
+        "cluster": 58,
+        "missing": false,
+        "advance": [
+          292,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b88bfcdb3af8bf8ae32f387cbaf51814647ed2dc1efee7a29c854cc63a182be6",
+        "cluster": 57,
+        "missing": false,
+        "advance": [
+          508,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "671e49b2c859b8d99e15eff6b28256942586e6566135d8991686e4c5f81e1a52",
+        "cluster": 56,
+        "missing": false,
+        "advance": [
+          468,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 55,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "384f42ec7d1c640ca52e7eb6ed94c9f72a03bfc0ecb691e3571bd9afb3a3a079",
+        "cluster": 54,
+        "missing": false,
+        "advance": [
+          474,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "23a1f250ff3f3c82b4bb01853fd16e46731341beaaa06bacef25fe8c2a94d8de",
+        "cluster": 53,
+        "missing": false,
+        "advance": [
+          420,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "671e49b2c859b8d99e15eff6b28256942586e6566135d8991686e4c5f81e1a52",
+        "cluster": 52,
+        "missing": false,
+        "advance": [
+          468,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 51,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b032226d2ee114d883ccb18d63bc233f41ac6b35ec1030b7b9c13ae9cfed80a4",
+        "cluster": 50,
+        "missing": false,
+        "advance": [
+          206,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4965a46f8c9fb735128965c1d119a0de46f943e1f7ce40af4a61437b8261d0a8",
+        "cluster": 49,
+        "missing": false,
+        "advance": [
+          647,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b88f1822527f9f5e5c16667287a829042d8efd15936e7a4aa649c9425b661b1c",
+        "cluster": 48,
+        "missing": false,
+        "advance": [
+          468,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "72740f62986eafc773f69810182ee0cbdacc138677c8ada0879188f1c16ce153",
+        "cluster": 47,
+        "missing": false,
+        "advance": [
+          387,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "0510c8ac198260c504ae13ea3ef2d809645349282b6215ef340ed8f9411bad66",
+        "cluster": 46,
+        "missing": false,
+        "advance": [
+          666,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "3ff39aecca2d54d69f6a82d79b3d90fa31131070085999b05c21f614558fa913",
+        "cluster": 45,
+        "missing": false,
+        "advance": [
+          212,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b1415359b4ee574238f09d8102bd2ff0763b19ed6a82c2dfb90a2a7c588b24da",
+        "cluster": 44,
+        "missing": false,
+        "advance": [
+          238,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "671e49b2c859b8d99e15eff6b28256942586e6566135d8991686e4c5f81e1a52",
+        "cluster": 43,
+        "missing": false,
+        "advance": [
+          468,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 42,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "be3c23420c6e9030d5ef25b36b25e7dec4abe5ef569f80fd388a235a118ecfc4",
+        "cluster": 41,
+        "missing": false,
+        "advance": [
+          467,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "85b8656824dda5d133a3913ae0478a20ce651b55ea7114ad1da7f5ecf883f451",
+        "cluster": 40,
+        "missing": false,
+        "advance": [
+          456,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b1415359b4ee574238f09d8102bd2ff0763b19ed6a82c2dfb90a2a7c588b24da",
+        "cluster": 39,
+        "missing": false,
+        "advance": [
+          238,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "09c67a08d9caa66344ea0159d5e05ad89767496367616f522affe44653498e6d",
+        "cluster": 38,
+        "missing": false,
+        "advance": [
+          404,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "440a739ca0e79f48a3bba2eaa55d246794b9b3ba614d55f9928cb1ab3cc242ef",
+        "cluster": 37,
+        "missing": false,
+        "advance": [
+          459,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "3ff39aecca2d54d69f6a82d79b3d90fa31131070085999b05c21f614558fa913",
+        "cluster": 36,
+        "missing": false,
+        "advance": [
+          212,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b1415359b4ee574238f09d8102bd2ff0763b19ed6a82c2dfb90a2a7c588b24da",
+        "cluster": 35,
+        "missing": false,
+        "advance": [
+          238,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 34,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4d9979a2d7cb7f10dd6a522aa7478fcd8e356cb52e743b3153398a979f101d59",
+        "cluster": 33,
+        "missing": false,
+        "advance": [
+          687,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "74c103014ef47d9edb811e80aeb2559a7fc9b626c366bd6890de8b4ac750a053",
+        "cluster": 32,
+        "missing": false,
+        "advance": [
+          420,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 31,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "bbe9aefdf0d3066e27cd901c1a43c0389485593a9f894efe640cd10b90f9fc1b",
+        "cluster": 30,
+        "missing": false,
+        "advance": [
+          585,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b91fa393931cbb31ba4e862609fa8fd8578c6d10068e27f12add156f194b995b",
+        "cluster": 29,
+        "missing": false,
+        "advance": [
+          343,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "671e49b2c859b8d99e15eff6b28256942586e6566135d8991686e4c5f81e1a52",
+        "cluster": 28,
+        "missing": false,
+        "advance": [
+          468,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4267730fec6cef26c2101d55fd7ff9db97dc6e2a9a8522caeadefd2639a6dfc3",
+        "cluster": 27,
+        "missing": false,
+        "advance": [
+          253,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "460d022710c113a68cb0ba83c556d76da2c51cf23a359554bff29a82b29cc8bc",
+        "cluster": 26,
+        "missing": false,
+        "advance": [
+          663,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "bf8798183e9fa21a3f5b4ed646ac1ce83fc3bcc6aff7a8e48cd1ccc3e97691ee",
+        "cluster": 25,
+        "missing": false,
+        "advance": [
+          360,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "85b8656824dda5d133a3913ae0478a20ce651b55ea7114ad1da7f5ecf883f451",
+        "cluster": 24,
+        "missing": false,
+        "advance": [
+          456,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 23,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b1415359b4ee574238f09d8102bd2ff0763b19ed6a82c2dfb90a2a7c588b24da",
+        "cluster": 22,
+        "missing": false,
+        "advance": [
+          238,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4a6cc4962d4333c89571ce3deea49cf27cc1f6ca0d76b77d0de043ba2f9779ef",
+        "cluster": 20,
+        "missing": false,
+        "advance": [
+          0,
+          0
+        ],
+        "offset": [
+          116,
+          88
+        ]
+      },
+      {
+        "outline": "84d9b44a2c967e6176c9781033dc0c0b674a013a392326b79c7fefc1e8fbfb58",
+        "cluster": 20,
+        "missing": false,
+        "advance": [
+          386,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b1415359b4ee574238f09d8102bd2ff0763b19ed6a82c2dfb90a2a7c588b24da",
+        "cluster": 19,
+        "missing": false,
+        "advance": [
+          238,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "09c67a08d9caa66344ea0159d5e05ad89767496367616f522affe44653498e6d",
+        "cluster": 18,
+        "missing": false,
+        "advance": [
+          404,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "aaef6d5e032495431c85b5b3e62a6cb904085924858b5ec3bb0170495f24f907",
+        "cluster": 17,
+        "missing": false,
+        "advance": [
+          636,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "65804c69c657a19c62ccf42664c075cd56aeb0b3a7986e51040947cfbd2010dd",
+        "cluster": 16,
+        "missing": false,
+        "advance": [
+          238,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 15,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "d5322c515c094330cbaa8c2525a2873c217e041647f75d08cd3316bd8c016be7",
+        "cluster": 14,
+        "missing": false,
+        "advance": [
+          1013,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4267730fec6cef26c2101d55fd7ff9db97dc6e2a9a8522caeadefd2639a6dfc3",
+        "cluster": 13,
+        "missing": false,
+        "advance": [
+          253,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "d675168cac05f68f3af32e87c13aab4e230d2b649e085447b749354cf9b02806",
+        "cluster": 12,
+        "missing": false,
+        "advance": [
+          292,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "3ff39aecca2d54d69f6a82d79b3d90fa31131070085999b05c21f614558fa913",
+        "cluster": 11,
+        "missing": false,
+        "advance": [
+          212,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b1415359b4ee574238f09d8102bd2ff0763b19ed6a82c2dfb90a2a7c588b24da",
+        "cluster": 10,
+        "missing": false,
+        "advance": [
+          238,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 9,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "5dfbb623f63c2a910d059efd0cae26fdd0b2d11de97499382b2412ccc4fa3d75",
+        "cluster": 8,
+        "missing": false,
+        "advance": [
+          477,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b2d910d2817f11808852d9c6adc89add237eec9fe05b491bba2fdd5347727c8c",
+        "cluster": 7,
+        "missing": false,
+        "advance": [
+          360,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b6a2fc23e5e946fd892ff5b8994a7b66283934b4f295659d845ccb10ed217997",
+        "cluster": 6,
+        "missing": false,
+        "advance": [
+          413,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "544fc7c37df607e33442a0e0946bd610a24c139abb300f1b94abf3b773c68f58",
+        "cluster": 5,
+        "missing": false,
+        "advance": [
+          636,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "cluster": 4,
+        "missing": false,
+        "advance": [
+          221,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "384f42ec7d1c640ca52e7eb6ed94c9f72a03bfc0ecb691e3571bd9afb3a3a079",
+        "cluster": 3,
+        "missing": false,
+        "advance": [
+          474,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "3ff39aecca2d54d69f6a82d79b3d90fa31131070085999b05c21f614558fa913",
+        "cluster": 2,
+        "missing": false,
+        "advance": [
+          212,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b88f1822527f9f5e5c16667287a829042d8efd15936e7a4aa649c9425b661b1c",
+        "cluster": 1,
+        "missing": false,
+        "advance": [
+          468,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      },
+      {
+        "outline": "b91fa393931cbb31ba4e862609fa8fd8578c6d10068e27f12add156f194b995b",
+        "cluster": 0,
+        "missing": false,
+        "advance": [
+          343,
+          0
+        ],
+        "offset": [
+          0,
+          0
+        ]
+      }
+    ]
+  ]
+}

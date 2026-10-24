@@ -1,0 +1,76 @@
+{
+  "files": [
+    {
+      "file": "NotoSans-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-fonts/ffebf8c1ee449e544955a7e813c54f9b73848eac/hinted/ttf/NotoSans/NotoSans-Regular.ttf",
+      "revision": "ffebf8c1ee449e544955a7e813c54f9b73848eac",
+      "sha256": "b85c38ecea8a7cfb39c24e395a4007474fa5a4fc864f6ee33309eb4948d232d5",
+      "bytes": 569208
+    },
+    {
+      "file": "NotoNaskhArabic-Regular.ttf",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-fonts/ffebf8c1ee449e544955a7e813c54f9b73848eac/hinted/ttf/NotoNaskhArabic/NotoNaskhArabic-Regular.ttf",
+      "revision": "ffebf8c1ee449e544955a7e813c54f9b73848eac",
+      "sha256": "2f4b88e6ee50fa82c617e2d1d4ba18281cb1c6cd71c3af3ec64970c23995db4b",
+      "bytes": 178388
+    },
+    {
+      "file": "OFL.txt",
+      "url": "https://raw.githubusercontent.com/notofonts/noto-fonts/ffebf8c1ee449e544955a7e813c54f9b73848eac/LICENSE",
+      "revision": "ffebf8c1ee449e544955a7e813c54f9b73848eac",
+      "sha256": "0dab92d0544f7b233403f14b84a663bdbfa746982eda629e7f4f9ffe1b036feb",
+      "bytes": 4377
+    },
+    {
+      "file": "udhr_eng.xml",
+      "url": "https://raw.githubusercontent.com/unicode-org/udhr/588b3f4b2d0467aff54842a4b926551b69d5a66a/data/udhr/udhr_eng.xml",
+      "revision": "588b3f4b2d0467aff54842a4b926551b69d5a66a",
+      "sha256": "df73275821449df4db2b164e59bda812c834d80cacc8792a6f41d6fc331ce204",
+      "bytes": 15848
+    },
+    {
+      "file": "udhr_fra.xml",
+      "url": "https://raw.githubusercontent.com/unicode-org/udhr/588b3f4b2d0467aff54842a4b926551b69d5a66a/data/udhr/udhr_fra.xml",
+      "revision": "588b3f4b2d0467aff54842a4b926551b69d5a66a",
+      "sha256": "d8c5970618f276065532f7aee7467e0dde3dda7fb4e5e38ea925466067e1515d",
+      "bytes": 17638
+    },
+    {
+      "file": "udhr_arb.xml",
+      "url": "https://raw.githubusercontent.com/unicode-org/udhr/588b3f4b2d0467aff54842a4b926551b69d5a66a/data/udhr/udhr_arb.xml",
+      "revision": "588b3f4b2d0467aff54842a4b926551b69d5a66a",
+      "sha256": "a04e769170f8acaf9afe84b723e0a9865950cca9ec35e47b08da831a7e86dcec",
+      "bytes": 19037
+    },
+    {
+      "file": "UNICODE-LICENSE.txt",
+      "url": "https://www.unicode.org/license.txt",
+      "revision": "retrieved 2026-10-19; content pinned by SHA-256",
+      "sha256": "e7a93b009565cfce55919a381437ac4db883e9da2126fa28b91d12732bc53d96",
+      "bytes": 1995
+    }
+  ],
+  "derived": [
+    {
+      "file": "eng.txt",
+      "sha256": "9b2f4374822ae5b8a14e89f69bdcc1b570948e201f318c763ee1c31d2fb02f3d",
+      "bytes": 171
+    },
+    {
+      "file": "fra.txt",
+      "sha256": "3a769640be35a486f26d9d90f89c3fb737c6d25d80d344deaf976cfff374b168",
+      "bytes": 192
+    },
+    {
+      "file": "arb.txt",
+      "sha256": "ba2a2300765aec8f27dc6a057458fb07b723b99f80e31dcf8778edee69866d49",
+      "bytes": 213
+    },
+    {
+      "file": "TEXT-NOTICE.txt",
+      "sha256": "350dc2245ee7828c2c9a894f6427f63ba473e280b4935502daeba6dbe1cf6c4f",
+      "bytes": 2494
+    }
+  ],
+  "text_extraction": "First article, all para itertext, stripped, joined with newline and final newline; no normalization."
+}

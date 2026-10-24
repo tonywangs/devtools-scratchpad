@@ -1,0 +1,23 @@
+{
+  "oracle": "HarfBuzz draw_glyph_with_pen outline commands, explicit-script shaping; independent of core.py and its fontTools pen hash implementation",
+  "harfbuzz": "12.1.0",
+  "uharfbuzz": "0.52.0",
+  "samples": [
+    {
+      "sample": "latin",
+      "glyph_count": 356,
+      "outlines_positions_clusters_equal": true,
+      "missing_glyphs": 0,
+      "source_bytes": 569208,
+      "subset_bytes": 9644
+    },
+    {
+      "sample": "arabic",
+      "glyph_count": 116,
+      "outlines_positions_clusters_equal": true,
+      "missing_glyphs": 0,
+      "source_bytes": 178388,
+      "subset_bytes": 13532
+    }
+  ]
+}

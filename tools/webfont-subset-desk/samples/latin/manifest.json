@@ -1,0 +1,81 @@
+{
+  "schema": 1,
+  "source": {
+    "sha256": "b85c38ecea8a7cfb39c24e395a4007474fa5a4fc864f6ee33309eb4948d232d5",
+    "bytes": 569208,
+    "family": "Noto Sans"
+  },
+  "text": {
+    "sha256": "c9b60a3a229208e6dd305ac7061b7d052af817c9b7e39410595b1413fd2a7989",
+    "bytes": 364,
+    "codepoints": 359
+  },
+  "settings": {
+    "script": "Latn",
+    "language": "en",
+    "direction": "ltr",
+    "liga": true,
+    "kern": true
+  },
+  "subset": {
+    "sha256": "d21fd48d26310af283776a099764b90c5c7cf32b0afdce9319b0830d75c196f1",
+    "bytes": 9644,
+    "family": "SubsetDeske93b17575d23",
+    "saved_bytes": 559564,
+    "change_percent": -98.31
+  },
+  "coverage": {
+    "source_sha256": "b85c38ecea8a7cfb39c24e395a4007474fa5a4fc864f6ee33309eb4948d232d5",
+    "source_bytes": 569208,
+    "family": "Noto Sans",
+    "unique_characters": 30,
+    "covered": 30,
+    "missing": [],
+    "ignored_controls": [
+      "U+000A"
+    ],
+    "notice": "Character-map coverage is not a shaping or rendering guarantee."
+  },
+  "shaping": {
+    "engine": "uharfbuzz 0.52.0",
+    "harfbuzz": "12.1.0",
+    "fonttools": "4.60.1",
+    "method": "Per-line, per-tab explicit script/language/direction; decomposed outline SHA-256, clusters, missing-glyph flags, x/y advances and offsets in font units. No raw glyph ID comparison.",
+    "equal": true,
+    "missing_glyphs": 0,
+    "glyph_count": 356
+  },
+  "license_sha256": "c2a1029585ba0ab0262b1d81145f5ebd9ad3892f8948057d8a53048dde101320",
+  "limitations": [
+    "Only the selected text and explicit shaping settings were checked.",
+    "Cmap coverage is distinct from shaping. HarfBuzz equality is not a cross-browser pixel guarantee.",
+    "Rebuild for future text outside the repertoire. Use separate script runs; no mixed bidi paragraphs.",
+    "Font is renamed; preserve this license and all applicable source obligations."
+  ],
+  "files": {
+    "subset.woff2": {
+      "sha256": "d21fd48d26310af283776a099764b90c5c7cf32b0afdce9319b0830d75c196f1",
+      "bytes": 9644
+    },
+    "style.css": {
+      "sha256": "c023624c166336723d4b01d9dbe281e459d9fbc5d408a7f47a85f016003e66ef",
+      "bytes": 312
+    },
+    "specimen.html": {
+      "sha256": "ffe6c212a5f5cac62da14fb1ff2f0efca727bea45ad8b21fa10d5a221e81a3be",
+      "bytes": 21935
+    },
+    "text.txt": {
+      "sha256": "c9b60a3a229208e6dd305ac7061b7d052af817c9b7e39410595b1413fd2a7989",
+      "bytes": 364
+    },
+    "LICENSE.txt": {
+      "sha256": "c2a1029585ba0ab0262b1d81145f5ebd9ad3892f8948057d8a53048dde101320",
+      "bytes": 6873
+    },
+    "shaping.json": {
+      "sha256": "1e67c2d69b033e2009d938cffbf2c9fd378a47c856315229f3b8504327b32e0c",
+      "bytes": 190819
+    }
+  }
+}

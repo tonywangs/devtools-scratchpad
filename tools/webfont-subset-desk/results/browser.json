@@ -1,0 +1,120 @@
+{
+  "browser": "145.0.7632.6",
+  "method": "Chromium canvas RGBA equality at 16/32/48px; white 2000x800 canvas, same coordinates, direction, text. DOM CDP font inspection confirms all rendered fonts are custom. Both default optional features enabled in pixel checks.",
+  "workflow": [
+    "real Latin demo",
+    "feature configuration",
+    "project download",
+    "reload recovery",
+    "mismatched font rejection",
+    "matching reconnection",
+    "project import",
+    "UTF-8 text import",
+    "missing coverage blocks export",
+    "Latin and Arabic build",
+    "ZIP download and hash verification",
+    "file:// standalone reopen without remote requests"
+  ],
+  "results": [
+    {
+      "sample": "latin",
+      "pixel_comparison": [
+        {
+          "size": 16,
+          "different_channels": 0,
+          "ink_channels": 40668
+        },
+        {
+          "size": 32,
+          "different_channels": 0,
+          "ink_channels": 102027
+        },
+        {
+          "size": 48,
+          "different_channels": 0,
+          "ink_channels": 133236
+        }
+      ],
+      "dom_fonts": {
+        "#original": [
+          {
+            "familyName": "Noto Sans",
+            "postScriptName": "NotoSans-Regular",
+            "isCustomFont": true,
+            "glyphCount": 356
+          }
+        ],
+        "#subset": [
+          {
+            "familyName": "SubsetDeske93b17575d23",
+            "postScriptName": "SubsetDeske93b17575d23",
+            "isCustomFont": true,
+            "glyphCount": 356
+          }
+        ]
+      },
+      "standalone_fonts": [
+        {
+          "familyName": "SubsetDeske93b17575d23",
+          "postScriptName": "SubsetDeske93b17575d23",
+          "isCustomFont": true,
+          "glyphCount": 356
+        }
+      ],
+      "standalone_remote_requests": 0,
+      "source_bytes": 569208,
+      "subset_bytes": 9644
+    },
+    {
+      "sample": "arabic",
+      "pixel_comparison": [
+        {
+          "size": 16,
+          "different_channels": 0,
+          "ink_channels": 9672
+        },
+        {
+          "size": 32,
+          "different_channels": 0,
+          "ink_channels": 29580
+        },
+        {
+          "size": 48,
+          "different_channels": 0,
+          "ink_channels": 57726
+        }
+      ],
+      "dom_fonts": {
+        "#original": [
+          {
+            "familyName": "Noto Naskh Arabic",
+            "postScriptName": "NotoNaskhArabic-Regular",
+            "isCustomFont": true,
+            "glyphCount": 116
+          }
+        ],
+        "#subset": [
+          {
+            "familyName": "SubsetDesk94d10dfa45c4",
+            "postScriptName": "SubsetDesk94d10dfa45c4",
+            "isCustomFont": true,
+            "glyphCount": 116
+          }
+        ]
+      },
+      "standalone_fonts": [
+        {
+          "familyName": "SubsetDesk94d10dfa45c4",
+          "postScriptName": "SubsetDesk94d10dfa45c4",
+          "isCustomFont": true,
+          "glyphCount": 116
+        }
+      ],
+      "standalone_remote_requests": 0,
+      "source_bytes": 178388,
+      "subset_bytes": 13532
+    }
+  ],
+  "page_errors": [],
+  "external_requests": []
+}
