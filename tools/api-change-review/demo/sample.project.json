@@ -1,0 +1,1778 @@
+{
+  "format": "api-change-review/project-v1",
+  "texts": {
+    "old": "{\n  \"openapi\": \"3.0.4\",\n  \"info\": {\n    \"title\": \"Swagger Petstore - OpenAPI 3.0\",\n    \"description\": \"This is a sample Pet Store Server based on the OpenAPI 3.0 specification.  You can find out more about\\nSwagger at [https://swagger.io](https://swagger.io). In the third iteration of the pet store, we've switched to the design first approach!\\nYou can now help us improve the API whether it's by making changes to the definition itself or to the code.\\nThat way, with time, we can improve the API in general, and expose some of the new features in OAS3.\\n\\nSome useful links:\\n- [The Pet Store repository](https://github.com/swagger-api/swagger-petstore)\\n- [The source API definition for the Pet Store](https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml)\",\n    \"termsOfService\": \"https://swagger.io/terms/\",\n    \"contact\": {\n      \"email\": \"apiteam@swagger.io\"\n    },\n    \"license\": {\n      \"name\": \"Apache 2.0\",\n      \"url\": \"https://www.apache.org/licenses/LICENSE-2.0.html\"\n    },\n    \"version\": \"1.0.27-SNAPSHOT\"\n  },\n  \"externalDocs\": {\n    \"description\": \"Find out more about Swagger\",\n    \"url\": \"https://swagger.io\"\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://petstore3.swagger.io/api/v3\"\n    }\n  ],\n  \"tags\": [\n    {\n      \"name\": \"pet\",\n      \"description\": \"Everything about your Pets\",\n      \"externalDocs\": {\n        \"description\": \"Find out more\",\n        \"url\": \"https://swagger.io\"\n      }\n    },\n    {\n      \"name\": \"store\",\n      \"description\": \"Access to Petstore orders\",\n      \"externalDocs\": {\n        \"description\": \"Find out more about our store\",\n        \"url\": \"https://swagger.io\"\n      }\n    },\n    {\n      \"name\": \"user\",\n      \"description\": \"Operations about user\"\n    }\n  ],\n  \"paths\": {\n    \"/pet\": {\n      \"put\": {\n        \"tags\": [\n          \"pet\"\n        ],\n        \"summary\": \"Update an existing pet.\",\n        \"description\": \"Update an existing pet by Id.\",\n        \"operationId\": \"updatePet\",\n        \"requestBody\": {\n          \"description\": \"Update an existent pet in the store\",\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/Pet\"\n              }\n            },\n            \"application/xml\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/Pet\"\n              }\n            },\n            \"application/x-www-form-urlencoded\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/Pet\"\n              }\n            }\n          },\n          \"required\": true\n        },\n        \"responses\": {\n          \"200\": {\n            \"description\": \"Successful operation\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/Pet\"\n                }\n              },\n              \"application/xml\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/Pet\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"Invalid ID supplied\"\n          },\n          \"404\": {\n            \"description\": \"Pet not found\"\n          },\n          \"422\": {\n            \"description\": \"Validation exception\"\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        },\n        \"security\": [\n          {\n            \"petstore_auth\": [\n              \"write:pets\",\n              \"read:pets\"\n            ]\n          }\n        ]\n      },\n      \"post\": {\n        \"tags\": [\n          \"pet\"\n        ],\n        \"summary\": \"Add a new pet to the store.\",\n        \"description\": \"Add a new pet to the store.\",\n        \"operationId\": \"addPet\",\n        \"requestBody\": {\n          \"description\": \"Create a new pet in the store\",\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/Pet\"\n              }\n            },\n            \"application/xml\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/Pet\"\n              }\n            },\n            \"application/x-www-form-urlencoded\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/Pet\"\n              }\n            }\n          },\n          \"required\": true\n        },\n        \"responses\": {\n          \"200\": {\n            \"description\": \"Successful operation\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/Pet\"\n                }\n              },\n              \"application/xml\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/Pet\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"Invalid input\"\n          },\n          \"422\": {\n            \"description\": \"Validation exception\"\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        },\n        \"security\": [\n          {\n            \"petstore_auth\": [\n              \"write:pets\",\n              \"read:pets\"\n            ]\n          }\n        ]\n      }\n    },\n    \"/pet/findByStatus\": {\n      \"get\": {\n        \"tags\": [\n          \"pet\"\n        ],\n        \"summary\": \"Finds Pets by status.\",\n        \"description\": \"Multiple status values can be provided with comma separated strings.\",\n        \"operationId\": \"findPetsByStatus\",\n        \"parameters\": [\n          {\n            \"name\": \"status\",\n            \"in\": \"query\",\n            \"description\": \"Status values that need to be considered for filter\",\n            \"required\": false,\n            \"explode\": true,\n            \"schema\": {\n              \"type\": \"string\",\n              \"default\": \"available\",\n              \"enum\": [\n                \"available\",\n                \"pending\",\n                \"sold\"\n              ]\n            }\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"successful operation\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"type\": \"array\",\n                  \"items\": {\n                    \"$ref\": \"#/components/schemas/Pet\"\n                  }\n                }\n              },\n              \"application/xml\": {\n                \"schema\": {\n                  \"type\": \"array\",\n                  \"items\": {\n                    \"$ref\": \"#/components/schemas/Pet\"\n                  }\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"Invalid status value\"\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        },\n        \"security\": [\n          {\n            \"petstore_auth\": [\n              \"write:pets\",\n              \"read:pets\"\n            ]\n          }\n        ]\n      }\n    },\n    \"/pet/findByTags\": {\n      \"get\": {\n        \"tags\": [\n          \"pet\"\n        ],\n        \"summary\": \"Finds Pets by tags.\",\n        \"description\": \"Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.\",\n        \"operationId\": \"findPetsByTags\",\n        \"parameters\": [\n          {\n            \"name\": \"tags\",\n            \"in\": \"query\",\n            \"description\": \"Tags to filter by\",\n            \"required\": false,\n            \"explode\": true,\n            \"schema\": {\n              \"type\": \"array\",\n              \"items\": {\n                \"type\": \"string\"\n              }\n            }\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"successful operation\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"type\": \"array\",\n                  \"items\": {\n                    \"$ref\": \"#/components/schemas/Pet\"\n                  }\n                }\n              },\n              \"application/xml\": {\n                \"schema\": {\n                  \"type\": \"array\",\n                  \"items\": {\n                    \"$ref\": \"#/components/schemas/Pet\"\n                  }\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"Invalid tag value\"\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        },\n        \"security\": [\n          {\n            \"petstore_auth\": [\n              \"write:pets\",\n              \"read:pets\"\n            ]\n          }\n        ]\n      }\n    },\n    \"/pet/{petId}\": {\n      \"get\": {\n        \"tags\": [\n          \"pet\"\n        ],\n        \"summary\": \"Find pet by ID.\",\n        \"description\": \"Returns a single pet.\",\n        \"operationId\": \"getPetById\",\n        \"parameters\": [\n          {\n            \"name\": \"petId\",\n            \"in\": \"path\",\n            \"description\": \"ID of pet to return\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"integer\",\n              \"format\": \"int64\"\n            }\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"successful operation\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/Pet\"\n                }\n              },\n              \"application/xml\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/Pet\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"Invalid ID supplied\"\n          },\n          \"404\": {\n            \"description\": \"Pet not found\"\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        },\n        \"security\": [\n          {\n            \"api_key\": []\n          },\n          {\n            \"petstore_auth\": [\n              \"write:pets\",\n              \"read:pets\"\n            ]\n          }\n        ]\n      },\n      \"post\": {\n        \"tags\": [\n          \"pet\"\n        ],\n        \"summary\": \"Updates a pet in the store with form data.\",\n        \"description\": \"Updates a pet resource based on the form data.\",\n        \"operationId\": \"updatePetWithForm\",\n        \"parameters\": [\n          {\n            \"name\": \"petId\",\n            \"in\": \"path\",\n            \"description\": \"ID of pet that needs to be updated\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"integer\",\n              \"format\": \"int64\"\n            }\n          },\n          {\n            \"name\": \"name\",\n            \"in\": \"query\",\n            \"description\": \"Name of pet that needs to be updated\",\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          },\n          {\n            \"name\": \"status\",\n            \"in\": \"query\",\n            \"description\": \"Status of pet that needs to be updated\",\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"successful operation\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/Pet\"\n                }\n              },\n              \"application/xml\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/Pet\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"Invalid input\"\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        },\n        \"security\": [\n          {\n            \"petstore_auth\": [\n              \"write:pets\",\n              \"read:pets\"\n            ]\n          }\n        ]\n      },\n      \"delete\": {\n        \"tags\": [\n          \"pet\"\n        ],\n        \"summary\": \"Deletes a pet.\",\n        \"description\": \"Delete a pet.\",\n        \"operationId\": \"deletePet\",\n        \"parameters\": [\n          {\n            \"name\": \"api_key\",\n            \"in\": \"header\",\n            \"description\": \"\",\n            \"required\": false,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          },\n          {\n            \"name\": \"petId\",\n            \"in\": \"path\",\n            \"description\": \"Pet id to delete\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"integer\",\n              \"format\": \"int64\"\n            }\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"Pet deleted\"\n          },\n          \"400\": {\n            \"description\": \"Invalid pet value\"\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        },\n        \"security\": [\n          {\n            \"petstore_auth\": [\n              \"write:pets\",\n              \"read:pets\"\n            ]\n          }\n        ]\n      }\n    },\n    \"/pet/{petId}/uploadImage\": {\n      \"post\": {\n        \"tags\": [\n          \"pet\"\n        ],\n        \"summary\": \"Uploads an image.\",\n        \"description\": \"Upload image of the pet.\",\n        \"operationId\": \"uploadFile\",\n        \"parameters\": [\n          {\n            \"name\": \"petId\",\n            \"in\": \"path\",\n            \"description\": \"ID of pet to update\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"integer\",\n              \"format\": \"int64\"\n            }\n          },\n          {\n            \"name\": \"additionalMetadata\",\n            \"in\": \"query\",\n            \"description\": \"Additional Metadata\",\n            \"required\": false,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          }\n        ],\n        \"requestBody\": {\n          \"content\": {\n            \"application/octet-stream\": {\n              \"schema\": {\n                \"type\": \"string\",\n                \"format\": \"binary\"\n              }\n            }\n          }\n        },\n        \"responses\": {\n          \"200\": {\n            \"description\": \"successful operation\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/ApiResponse\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"No file uploaded\"\n          },\n          \"404\": {\n            \"description\": \"Pet not found\"\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        },\n        \"security\": [\n          {\n            \"petstore_auth\": [\n              \"write:pets\",\n              \"read:pets\"\n            ]\n          }\n        ]\n      }\n    },\n    \"/store/inventory\": {\n      \"get\": {\n        \"tags\": [\n          \"store\"\n        ],\n        \"summary\": \"Returns pet inventories by status.\",\n        \"description\": \"Returns a map of status codes to quantities.\",\n        \"operationId\": \"getInventory\",\n        \"x-swagger-router-controller\": \"OrderController\",\n        \"responses\": {\n          \"200\": {\n            \"description\": \"successful operation\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"type\": \"object\",\n                  \"additionalProperties\": {\n                    \"type\": \"integer\",\n                    \"format\": \"int32\"\n                  }\n                }\n              }\n            }\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        },\n        \"security\": [\n          {\n            \"api_key\": []\n          }\n        ]\n      }\n    },\n    \"/store/order\": {\n      \"post\": {\n        \"tags\": [\n          \"store\"\n        ],\n        \"summary\": \"Place an order for a pet.\",\n        \"description\": \"Place a new order in the store.\",\n        \"x-swagger-router-controller\": \"OrderController\",\n        \"operationId\": \"placeOrder\",\n        \"requestBody\": {\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/Order\"\n              }\n            },\n            \"application/xml\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/Order\"\n              }\n            },\n            \"application/x-www-form-urlencoded\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/Order\"\n              }\n            }\n          }\n        },\n        \"responses\": {\n          \"200\": {\n            \"description\": \"successful operation\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/Order\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"Invalid input\"\n          },\n          \"422\": {\n            \"description\": \"Validation exception\"\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        }\n      }\n    },\n    \"/store/order/{orderId}\": {\n      \"get\": {\n        \"tags\": [\n          \"store\"\n        ],\n        \"summary\": \"Find purchase order by ID.\",\n        \"x-swagger-router-controller\": \"OrderController\",\n        \"description\": \"For valid response try integer IDs with value <= 5 or > 10. Other values will generate exceptions.\",\n        \"operationId\": \"getOrderById\",\n        \"parameters\": [\n          {\n            \"name\": \"orderId\",\n            \"in\": \"path\",\n            \"description\": \"ID of order that needs to be fetched\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"integer\",\n              \"format\": \"int64\"\n            }\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"successful operation\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/Order\"\n                }\n              },\n              \"application/xml\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/Order\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"Invalid ID supplied\"\n          },\n          \"404\": {\n            \"description\": \"Order not found\"\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        }\n      },\n      \"delete\": {\n        \"tags\": [\n          \"store\"\n        ],\n        \"summary\": \"Delete purchase order by identifier.\",\n        \"description\": \"For valid response try integer IDs with value < 1000. Anything above 1000 or non-integers will generate API errors.\",\n        \"x-swagger-router-controller\": \"OrderController\",\n        \"operationId\": \"deleteOrder\",\n        \"parameters\": [\n          {\n            \"name\": \"orderId\",\n            \"in\": \"path\",\n            \"description\": \"ID of the order that needs to be deleted\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"integer\",\n              \"format\": \"int64\"\n            }\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"order deleted\"\n          },\n          \"400\": {\n            \"description\": \"Invalid ID supplied\"\n          },\n          \"404\": {\n            \"description\": \"Order not found\"\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        }\n      }\n    },\n    \"/user\": {\n      \"post\": {\n        \"tags\": [\n          \"user\"\n        ],\n        \"summary\": \"Create user.\",\n        \"description\": \"This can only be done by the logged in user.\",\n        \"x-swagger-router-controller\": \"UserController\",\n        \"operationId\": \"createUser\",\n        \"requestBody\": {\n          \"description\": \"Created user object\",\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/User\"\n              }\n            },\n            \"application/xml\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/User\"\n              }\n            },\n            \"application/x-www-form-urlencoded\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/User\"\n              }\n            }\n          }\n        },\n        \"responses\": {\n          \"200\": {\n            \"description\": \"successful operation\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/User\"\n                }\n              },\n              \"application/xml\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/User\"\n                }\n              }\n            }\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        }\n      }\n    },\n    \"/user/createWithList\": {\n      \"post\": {\n        \"tags\": [\n          \"user\"\n        ],\n        \"summary\": \"Creates list of users with given input array.\",\n        \"description\": \"Creates list of users with given input array.\",\n        \"x-swagger-router-controller\": \"UserController\",\n        \"operationId\": \"createUsersWithListInput\",\n        \"requestBody\": {\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"type\": \"array\",\n                \"items\": {\n                  \"$ref\": \"#/components/schemas/User\"\n                }\n              }\n            }\n          }\n        },\n        \"responses\": {\n          \"200\": {\n            \"description\": \"Successful operation\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/User\"\n                }\n              },\n              \"application/xml\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/User\"\n                }\n              }\n            }\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        }\n      }\n    },\n    \"/user/login\": {\n      \"get\": {\n        \"tags\": [\n          \"user\"\n        ],\n        \"summary\": \"Logs user into the system.\",\n        \"description\": \"Log into the system.\",\n        \"operationId\": \"loginUser\",\n        \"parameters\": [\n          {\n            \"name\": \"username\",\n            \"in\": \"query\",\n            \"description\": \"The user name for login\",\n            \"required\": false,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          },\n          {\n            \"name\": \"password\",\n            \"in\": \"query\",\n            \"description\": \"The password for login in clear text\",\n            \"required\": false,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"successful operation\",\n            \"headers\": {\n              \"X-Rate-Limit\": {\n                \"description\": \"calls per hour allowed by the user\",\n                \"schema\": {\n                  \"type\": \"integer\",\n                  \"format\": \"int32\"\n                }\n              },\n              \"X-Expires-After\": {\n                \"description\": \"date in UTC when token expires\",\n                \"schema\": {\n                  \"type\": \"string\",\n                  \"format\": \"date-time\"\n                }\n              }\n            },\n            \"content\": {\n              \"application/xml\": {\n                \"schema\": {\n                  \"type\": \"string\"\n                }\n              },\n              \"application/json\": {\n                \"schema\": {\n                  \"type\": \"string\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"Invalid username/password supplied\"\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        }\n      }\n    },\n    \"/user/logout\": {\n      \"get\": {\n        \"tags\": [\n          \"user\"\n        ],\n        \"summary\": \"Logs out current logged in user session.\",\n        \"description\": \"Log user out of the system.\",\n        \"operationId\": \"logoutUser\",\n        \"parameters\": [],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"successful operation\"\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        }\n      }\n    },\n    \"/user/{username}\": {\n      \"get\": {\n        \"tags\": [\n          \"user\"\n        ],\n        \"summary\": \"Get user by user name.\",\n        \"description\": \"Get user detail based on username.\",\n        \"operationId\": \"getUserByName\",\n        \"parameters\": [\n          {\n            \"name\": \"username\",\n            \"in\": \"path\",\n            \"description\": \"The name that needs to be fetched. Use user1 for testing\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"successful operation\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/User\"\n                }\n              },\n              \"application/xml\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/User\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"Invalid username supplied\"\n          },\n          \"404\": {\n            \"description\": \"User not found\"\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        }\n      },\n      \"put\": {\n        \"tags\": [\n          \"user\"\n        ],\n        \"summary\": \"Update user resource.\",\n        \"description\": \"This can only be done by the logged in user.\",\n        \"x-swagger-router-controller\": \"UserController\",\n        \"operationId\": \"updateUser\",\n        \"parameters\": [\n          {\n            \"name\": \"username\",\n            \"in\": \"path\",\n            \"description\": \"name that need to be deleted\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          }\n        ],\n        \"requestBody\": {\n          \"description\": \"Update an existent user in the store\",\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/User\"\n              }\n            },\n            \"application/xml\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/User\"\n              }\n            },\n            \"application/x-www-form-urlencoded\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/User\"\n              }\n            }\n          }\n        },\n        \"responses\": {\n          \"200\": {\n            \"description\": \"successful operation\"\n          },\n          \"400\": {\n            \"description\": \"bad request\"\n          },\n          \"404\": {\n            \"description\": \"user not found\"\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        }\n      },\n      \"delete\": {\n        \"tags\": [\n          \"user\"\n        ],\n        \"summary\": \"Delete user resource.\",\n        \"description\": \"This can only be done by the logged in user.\",\n        \"operationId\": \"deleteUser\",\n        \"parameters\": [\n          {\n            \"name\": \"username\",\n            \"in\": \"path\",\n            \"description\": \"The name that needs to be deleted\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"User deleted\"\n          },\n          \"400\": {\n            \"description\": \"Invalid username supplied\"\n          },\n          \"404\": {\n            \"description\": \"User not found\"\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        }\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"Order\": {\n        \"x-swagger-router-model\": \"io.swagger.petstore.model.Order\",\n        \"type\": \"object\",\n        \"properties\": {\n          \"id\": {\n            \"type\": \"integer\",\n            \"format\": \"int64\",\n            \"example\": 10\n          },\n          \"petId\": {\n            \"type\": \"integer\",\n            \"format\": \"int64\",\n            \"example\": 198772\n          },\n          \"quantity\": {\n            \"type\": \"integer\",\n            \"format\": \"int32\",\n            \"example\": 7\n          },\n          \"shipDate\": {\n            \"type\": \"string\",\n            \"format\": \"date-time\"\n          },\n          \"status\": {\n            \"type\": \"string\",\n            \"description\": \"Order Status\",\n            \"example\": \"approved\",\n            \"enum\": [\n              \"placed\",\n              \"approved\",\n              \"delivered\"\n            ]\n          },\n          \"complete\": {\n            \"type\": \"boolean\"\n          }\n        },\n        \"xml\": {\n          \"name\": \"order\"\n        }\n      },\n      \"Category\": {\n        \"x-swagger-router-model\": \"io.swagger.petstore.model.Category\",\n        \"type\": \"object\",\n        \"properties\": {\n          \"id\": {\n            \"type\": \"integer\",\n            \"format\": \"int64\",\n            \"example\": 1\n          },\n          \"name\": {\n            \"type\": \"string\",\n            \"example\": \"Dogs\"\n          }\n        },\n        \"xml\": {\n          \"name\": \"category\"\n        }\n      },\n      \"User\": {\n        \"x-swagger-router-model\": \"io.swagger.petstore.model.User\",\n        \"type\": \"object\",\n        \"properties\": {\n          \"id\": {\n            \"type\": \"integer\",\n            \"format\": \"int64\",\n            \"example\": 10\n          },\n          \"username\": {\n            \"type\": \"string\",\n            \"example\": \"theUser\"\n          },\n          \"firstName\": {\n            \"type\": \"string\",\n            \"example\": \"John\"\n          },\n          \"lastName\": {\n            \"type\": \"string\",\n            \"example\": \"James\"\n          },\n          \"email\": {\n            \"type\": \"string\",\n            \"example\": \"john@email.com\"\n          },\n          \"password\": {\n            \"type\": \"string\",\n            \"example\": \"12345\"\n          },\n          \"phone\": {\n            \"type\": \"string\",\n            \"example\": \"12345\"\n          },\n          \"userStatus\": {\n            \"type\": \"integer\",\n            \"description\": \"User Status\",\n            \"format\": \"int32\",\n            \"example\": 1\n          }\n        },\n        \"xml\": {\n          \"name\": \"user\"\n        }\n      },\n      \"Tag\": {\n        \"x-swagger-router-model\": \"io.swagger.petstore.model.Tag\",\n        \"type\": \"object\",\n        \"properties\": {\n          \"id\": {\n            \"type\": \"integer\",\n            \"format\": \"int64\"\n          },\n          \"name\": {\n            \"type\": \"string\"\n          }\n        },\n        \"xml\": {\n          \"name\": \"tag\"\n        }\n      },\n      \"Pet\": {\n        \"x-swagger-router-model\": \"io.swagger.petstore.model.Pet\",\n        \"required\": [\n          \"name\",\n          \"photoUrls\"\n        ],\n        \"type\": \"object\",\n        \"properties\": {\n          \"id\": {\n            \"type\": \"integer\",\n            \"format\": \"int64\",\n            \"example\": 10\n          },\n          \"name\": {\n            \"type\": \"string\",\n            \"example\": \"doggie\"\n          },\n          \"category\": {\n            \"$ref\": \"#/components/schemas/Category\"\n          },\n          \"photoUrls\": {\n            \"type\": \"array\",\n            \"xml\": {\n              \"wrapped\": true\n            },\n            \"items\": {\n              \"type\": \"string\",\n              \"xml\": {\n                \"name\": \"photoUrl\"\n              }\n            }\n          },\n          \"tags\": {\n            \"type\": \"array\",\n            \"xml\": {\n              \"wrapped\": true\n            },\n            \"items\": {\n              \"$ref\": \"#/components/schemas/Tag\"\n            }\n          },\n          \"status\": {\n            \"type\": \"string\",\n            \"description\": \"pet status in the store\",\n            \"enum\": [\n              \"available\",\n              \"pending\",\n              \"sold\"\n            ]\n          }\n        },\n        \"xml\": {\n          \"name\": \"pet\"\n        }\n      },\n      \"ApiResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"code\": {\n            \"type\": \"integer\",\n            \"format\": \"int32\"\n          },\n          \"type\": {\n            \"type\": \"string\"\n          },\n          \"message\": {\n            \"type\": \"string\"\n          }\n        },\n        \"xml\": {\n          \"name\": \"##default\"\n        }\n      }\n    },\n    \"requestBodies\": {\n      \"Pet\": {\n        \"description\": \"Pet object that needs to be added to the store\",\n        \"content\": {\n          \"application/json\": {\n            \"schema\": {\n              \"$ref\": \"#/components/schemas/Pet\"\n            }\n          },\n          \"application/xml\": {\n            \"schema\": {\n              \"$ref\": \"#/components/schemas/Pet\"\n            }\n          }\n        }\n      },\n      \"UserArray\": {\n        \"description\": \"List of user object\",\n        \"content\": {\n          \"application/json\": {\n            \"schema\": {\n              \"type\": \"array\",\n              \"items\": {\n                \"$ref\": \"#/components/schemas/User\"\n              }\n            }\n          }\n        }\n      }\n    },\n    \"securitySchemes\": {\n      \"petstore_auth\": {\n        \"type\": \"oauth2\",\n        \"flows\": {\n          \"implicit\": {\n            \"authorizationUrl\": \"https://petstore3.swagger.io/oauth/authorize\",\n            \"scopes\": {\n              \"write:pets\": \"modify pets in your account\",\n              \"read:pets\": \"read your pets\"\n            }\n          }\n        }\n      },\n      \"api_key\": {\n        \"type\": \"apiKey\",\n        \"name\": \"api_key\",\n        \"in\": \"header\"\n      }\n    }\n  }\n}\n",
+    "new": "{\n  \"openapi\": \"3.0.4\",\n  \"info\": {\n    \"title\": \"Swagger Petstore - OpenAPI 3.0\",\n    \"description\": \"This is a sample Pet Store Server based on the OpenAPI 3.0 specification.  You can find out more about\\nSwagger at [https://swagger.io](https://swagger.io). In the third iteration of the pet store, we've switched to the design first approach!\\nYou can now help us improve the API whether it's by making changes to the definition itself or to the code.\\nThat way, with time, we can improve the API in general, and expose some of the new features in OAS3.\\n\\nSome useful links:\\n- [The Pet Store repository](https://github.com/swagger-api/swagger-petstore)\\n- [The source API definition for the Pet Store](https://github.com/swagger-api/swagger-petstore/blob/master/src/main/resources/openapi.yaml)\",\n    \"termsOfService\": \"https://swagger.io/terms/\",\n    \"contact\": {\n      \"email\": \"apiteam@swagger.io\"\n    },\n    \"license\": {\n      \"name\": \"Apache 2.0\",\n      \"url\": \"https://www.apache.org/licenses/LICENSE-2.0.html\"\n    },\n    \"version\": \"1.0.27-SNAPSHOT\"\n  },\n  \"externalDocs\": {\n    \"description\": \"Find out more about Swagger\",\n    \"url\": \"https://swagger.io\"\n  },\n  \"servers\": [\n    {\n      \"url\": \"https://petstore3.swagger.io/api/v3\"\n    }\n  ],\n  \"tags\": [\n    {\n      \"name\": \"pet\",\n      \"description\": \"Everything about your Pets\",\n      \"externalDocs\": {\n        \"description\": \"Find out more\",\n        \"url\": \"https://swagger.io\"\n      }\n    },\n    {\n      \"name\": \"store\",\n      \"description\": \"Access to Petstore orders\",\n      \"externalDocs\": {\n        \"description\": \"Find out more about our store\",\n        \"url\": \"https://swagger.io\"\n      }\n    },\n    {\n      \"name\": \"user\",\n      \"description\": \"Operations about user\"\n    }\n  ],\n  \"paths\": {\n    \"/pet\": {\n      \"put\": {\n        \"tags\": [\n          \"pet\"\n        ],\n        \"summary\": \"Update an existing pet.\",\n        \"description\": \"Update an existing pet by Id.\",\n        \"operationId\": \"updatePet\",\n        \"requestBody\": {\n          \"description\": \"Update an existent pet in the store\",\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/Pet\"\n              }\n            },\n            \"application/xml\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/Pet\"\n              }\n            },\n            \"application/x-www-form-urlencoded\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/Pet\"\n              }\n            }\n          },\n          \"required\": true\n        },\n        \"responses\": {\n          \"200\": {\n            \"description\": \"Successful operation\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/Pet\"\n                }\n              },\n              \"application/xml\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/Pet\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"Invalid ID supplied\"\n          },\n          \"404\": {\n            \"description\": \"Pet not found\"\n          },\n          \"422\": {\n            \"description\": \"Validation exception\"\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        },\n        \"security\": [\n          {\n            \"petstore_auth\": [\n              \"write:pets\",\n              \"read:pets\"\n            ]\n          }\n        ]\n      },\n      \"post\": {\n        \"tags\": [\n          \"pet\"\n        ],\n        \"summary\": \"Add a new pet to the store.\",\n        \"description\": \"Add a new pet to the store.\",\n        \"operationId\": \"addPet\",\n        \"requestBody\": {\n          \"description\": \"Create a new pet in the store\",\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/Pet\"\n              }\n            },\n            \"application/xml\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/Pet\"\n              }\n            },\n            \"application/x-www-form-urlencoded\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/Pet\"\n              }\n            }\n          },\n          \"required\": true\n        },\n        \"responses\": {\n          \"200\": {\n            \"description\": \"Successful operation\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/Pet\"\n                }\n              },\n              \"application/xml\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/Pet\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"Invalid input\"\n          },\n          \"422\": {\n            \"description\": \"Validation exception\"\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        },\n        \"security\": [\n          {\n            \"petstore_auth\": [\n              \"write:pets\",\n              \"read:pets\"\n            ]\n          }\n        ]\n      }\n    },\n    \"/pet/findByStatus\": {\n      \"get\": {\n        \"tags\": [\n          \"pet\"\n        ],\n        \"summary\": \"Finds Pets by status.\",\n        \"description\": \"Multiple status values can be provided with comma separated strings.\",\n        \"operationId\": \"findPetsByStatus\",\n        \"parameters\": [\n          {\n            \"name\": \"status\",\n            \"in\": \"query\",\n            \"description\": \"Status values that need to be considered for filter\",\n            \"required\": true,\n            \"explode\": true,\n            \"schema\": {\n              \"type\": \"string\",\n              \"default\": \"available\",\n              \"enum\": [\n                \"available\",\n                \"pending\",\n                \"sold\"\n              ]\n            }\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"successful operation\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"type\": \"array\",\n                  \"items\": {\n                    \"$ref\": \"#/components/schemas/Pet\"\n                  }\n                }\n              },\n              \"application/xml\": {\n                \"schema\": {\n                  \"type\": \"array\",\n                  \"items\": {\n                    \"$ref\": \"#/components/schemas/Pet\"\n                  }\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"Invalid status value\"\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        },\n        \"security\": [\n          {\n            \"petstore_auth\": [\n              \"write:pets\",\n              \"read:pets\"\n            ]\n          }\n        ]\n      }\n    },\n    \"/pet/findByTags\": {\n      \"get\": {\n        \"tags\": [\n          \"pet\"\n        ],\n        \"summary\": \"Finds Pets by tags.\",\n        \"description\": \"Multiple tags can be provided with comma separated strings. Use tag1, tag2, tag3 for testing.\",\n        \"operationId\": \"findPetsByTags\",\n        \"parameters\": [\n          {\n            \"name\": \"tags\",\n            \"in\": \"query\",\n            \"description\": \"Tags to filter by\",\n            \"required\": true,\n            \"explode\": true,\n            \"schema\": {\n              \"type\": \"array\",\n              \"items\": {\n                \"type\": \"string\"\n              }\n            }\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"successful operation\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"type\": \"array\",\n                  \"items\": {\n                    \"$ref\": \"#/components/schemas/Pet\"\n                  }\n                }\n              },\n              \"application/xml\": {\n                \"schema\": {\n                  \"type\": \"array\",\n                  \"items\": {\n                    \"$ref\": \"#/components/schemas/Pet\"\n                  }\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"Invalid tag value\"\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        },\n        \"security\": [\n          {\n            \"petstore_auth\": [\n              \"write:pets\",\n              \"read:pets\"\n            ]\n          }\n        ]\n      }\n    },\n    \"/pet/{petId}\": {\n      \"get\": {\n        \"tags\": [\n          \"pet\"\n        ],\n        \"summary\": \"Find pet by ID.\",\n        \"description\": \"Returns a single pet.\",\n        \"operationId\": \"getPetById\",\n        \"parameters\": [\n          {\n            \"name\": \"petId\",\n            \"in\": \"path\",\n            \"description\": \"ID of pet to return\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"integer\",\n              \"format\": \"int64\"\n            }\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"successful operation\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/Pet\"\n                }\n              },\n              \"application/xml\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/Pet\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"Invalid ID supplied\"\n          },\n          \"404\": {\n            \"description\": \"Pet not found\"\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        },\n        \"security\": [\n          {\n            \"api_key\": []\n          },\n          {\n            \"petstore_auth\": [\n              \"write:pets\",\n              \"read:pets\"\n            ]\n          }\n        ]\n      },\n      \"post\": {\n        \"tags\": [\n          \"pet\"\n        ],\n        \"summary\": \"Updates a pet in the store with form data.\",\n        \"description\": \"Updates a pet resource based on the form data.\",\n        \"operationId\": \"updatePetWithForm\",\n        \"parameters\": [\n          {\n            \"name\": \"petId\",\n            \"in\": \"path\",\n            \"description\": \"ID of pet that needs to be updated\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"integer\",\n              \"format\": \"int64\"\n            }\n          },\n          {\n            \"name\": \"name\",\n            \"in\": \"query\",\n            \"description\": \"Name of pet that needs to be updated\",\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          },\n          {\n            \"name\": \"status\",\n            \"in\": \"query\",\n            \"description\": \"Status of pet that needs to be updated\",\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"successful operation\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/Pet\"\n                }\n              },\n              \"application/xml\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/Pet\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"Invalid input\"\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        },\n        \"security\": [\n          {\n            \"petstore_auth\": [\n              \"write:pets\",\n              \"read:pets\"\n            ]\n          }\n        ]\n      },\n      \"delete\": {\n        \"tags\": [\n          \"pet\"\n        ],\n        \"summary\": \"Deletes a pet.\",\n        \"description\": \"Delete a pet.\",\n        \"operationId\": \"deletePet\",\n        \"parameters\": [\n          {\n            \"name\": \"api_key\",\n            \"in\": \"header\",\n            \"description\": \"\",\n            \"required\": false,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          },\n          {\n            \"name\": \"petId\",\n            \"in\": \"path\",\n            \"description\": \"Pet id to delete\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"integer\",\n              \"format\": \"int64\"\n            }\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"Pet deleted\"\n          },\n          \"400\": {\n            \"description\": \"Invalid pet value\"\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        },\n        \"security\": [\n          {\n            \"petstore_auth\": [\n              \"write:pets\",\n              \"read:pets\"\n            ]\n          }\n        ]\n      }\n    },\n    \"/pet/{petId}/uploadImage\": {\n      \"post\": {\n        \"tags\": [\n          \"pet\"\n        ],\n        \"summary\": \"Uploads an image.\",\n        \"description\": \"Upload image of the pet.\",\n        \"operationId\": \"uploadFile\",\n        \"parameters\": [\n          {\n            \"name\": \"petId\",\n            \"in\": \"path\",\n            \"description\": \"ID of pet to update\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"integer\",\n              \"format\": \"int64\"\n            }\n          },\n          {\n            \"name\": \"additionalMetadata\",\n            \"in\": \"query\",\n            \"description\": \"Additional Metadata\",\n            \"required\": false,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          }\n        ],\n        \"requestBody\": {\n          \"content\": {\n            \"application/octet-stream\": {\n              \"schema\": {\n                \"type\": \"string\",\n                \"format\": \"binary\"\n              }\n            }\n          }\n        },\n        \"responses\": {\n          \"200\": {\n            \"description\": \"successful operation\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/ApiResponse\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"No file uploaded\"\n          },\n          \"404\": {\n            \"description\": \"Pet not found\"\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        },\n        \"security\": [\n          {\n            \"petstore_auth\": [\n              \"write:pets\",\n              \"read:pets\"\n            ]\n          }\n        ]\n      }\n    },\n    \"/store/inventory\": {\n      \"get\": {\n        \"tags\": [\n          \"store\"\n        ],\n        \"summary\": \"Returns pet inventories by status.\",\n        \"description\": \"Returns a map of status codes to quantities.\",\n        \"operationId\": \"getInventory\",\n        \"x-swagger-router-controller\": \"OrderController\",\n        \"responses\": {\n          \"200\": {\n            \"description\": \"successful operation\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"type\": \"object\",\n                  \"additionalProperties\": {\n                    \"type\": \"integer\",\n                    \"format\": \"int32\"\n                  }\n                }\n              }\n            }\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        },\n        \"security\": [\n          {\n            \"api_key\": []\n          }\n        ]\n      }\n    },\n    \"/store/order\": {\n      \"post\": {\n        \"tags\": [\n          \"store\"\n        ],\n        \"summary\": \"Place an order for a pet.\",\n        \"description\": \"Place a new order in the store.\",\n        \"x-swagger-router-controller\": \"OrderController\",\n        \"operationId\": \"placeOrder\",\n        \"requestBody\": {\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/Order\"\n              }\n            },\n            \"application/xml\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/Order\"\n              }\n            },\n            \"application/x-www-form-urlencoded\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/Order\"\n              }\n            }\n          }\n        },\n        \"responses\": {\n          \"200\": {\n            \"description\": \"successful operation\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/Order\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"Invalid input\"\n          },\n          \"422\": {\n            \"description\": \"Validation exception\"\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        }\n      }\n    },\n    \"/store/order/{orderId}\": {\n      \"get\": {\n        \"tags\": [\n          \"store\"\n        ],\n        \"summary\": \"Find purchase order by ID.\",\n        \"x-swagger-router-controller\": \"OrderController\",\n        \"description\": \"For valid response try integer IDs with value <= 5 or > 10. Other values will generate exceptions.\",\n        \"operationId\": \"getOrderById\",\n        \"parameters\": [\n          {\n            \"name\": \"orderId\",\n            \"in\": \"path\",\n            \"description\": \"ID of order that needs to be fetched\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"integer\",\n              \"format\": \"int64\"\n            }\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"successful operation\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/Order\"\n                }\n              },\n              \"application/xml\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/Order\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"Invalid ID supplied\"\n          },\n          \"404\": {\n            \"description\": \"Order not found\"\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        }\n      },\n      \"delete\": {\n        \"tags\": [\n          \"store\"\n        ],\n        \"summary\": \"Delete purchase order by identifier.\",\n        \"description\": \"For valid response try integer IDs with value < 1000. Anything above 1000 or non-integers will generate API errors.\",\n        \"x-swagger-router-controller\": \"OrderController\",\n        \"operationId\": \"deleteOrder\",\n        \"parameters\": [\n          {\n            \"name\": \"orderId\",\n            \"in\": \"path\",\n            \"description\": \"ID of the order that needs to be deleted\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"integer\",\n              \"format\": \"int64\"\n            }\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"order deleted\"\n          },\n          \"400\": {\n            \"description\": \"Invalid ID supplied\"\n          },\n          \"404\": {\n            \"description\": \"Order not found\"\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        }\n      }\n    },\n    \"/user\": {\n      \"post\": {\n        \"tags\": [\n          \"user\"\n        ],\n        \"summary\": \"Create user.\",\n        \"description\": \"This can only be done by the logged in user.\",\n        \"x-swagger-router-controller\": \"UserController\",\n        \"operationId\": \"createUser\",\n        \"requestBody\": {\n          \"description\": \"Created user object\",\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/User\"\n              }\n            },\n            \"application/xml\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/User\"\n              }\n            },\n            \"application/x-www-form-urlencoded\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/User\"\n              }\n            }\n          }\n        },\n        \"responses\": {\n          \"200\": {\n            \"description\": \"successful operation\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/User\"\n                }\n              },\n              \"application/xml\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/User\"\n                }\n              }\n            }\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        }\n      }\n    },\n    \"/user/createWithList\": {\n      \"post\": {\n        \"tags\": [\n          \"user\"\n        ],\n        \"summary\": \"Creates list of users with given input array.\",\n        \"description\": \"Creates list of users with given input array.\",\n        \"x-swagger-router-controller\": \"UserController\",\n        \"operationId\": \"createUsersWithListInput\",\n        \"requestBody\": {\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"type\": \"array\",\n                \"items\": {\n                  \"$ref\": \"#/components/schemas/User\"\n                }\n              }\n            }\n          }\n        },\n        \"responses\": {\n          \"200\": {\n            \"description\": \"Successful operation\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/User\"\n                }\n              },\n              \"application/xml\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/User\"\n                }\n              }\n            }\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        }\n      }\n    },\n    \"/user/login\": {\n      \"get\": {\n        \"tags\": [\n          \"user\"\n        ],\n        \"summary\": \"Logs user into the system.\",\n        \"description\": \"Log into the system.\",\n        \"operationId\": \"loginUser\",\n        \"parameters\": [\n          {\n            \"name\": \"username\",\n            \"in\": \"query\",\n            \"description\": \"The user name for login\",\n            \"required\": false,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          },\n          {\n            \"name\": \"password\",\n            \"in\": \"query\",\n            \"description\": \"The password for login in clear text\",\n            \"required\": false,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"successful operation\",\n            \"headers\": {\n              \"X-Rate-Limit\": {\n                \"description\": \"calls per hour allowed by the user\",\n                \"schema\": {\n                  \"type\": \"integer\",\n                  \"format\": \"int32\"\n                }\n              },\n              \"X-Expires-After\": {\n                \"description\": \"date in UTC when token expires\",\n                \"schema\": {\n                  \"type\": \"string\",\n                  \"format\": \"date-time\"\n                }\n              }\n            },\n            \"content\": {\n              \"application/xml\": {\n                \"schema\": {\n                  \"type\": \"string\"\n                }\n              },\n              \"application/json\": {\n                \"schema\": {\n                  \"type\": \"string\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"Invalid username/password supplied\"\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        }\n      }\n    },\n    \"/user/logout\": {\n      \"get\": {\n        \"tags\": [\n          \"user\"\n        ],\n        \"summary\": \"Logs out current logged in user session.\",\n        \"description\": \"Log user out of the system.\",\n        \"operationId\": \"logoutUser\",\n        \"parameters\": [],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"successful operation\"\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        }\n      }\n    },\n    \"/user/{username}\": {\n      \"get\": {\n        \"tags\": [\n          \"user\"\n        ],\n        \"summary\": \"Get user by user name.\",\n        \"description\": \"Get user detail based on username.\",\n        \"operationId\": \"getUserByName\",\n        \"parameters\": [\n          {\n            \"name\": \"username\",\n            \"in\": \"path\",\n            \"description\": \"The name that needs to be fetched. Use user1 for testing\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"successful operation\",\n            \"content\": {\n              \"application/json\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/User\"\n                }\n              },\n              \"application/xml\": {\n                \"schema\": {\n                  \"$ref\": \"#/components/schemas/User\"\n                }\n              }\n            }\n          },\n          \"400\": {\n            \"description\": \"Invalid username supplied\"\n          },\n          \"404\": {\n            \"description\": \"User not found\"\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        }\n      },\n      \"put\": {\n        \"tags\": [\n          \"user\"\n        ],\n        \"summary\": \"Update user resource.\",\n        \"description\": \"This can only be done by the logged in user.\",\n        \"x-swagger-router-controller\": \"UserController\",\n        \"operationId\": \"updateUser\",\n        \"parameters\": [\n          {\n            \"name\": \"username\",\n            \"in\": \"path\",\n            \"description\": \"name that need to be deleted\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          }\n        ],\n        \"requestBody\": {\n          \"description\": \"Update an existent user in the store\",\n          \"content\": {\n            \"application/json\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/User\"\n              }\n            },\n            \"application/xml\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/User\"\n              }\n            },\n            \"application/x-www-form-urlencoded\": {\n              \"schema\": {\n                \"$ref\": \"#/components/schemas/User\"\n              }\n            }\n          }\n        },\n        \"responses\": {\n          \"200\": {\n            \"description\": \"successful operation\"\n          },\n          \"400\": {\n            \"description\": \"bad request\"\n          },\n          \"404\": {\n            \"description\": \"user not found\"\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        }\n      },\n      \"delete\": {\n        \"tags\": [\n          \"user\"\n        ],\n        \"summary\": \"Delete user resource.\",\n        \"description\": \"This can only be done by the logged in user.\",\n        \"operationId\": \"deleteUser\",\n        \"parameters\": [\n          {\n            \"name\": \"username\",\n            \"in\": \"path\",\n            \"description\": \"The name that needs to be deleted\",\n            \"required\": true,\n            \"schema\": {\n              \"type\": \"string\"\n            }\n          }\n        ],\n        \"responses\": {\n          \"200\": {\n            \"description\": \"User deleted\"\n          },\n          \"400\": {\n            \"description\": \"Invalid username supplied\"\n          },\n          \"404\": {\n            \"description\": \"User not found\"\n          },\n          \"default\": {\n            \"description\": \"Unexpected error\"\n          }\n        }\n      }\n    }\n  },\n  \"components\": {\n    \"schemas\": {\n      \"Order\": {\n        \"x-swagger-router-model\": \"io.swagger.petstore.model.Order\",\n        \"type\": \"object\",\n        \"properties\": {\n          \"id\": {\n            \"type\": \"integer\",\n            \"format\": \"int64\",\n            \"example\": 10\n          },\n          \"petId\": {\n            \"type\": \"integer\",\n            \"format\": \"int64\",\n            \"example\": 198772\n          },\n          \"quantity\": {\n            \"type\": \"integer\",\n            \"format\": \"int32\",\n            \"example\": 7\n          },\n          \"shipDate\": {\n            \"type\": \"string\",\n            \"format\": \"date-time\"\n          },\n          \"status\": {\n            \"type\": \"string\",\n            \"description\": \"Order Status\",\n            \"example\": \"approved\",\n            \"enum\": [\n              \"placed\",\n              \"approved\",\n              \"delivered\"\n            ]\n          },\n          \"complete\": {\n            \"type\": \"boolean\"\n          }\n        },\n        \"xml\": {\n          \"name\": \"order\"\n        }\n      },\n      \"Category\": {\n        \"x-swagger-router-model\": \"io.swagger.petstore.model.Category\",\n        \"type\": \"object\",\n        \"properties\": {\n          \"id\": {\n            \"type\": \"integer\",\n            \"format\": \"int64\",\n            \"example\": 1\n          },\n          \"name\": {\n            \"type\": \"string\",\n            \"example\": \"Dogs\"\n          }\n        },\n        \"xml\": {\n          \"name\": \"category\"\n        }\n      },\n      \"User\": {\n        \"x-swagger-router-model\": \"io.swagger.petstore.model.User\",\n        \"type\": \"object\",\n        \"properties\": {\n          \"id\": {\n            \"type\": \"integer\",\n            \"format\": \"int64\",\n            \"example\": 10\n          },\n          \"username\": {\n            \"type\": \"string\",\n            \"example\": \"theUser\"\n          },\n          \"firstName\": {\n            \"type\": \"string\",\n            \"example\": \"John\"\n          },\n          \"lastName\": {\n            \"type\": \"string\",\n            \"example\": \"James\"\n          },\n          \"email\": {\n            \"type\": \"string\",\n            \"example\": \"john@email.com\"\n          },\n          \"password\": {\n            \"type\": \"string\",\n            \"example\": \"12345\"\n          },\n          \"phone\": {\n            \"type\": \"string\",\n            \"example\": \"12345\"\n          },\n          \"userStatus\": {\n            \"type\": \"integer\",\n            \"description\": \"User Status\",\n            \"format\": \"int32\",\n            \"example\": 1\n          }\n        },\n        \"xml\": {\n          \"name\": \"user\"\n        }\n      },\n      \"Tag\": {\n        \"x-swagger-router-model\": \"io.swagger.petstore.model.Tag\",\n        \"type\": \"object\",\n        \"properties\": {\n          \"id\": {\n            \"type\": \"integer\",\n            \"format\": \"int64\"\n          },\n          \"name\": {\n            \"type\": \"string\"\n          }\n        },\n        \"xml\": {\n          \"name\": \"tag\"\n        }\n      },\n      \"Pet\": {\n        \"x-swagger-router-model\": \"io.swagger.petstore.model.Pet\",\n        \"required\": [\n          \"name\",\n          \"photoUrls\"\n        ],\n        \"type\": \"object\",\n        \"properties\": {\n          \"id\": {\n            \"type\": \"integer\",\n            \"format\": \"int64\",\n            \"example\": 10\n          },\n          \"name\": {\n            \"type\": \"string\",\n            \"example\": \"doggie\"\n          },\n          \"category\": {\n            \"$ref\": \"#/components/schemas/Category\"\n          },\n          \"photoUrls\": {\n            \"type\": \"array\",\n            \"xml\": {\n              \"wrapped\": true\n            },\n            \"items\": {\n              \"type\": \"string\",\n              \"xml\": {\n                \"name\": \"photoUrl\"\n              }\n            }\n          },\n          \"tags\": {\n            \"type\": \"array\",\n            \"xml\": {\n              \"wrapped\": true\n            },\n            \"items\": {\n              \"$ref\": \"#/components/schemas/Tag\"\n            }\n          },\n          \"status\": {\n            \"type\": \"string\",\n            \"description\": \"pet status in the store\",\n            \"enum\": [\n              \"available\",\n              \"pending\",\n              \"sold\"\n            ]\n          }\n        },\n        \"xml\": {\n          \"name\": \"pet\"\n        }\n      },\n      \"ApiResponse\": {\n        \"type\": \"object\",\n        \"properties\": {\n          \"code\": {\n            \"type\": \"integer\",\n            \"format\": \"int32\"\n          },\n          \"type\": {\n            \"type\": \"string\"\n          },\n          \"message\": {\n            \"type\": \"string\"\n          }\n        },\n        \"xml\": {\n          \"name\": \"##default\"\n        }\n      }\n    },\n    \"requestBodies\": {\n      \"Pet\": {\n        \"description\": \"Pet object that needs to be added to the store\",\n        \"content\": {\n          \"application/json\": {\n            \"schema\": {\n              \"$ref\": \"#/components/schemas/Pet\"\n            }\n          },\n          \"application/xml\": {\n            \"schema\": {\n              \"$ref\": \"#/components/schemas/Pet\"\n            }\n          }\n        }\n      },\n      \"UserArray\": {\n        \"description\": \"List of user object\",\n        \"content\": {\n          \"application/json\": {\n            \"schema\": {\n              \"type\": \"array\",\n              \"items\": {\n                \"$ref\": \"#/components/schemas/User\"\n              }\n            }\n          }\n        }\n      }\n    },\n    \"securitySchemes\": {\n      \"petstore_auth\": {\n        \"type\": \"oauth2\",\n        \"flows\": {\n          \"implicit\": {\n            \"authorizationUrl\": \"https://petstore3.swagger.io/oauth/authorize\",\n            \"scopes\": {\n              \"write:pets\": \"modify pets in your account\",\n              \"read:pets\": \"read your pets\"\n            }\n          }\n        }\n      },\n      \"api_key\": {\n        \"type\": \"apiKey\",\n        \"name\": \"api_key\",\n        \"in\": \"header\"\n      }\n    }\n  }\n}\n"
+  },
+  "sources": {
+    "old": {
+      "name": "Swagger Petstore old",
+      "revision": "f1ed336a08b18ba4a86c496147c4f546ae965a7b",
+      "url": "https://raw.githubusercontent.com/swagger-api/swagger-petstore/f1ed336a08b18ba4a86c496147c4f546ae965a7b/src/main/resources/openapi.yaml",
+      "repository": "https://github.com/swagger-api/swagger-petstore",
+      "license": "Apache-2.0",
+      "licenseURL": "https://github.com/swagger-api/swagger-petstore/blob/f1ed336a08b18ba4a86c496147c4f546ae965a7b/LICENSE",
+      "originalSHA256": "7c1315ff7d191c2470e1f5fc9c9f7de1c7aacd162f24eaaf0174f88e1b7d9b1d",
+      "sha256": "02a99924c777b0302850ba630810b8bc56f8ba26c278424fdd4c2cfbf873f0c4",
+      "conversion": "yaml 2.8.3 parse → JSON.stringify(value,null,2) + newline; semantic content preserved"
+    },
+    "new": {
+      "name": "Swagger Petstore new",
+      "revision": "9fb97b14d3c9d15d99aa8e3dbe323284cceb6bee",
+      "url": "https://raw.githubusercontent.com/swagger-api/swagger-petstore/9fb97b14d3c9d15d99aa8e3dbe323284cceb6bee/src/main/resources/openapi.yaml",
+      "repository": "https://github.com/swagger-api/swagger-petstore",
+      "license": "Apache-2.0",
+      "licenseURL": "https://github.com/swagger-api/swagger-petstore/blob/9fb97b14d3c9d15d99aa8e3dbe323284cceb6bee/LICENSE",
+      "originalSHA256": "ce2fca7e5726ddceff7b0c1b7fb9654fb784ed02c76256839a4858311d2f676b",
+      "sha256": "bc46a154f5421303ba9caf8b0aaaeef3a46fef14450af162bb0ba2fa5ff3ab3b",
+      "conversion": "yaml 2.8.3 parse → JSON.stringify(value,null,2) + newline; semantic content preserved"
+    }
+  },
+  "hashes": {
+    "old": "02a99924c777b0302850ba630810b8bc56f8ba26c278424fdd4c2cfbf873f0c4",
+    "new": "bc46a154f5421303ba9caf8b0aaaeef3a46fef14450af162bb0ba2fa5ff3ab3b"
+  },
+  "state": {
+    "severity": "all",
+    "query": "",
+    "operation": "all",
+    "annotations": {}
+  },
+  "report": {
+    "format": "api-change-review/report-v1",
+    "disclaimer": "Static contract analysis, not observed server behavior. Potentially breaking means an existing client may be affected. Unresolved coverage requires manual review; no clean bill of compatibility is implied.",
+    "findings": [
+      {
+        "rule": "parameter-required",
+        "severity": "breaking",
+        "operation": "GET /pet/findByStatus",
+        "old": {
+          "pointer": "#/paths/~1pet~1findByStatus/get/parameters/0/required",
+          "present": true,
+          "value": false
+        },
+        "new": {
+          "pointer": "#/paths/~1pet~1findByStatus/get/parameters/0/required",
+          "present": true,
+          "value": true
+        },
+        "message": "Existing callers must now supply this input",
+        "id": "[\"parameter-required\",\"GET /pet/findByStatus\",\"#/paths/~1pet~1findByStatus/get/parameters/0/required\",\"#/paths/~1pet~1findByStatus/get/parameters/0/required\"]"
+      },
+      {
+        "rule": "parameter-required",
+        "severity": "breaking",
+        "operation": "GET /pet/findByTags",
+        "old": {
+          "pointer": "#/paths/~1pet~1findByTags/get/parameters/0/required",
+          "present": true,
+          "value": false
+        },
+        "new": {
+          "pointer": "#/paths/~1pet~1findByTags/get/parameters/0/required",
+          "present": true,
+          "value": true
+        },
+        "message": "Existing callers must now supply this input",
+        "id": "[\"parameter-required\",\"GET /pet/findByTags\",\"#/paths/~1pet~1findByTags/get/parameters/0/required\",\"#/paths/~1pet~1findByTags/get/parameters/0/required\"]"
+      }
+    ],
+    "operations": [
+      {
+        "operation": "PUT /pet",
+        "oldPresent": true,
+        "newPresent": true,
+        "findings": 0
+      },
+      {
+        "operation": "POST /pet",
+        "oldPresent": true,
+        "newPresent": true,
+        "findings": 0
+      },
+      {
+        "operation": "GET /pet/findByStatus",
+        "oldPresent": true,
+        "newPresent": true,
+        "findings": 1
+      },
+      {
+        "operation": "GET /pet/findByTags",
+        "oldPresent": true,
+        "newPresent": true,
+        "findings": 1
+      },
+      {
+        "operation": "GET /pet/{petId}",
+        "oldPresent": true,
+        "newPresent": true,
+        "findings": 0
+      },
+      {
+        "operation": "POST /pet/{petId}",
+        "oldPresent": true,
+        "newPresent": true,
+        "findings": 0
+      },
+      {
+        "operation": "DELETE /pet/{petId}",
+        "oldPresent": true,
+        "newPresent": true,
+        "findings": 0
+      },
+      {
+        "operation": "POST /pet/{petId}/uploadImage",
+        "oldPresent": true,
+        "newPresent": true,
+        "findings": 0
+      },
+      {
+        "operation": "GET /store/inventory",
+        "oldPresent": true,
+        "newPresent": true,
+        "findings": 0
+      },
+      {
+        "operation": "POST /store/order",
+        "oldPresent": true,
+        "newPresent": true,
+        "findings": 0
+      },
+      {
+        "operation": "GET /store/order/{orderId}",
+        "oldPresent": true,
+        "newPresent": true,
+        "findings": 0
+      },
+      {
+        "operation": "DELETE /store/order/{orderId}",
+        "oldPresent": true,
+        "newPresent": true,
+        "findings": 0
+      },
+      {
+        "operation": "POST /user",
+        "oldPresent": true,
+        "newPresent": true,
+        "findings": 0
+      },
+      {
+        "operation": "POST /user/createWithList",
+        "oldPresent": true,
+        "newPresent": true,
+        "findings": 0
+      },
+      {
+        "operation": "GET /user/login",
+        "oldPresent": true,
+        "newPresent": true,
+        "findings": 0
+      },
+      {
+        "operation": "GET /user/logout",
+        "oldPresent": true,
+        "newPresent": true,
+        "findings": 0
+      },
+      {
+        "operation": "GET /user/{username}",
+        "oldPresent": true,
+        "newPresent": true,
+        "findings": 0
+      },
+      {
+        "operation": "PUT /user/{username}",
+        "oldPresent": true,
+        "newPresent": true,
+        "findings": 0
+      },
+      {
+        "operation": "DELETE /user/{username}",
+        "oldPresent": true,
+        "newPresent": true,
+        "findings": 0
+      }
+    ],
+    "coverage": [
+      {
+        "side": "old",
+        "pointer": "#/paths/~1pet/put/security",
+        "reason": "Unsupported operation field: security",
+        "operation": "PUT /pet"
+      },
+      {
+        "side": "new",
+        "pointer": "#/paths/~1pet/put/security",
+        "reason": "Unsupported operation field: security",
+        "operation": "PUT /pet"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "PUT /pet"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "PUT /pet"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "PUT /pet"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "PUT /pet"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "PUT /pet"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "PUT /pet"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Category/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "PUT /pet"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Category/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "PUT /pet"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Category/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "PUT /pet"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Category/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "PUT /pet"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Category/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "PUT /pet"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Category/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "PUT /pet"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/properties/photoUrls/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "PUT /pet"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/properties/photoUrls/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "PUT /pet"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/properties/photoUrls/items/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "PUT /pet"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/properties/photoUrls/items/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "PUT /pet"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/properties/tags/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "PUT /pet"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/properties/tags/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "PUT /pet"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Tag/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "PUT /pet"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Tag/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "PUT /pet"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Tag/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "PUT /pet"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Tag/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "PUT /pet"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Tag/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "PUT /pet"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Tag/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "PUT /pet"
+      },
+      {
+        "side": "old",
+        "pointer": "#/paths/~1pet/post/security",
+        "reason": "Unsupported operation field: security",
+        "operation": "POST /pet"
+      },
+      {
+        "side": "new",
+        "pointer": "#/paths/~1pet/post/security",
+        "reason": "Unsupported operation field: security",
+        "operation": "POST /pet"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "POST /pet"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "POST /pet"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "POST /pet"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "POST /pet"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /pet"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /pet"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Category/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "POST /pet"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Category/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "POST /pet"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Category/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "POST /pet"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Category/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "POST /pet"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Category/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /pet"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Category/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /pet"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/properties/photoUrls/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "POST /pet"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/properties/photoUrls/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "POST /pet"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/properties/photoUrls/items/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "POST /pet"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/properties/photoUrls/items/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "POST /pet"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/properties/tags/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "POST /pet"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/properties/tags/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "POST /pet"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Tag/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "POST /pet"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Tag/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "POST /pet"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Tag/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "POST /pet"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Tag/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "POST /pet"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Tag/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /pet"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Tag/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /pet"
+      },
+      {
+        "side": "old",
+        "pointer": "#/paths/~1pet~1findByStatus/get/security",
+        "reason": "Unsupported operation field: security",
+        "operation": "GET /pet/findByStatus"
+      },
+      {
+        "side": "new",
+        "pointer": "#/paths/~1pet~1findByStatus/get/security",
+        "reason": "Unsupported operation field: security",
+        "operation": "GET /pet/findByStatus"
+      },
+      {
+        "side": "old",
+        "pointer": "#/paths/~1pet~1findByStatus/get/parameters/0/explode",
+        "reason": "Unsupported parameter field: explode",
+        "operation": "GET /pet/findByStatus"
+      },
+      {
+        "side": "new",
+        "pointer": "#/paths/~1pet~1findByStatus/get/parameters/0/explode",
+        "reason": "Unsupported parameter field: explode",
+        "operation": "GET /pet/findByStatus"
+      },
+      {
+        "side": "old",
+        "pointer": "#/paths/~1pet~1findByStatus/get/parameters/0/schema/default",
+        "reason": "Unsupported schema field: default",
+        "operation": "GET /pet/findByStatus"
+      },
+      {
+        "side": "new",
+        "pointer": "#/paths/~1pet~1findByStatus/get/parameters/0/schema/default",
+        "reason": "Unsupported schema field: default",
+        "operation": "GET /pet/findByStatus"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "GET /pet/findByStatus"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/findByStatus"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "GET /pet/findByStatus"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/findByStatus"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "GET /pet/findByStatus"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "GET /pet/findByStatus"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Category/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "GET /pet/findByStatus"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Category/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/findByStatus"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Category/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "GET /pet/findByStatus"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Category/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/findByStatus"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Category/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "GET /pet/findByStatus"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Category/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "GET /pet/findByStatus"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/properties/photoUrls/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/findByStatus"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/properties/photoUrls/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/findByStatus"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/properties/photoUrls/items/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/findByStatus"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/properties/photoUrls/items/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/findByStatus"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/properties/tags/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/findByStatus"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/properties/tags/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/findByStatus"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Tag/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "GET /pet/findByStatus"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Tag/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/findByStatus"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Tag/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "GET /pet/findByStatus"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Tag/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/findByStatus"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Tag/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "GET /pet/findByStatus"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Tag/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "GET /pet/findByStatus"
+      },
+      {
+        "side": "old",
+        "pointer": "#/paths/~1pet~1findByTags/get/security",
+        "reason": "Unsupported operation field: security",
+        "operation": "GET /pet/findByTags"
+      },
+      {
+        "side": "new",
+        "pointer": "#/paths/~1pet~1findByTags/get/security",
+        "reason": "Unsupported operation field: security",
+        "operation": "GET /pet/findByTags"
+      },
+      {
+        "side": "old",
+        "pointer": "#/paths/~1pet~1findByTags/get/parameters/0/explode",
+        "reason": "Unsupported parameter field: explode",
+        "operation": "GET /pet/findByTags"
+      },
+      {
+        "side": "new",
+        "pointer": "#/paths/~1pet~1findByTags/get/parameters/0/explode",
+        "reason": "Unsupported parameter field: explode",
+        "operation": "GET /pet/findByTags"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "GET /pet/findByTags"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/findByTags"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "GET /pet/findByTags"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/findByTags"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "GET /pet/findByTags"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "GET /pet/findByTags"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Category/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "GET /pet/findByTags"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Category/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/findByTags"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Category/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "GET /pet/findByTags"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Category/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/findByTags"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Category/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "GET /pet/findByTags"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Category/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "GET /pet/findByTags"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/properties/photoUrls/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/findByTags"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/properties/photoUrls/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/findByTags"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/properties/photoUrls/items/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/findByTags"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/properties/photoUrls/items/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/findByTags"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/properties/tags/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/findByTags"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/properties/tags/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/findByTags"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Tag/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "GET /pet/findByTags"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Tag/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/findByTags"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Tag/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "GET /pet/findByTags"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Tag/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/findByTags"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Tag/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "GET /pet/findByTags"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Tag/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "GET /pet/findByTags"
+      },
+      {
+        "side": "old",
+        "pointer": "#/paths/~1pet~1{petId}/get/security",
+        "reason": "Unsupported operation field: security",
+        "operation": "GET /pet/{petId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/paths/~1pet~1{petId}/get/security",
+        "reason": "Unsupported operation field: security",
+        "operation": "GET /pet/{petId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/paths/~1pet~1{petId}/get/parameters/0/schema/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "GET /pet/{petId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/paths/~1pet~1{petId}/get/parameters/0/schema/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "GET /pet/{petId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "GET /pet/{petId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/{petId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "GET /pet/{petId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/{petId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "GET /pet/{petId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "GET /pet/{petId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Category/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "GET /pet/{petId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Category/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/{petId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Category/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "GET /pet/{petId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Category/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/{petId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Category/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "GET /pet/{petId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Category/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "GET /pet/{petId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/properties/photoUrls/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/{petId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/properties/photoUrls/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/{petId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/properties/photoUrls/items/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/{petId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/properties/photoUrls/items/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/{petId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/properties/tags/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/{petId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/properties/tags/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/{petId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Tag/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "GET /pet/{petId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Tag/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/{petId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Tag/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "GET /pet/{petId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Tag/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /pet/{petId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Tag/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "GET /pet/{petId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Tag/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "GET /pet/{petId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/paths/~1pet~1{petId}/post/security",
+        "reason": "Unsupported operation field: security",
+        "operation": "POST /pet/{petId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/paths/~1pet~1{petId}/post/security",
+        "reason": "Unsupported operation field: security",
+        "operation": "POST /pet/{petId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/paths/~1pet~1{petId}/post/parameters/0/schema/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /pet/{petId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/paths/~1pet~1{petId}/post/parameters/0/schema/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /pet/{petId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "POST /pet/{petId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "POST /pet/{petId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "POST /pet/{petId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "POST /pet/{petId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /pet/{petId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /pet/{petId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Category/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "POST /pet/{petId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Category/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "POST /pet/{petId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Category/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "POST /pet/{petId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Category/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "POST /pet/{petId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Category/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /pet/{petId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Category/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /pet/{petId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/properties/photoUrls/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "POST /pet/{petId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/properties/photoUrls/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "POST /pet/{petId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/properties/photoUrls/items/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "POST /pet/{petId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/properties/photoUrls/items/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "POST /pet/{petId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Pet/properties/tags/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "POST /pet/{petId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Pet/properties/tags/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "POST /pet/{petId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Tag/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "POST /pet/{petId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Tag/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "POST /pet/{petId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Tag/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "POST /pet/{petId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Tag/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "POST /pet/{petId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Tag/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /pet/{petId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Tag/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /pet/{petId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/paths/~1pet~1{petId}/delete/security",
+        "reason": "Unsupported operation field: security",
+        "operation": "DELETE /pet/{petId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/paths/~1pet~1{petId}/delete/security",
+        "reason": "Unsupported operation field: security",
+        "operation": "DELETE /pet/{petId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/paths/~1pet~1{petId}/delete/parameters/1/schema/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "DELETE /pet/{petId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/paths/~1pet~1{petId}/delete/parameters/1/schema/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "DELETE /pet/{petId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/paths/~1pet~1{petId}~1uploadImage/post/security",
+        "reason": "Unsupported operation field: security",
+        "operation": "POST /pet/{petId}/uploadImage"
+      },
+      {
+        "side": "new",
+        "pointer": "#/paths/~1pet~1{petId}~1uploadImage/post/security",
+        "reason": "Unsupported operation field: security",
+        "operation": "POST /pet/{petId}/uploadImage"
+      },
+      {
+        "side": "old",
+        "pointer": "#/paths/~1pet~1{petId}~1uploadImage/post/parameters/0/schema/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /pet/{petId}/uploadImage"
+      },
+      {
+        "side": "new",
+        "pointer": "#/paths/~1pet~1{petId}~1uploadImage/post/parameters/0/schema/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /pet/{petId}/uploadImage"
+      },
+      {
+        "side": "old",
+        "pointer": "#/paths/~1pet~1{petId}~1uploadImage/post/requestBody/content/application~1octet-stream/schema/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /pet/{petId}/uploadImage"
+      },
+      {
+        "side": "new",
+        "pointer": "#/paths/~1pet~1{petId}~1uploadImage/post/requestBody/content/application~1octet-stream/schema/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /pet/{petId}/uploadImage"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/ApiResponse/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "POST /pet/{petId}/uploadImage"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/ApiResponse/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "POST /pet/{petId}/uploadImage"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/ApiResponse/properties/code/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /pet/{petId}/uploadImage"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/ApiResponse/properties/code/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /pet/{petId}/uploadImage"
+      },
+      {
+        "side": "old",
+        "pointer": "#/paths/~1store~1inventory/get/x-swagger-router-controller",
+        "reason": "Unsupported operation field: x-swagger-router-controller",
+        "operation": "GET /store/inventory"
+      },
+      {
+        "side": "old",
+        "pointer": "#/paths/~1store~1inventory/get/security",
+        "reason": "Unsupported operation field: security",
+        "operation": "GET /store/inventory"
+      },
+      {
+        "side": "new",
+        "pointer": "#/paths/~1store~1inventory/get/x-swagger-router-controller",
+        "reason": "Unsupported operation field: x-swagger-router-controller",
+        "operation": "GET /store/inventory"
+      },
+      {
+        "side": "new",
+        "pointer": "#/paths/~1store~1inventory/get/security",
+        "reason": "Unsupported operation field: security",
+        "operation": "GET /store/inventory"
+      },
+      {
+        "side": "old",
+        "pointer": "#/paths/~1store~1inventory/get/responses/200/content/application~1json/schema/additionalProperties",
+        "reason": "Unsupported schema field: additionalProperties",
+        "operation": "GET /store/inventory"
+      },
+      {
+        "side": "new",
+        "pointer": "#/paths/~1store~1inventory/get/responses/200/content/application~1json/schema/additionalProperties",
+        "reason": "Unsupported schema field: additionalProperties",
+        "operation": "GET /store/inventory"
+      },
+      {
+        "side": "old",
+        "pointer": "#/paths/~1store~1order/post/x-swagger-router-controller",
+        "reason": "Unsupported operation field: x-swagger-router-controller",
+        "operation": "POST /store/order"
+      },
+      {
+        "side": "new",
+        "pointer": "#/paths/~1store~1order/post/x-swagger-router-controller",
+        "reason": "Unsupported operation field: x-swagger-router-controller",
+        "operation": "POST /store/order"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Order/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "POST /store/order"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Order/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "POST /store/order"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Order/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "POST /store/order"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Order/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "POST /store/order"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Order/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /store/order"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Order/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /store/order"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Order/properties/petId/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /store/order"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Order/properties/petId/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /store/order"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Order/properties/quantity/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /store/order"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Order/properties/quantity/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /store/order"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Order/properties/shipDate/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /store/order"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Order/properties/shipDate/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /store/order"
+      },
+      {
+        "side": "old",
+        "pointer": "#/paths/~1store~1order~1{orderId}/get/x-swagger-router-controller",
+        "reason": "Unsupported operation field: x-swagger-router-controller",
+        "operation": "GET /store/order/{orderId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/paths/~1store~1order~1{orderId}/get/x-swagger-router-controller",
+        "reason": "Unsupported operation field: x-swagger-router-controller",
+        "operation": "GET /store/order/{orderId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/paths/~1store~1order~1{orderId}/get/parameters/0/schema/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "GET /store/order/{orderId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/paths/~1store~1order~1{orderId}/get/parameters/0/schema/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "GET /store/order/{orderId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Order/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "GET /store/order/{orderId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Order/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /store/order/{orderId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Order/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "GET /store/order/{orderId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Order/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /store/order/{orderId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Order/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "GET /store/order/{orderId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Order/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "GET /store/order/{orderId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Order/properties/petId/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "GET /store/order/{orderId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Order/properties/petId/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "GET /store/order/{orderId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Order/properties/quantity/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "GET /store/order/{orderId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Order/properties/quantity/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "GET /store/order/{orderId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/Order/properties/shipDate/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "GET /store/order/{orderId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/Order/properties/shipDate/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "GET /store/order/{orderId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/paths/~1store~1order~1{orderId}/delete/x-swagger-router-controller",
+        "reason": "Unsupported operation field: x-swagger-router-controller",
+        "operation": "DELETE /store/order/{orderId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/paths/~1store~1order~1{orderId}/delete/x-swagger-router-controller",
+        "reason": "Unsupported operation field: x-swagger-router-controller",
+        "operation": "DELETE /store/order/{orderId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/paths/~1store~1order~1{orderId}/delete/parameters/0/schema/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "DELETE /store/order/{orderId}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/paths/~1store~1order~1{orderId}/delete/parameters/0/schema/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "DELETE /store/order/{orderId}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/paths/~1user/post/x-swagger-router-controller",
+        "reason": "Unsupported operation field: x-swagger-router-controller",
+        "operation": "POST /user"
+      },
+      {
+        "side": "new",
+        "pointer": "#/paths/~1user/post/x-swagger-router-controller",
+        "reason": "Unsupported operation field: x-swagger-router-controller",
+        "operation": "POST /user"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/User/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "POST /user"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/User/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "POST /user"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/User/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "POST /user"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/User/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "POST /user"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/User/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /user"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/User/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /user"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/User/properties/userStatus/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /user"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/User/properties/userStatus/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /user"
+      },
+      {
+        "side": "old",
+        "pointer": "#/paths/~1user~1createWithList/post/x-swagger-router-controller",
+        "reason": "Unsupported operation field: x-swagger-router-controller",
+        "operation": "POST /user/createWithList"
+      },
+      {
+        "side": "new",
+        "pointer": "#/paths/~1user~1createWithList/post/x-swagger-router-controller",
+        "reason": "Unsupported operation field: x-swagger-router-controller",
+        "operation": "POST /user/createWithList"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/User/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "POST /user/createWithList"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/User/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "POST /user/createWithList"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/User/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "POST /user/createWithList"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/User/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "POST /user/createWithList"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/User/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /user/createWithList"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/User/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /user/createWithList"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/User/properties/userStatus/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /user/createWithList"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/User/properties/userStatus/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "POST /user/createWithList"
+      },
+      {
+        "side": "old",
+        "pointer": "#/paths/~1user~1login/get/responses/200/headers",
+        "reason": "Unsupported response field: headers",
+        "operation": "GET /user/login"
+      },
+      {
+        "side": "new",
+        "pointer": "#/paths/~1user~1login/get/responses/200/headers",
+        "reason": "Unsupported response field: headers",
+        "operation": "GET /user/login"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/User/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "GET /user/{username}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/User/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /user/{username}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/User/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "GET /user/{username}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/User/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "GET /user/{username}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/User/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "GET /user/{username}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/User/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "GET /user/{username}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/User/properties/userStatus/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "GET /user/{username}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/User/properties/userStatus/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "GET /user/{username}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/paths/~1user~1{username}/put/x-swagger-router-controller",
+        "reason": "Unsupported operation field: x-swagger-router-controller",
+        "operation": "PUT /user/{username}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/paths/~1user~1{username}/put/x-swagger-router-controller",
+        "reason": "Unsupported operation field: x-swagger-router-controller",
+        "operation": "PUT /user/{username}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/User/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "PUT /user/{username}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/User/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "PUT /user/{username}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/User/x-swagger-router-model",
+        "reason": "Unsupported schema field: x-swagger-router-model",
+        "operation": "PUT /user/{username}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/User/xml",
+        "reason": "Unsupported schema field: xml",
+        "operation": "PUT /user/{username}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/User/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "PUT /user/{username}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/User/properties/id/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "PUT /user/{username}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/components/schemas/User/properties/userStatus/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "PUT /user/{username}"
+      },
+      {
+        "side": "new",
+        "pointer": "#/components/schemas/User/properties/userStatus/format",
+        "reason": "Unsupported schema field: format",
+        "operation": "PUT /user/{username}"
+      },
+      {
+        "side": "old",
+        "pointer": "#/servers",
+        "reason": "Global configuration is outside compatibility rules",
+        "operation": "Document"
+      },
+      {
+        "side": "new",
+        "pointer": "#/servers",
+        "reason": "Global configuration is outside compatibility rules",
+        "operation": "Document"
+      }
+    ],
+    "limits": {
+      "bytes": 2097152,
+      "depth": 64,
+      "nodes": 100000,
+      "operations": 200,
+      "findings": 10000
+    }
+  }
+}

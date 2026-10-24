@@ -1,0 +1,17 @@
+{
+  "name": "api-change-review",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --test tests/*.test.js",
+    "test:browser": "playwright test",
+    "demo:build": "node scripts/demo.js",
+    "verify:real": "node scripts/verify-real.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.56.1",
+    "yaml": "2.8.3"
+  }
+}
