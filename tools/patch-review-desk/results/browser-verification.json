@@ -1,0 +1,57 @@
+{
+  "executedAt": "2026-10-19T23:19:48.855Z",
+  "browser": "141.0.7390.37",
+  "checks": [
+    {
+      "name": "Real public patch import and provenance display",
+      "passed": true
+    },
+    {
+      "name": "File filtering and hunk navigation",
+      "passed": true
+    },
+    {
+      "name": "Source-linked annotation and file/hunk review status",
+      "passed": true
+    },
+    {
+      "name": "Reload recovery with exact patch identity",
+      "passed": true
+    },
+    {
+      "name": "JSON, standalone HTML, and byte-identical original exports",
+      "passed": true
+    },
+    {
+      "name": "Portable project imported in a fresh browser storage context",
+      "passed": true
+    },
+    {
+      "name": "Offline file reopening: all 127 lines and annotations, zero network requests",
+      "passed": true
+    },
+    {
+      "name": "Second real public patch loads seven file sections",
+      "passed": true
+    },
+    {
+      "name": "Labeled repeated-hunk identities, duplicate basenames, inert markup, and visible warnings",
+      "passed": true
+    },
+    {
+      "name": "Resource rejection preserves the current review",
+      "passed": true
+    },
+    {
+      "name": "Tampered portable project rejected without replacing current state",
+      "passed": true
+    },
+    {
+      "name": "No browser JavaScript errors or external review requests",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "externalRequests": [],
+  "offlineReportRequests": []
+}
