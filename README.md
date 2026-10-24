@@ -1,4 +1,7 @@
-# Personal Developer Tools
+# Switchyard
+
+Tools for inspecting code, APIs, dependencies, and web behavior.
+
 
 Independent utilities collected into one private repository. Each lives under `tools/<name>/`; run its installation and commands from that directory. This is a source consolidation, not a unified application.
 
