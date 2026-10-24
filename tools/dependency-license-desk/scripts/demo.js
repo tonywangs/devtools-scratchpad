@@ -1,0 +1,14 @@
+import fs from 'node:fs/promises';
+import {fileURLToPath} from 'node:url';
+import {execFileSync} from 'node:child_process';
+import {inspect,hash} from '../src/inspect.js';
+import {html} from '../src/report.js';
+const root=fileURLToPath(new URL('../demo/source',import.meta.url));
+const pinned=JSON.parse(await fs.readFile('demo/provenance.json'));
+for(const source of pinned.sources)if(hash(await fs.readFile(source.path))!==source.sha256)throw Error('Pinned source mismatch: '+source.path);
+const inventory=await inspect(root);
+const review={schema:1,inventory,notes:{},filters:{query:'',declaration:'',unresolved:false}};
+await fs.mkdir('demo/reports',{recursive:true});
+await fs.writeFile('demo/reports/review.json',JSON.stringify(review,null,2));
+await fs.writeFile('demo/reports/review.html',html(review));
+console.log(JSON.stringify({total:inventory.total,coverage:inventory.coverage}));
