@@ -1,0 +1,14 @@
+LICENSE
+README.md
+pyproject.toml
+site_link_inspector/__init__.py
+site_link_inspector/__main__.py
+site_link_inspector/cli.py
+site_link_inspector/core.py
+site_link_inspector/report.html
+site_link_inspector.egg-info/PKG-INFO
+site_link_inspector.egg-info/SOURCES.txt
+site_link_inspector.egg-info/dependency_links.txt
+site_link_inspector.egg-info/entry_points.txt
+site_link_inspector.egg-info/top_level.txt
+tests/test_inspector.py

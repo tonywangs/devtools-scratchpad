@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "root": "/var/lib/dailybuilder/projects/site-link-inspector/build/demo/site",
+  "directory_index": "index.html",
+  "html_files": 1,
+  "total": 4,
+  "counts": {
+    "checked": 2,
+    "skipped": 2,
+    "unsupported": 0,
+    "failed": 0
+  },
+  "scan_errors": [],
+  "links": [
+    {
+      "tag": "link",
+      "attribute": "href",
+      "url": "http://fonts.googleapis.com/css?family=Open+Sans",
+      "line": 6,
+      "column": 5,
+      "snippet": "<link href=\"http://fonts.googleapis.com/css?family=Open+Sans\" rel=\"stylesheet\" type=\"text/css\">",
+      "duplicate": false,
+      "source": "index.html",
+      "status": "skipped",
+      "reason": "external_network_disabled",
+      "resolved_url": "http://fonts.googleapis.com/css?family=Open+Sans",
+      "base_url": "https://site-link-inspector.invalid/index.html",
+      "query_ignored": "family=Open+Sans"
+    },
+    {
+      "tag": "link",
+      "attribute": "href",
+      "url": "styles/style.css",
+      "line": 7,
+      "column": 5,
+      "snippet": "<link href=\"styles/style.css\" rel=\"stylesheet\" type=\"text/css\">",
+      "duplicate": false,
+      "source": "index.html",
+      "status": "checked",
+      "reason": "local_target_exists",
+      "resolved_url": "https://site-link-inspector.invalid/styles/style.css",
+      "base_url": "https://site-link-inspector.invalid/index.html",
+      "query_ignored": "",
+      "target": "styles/style.css",
+      "fragment": ""
+    },
+    {
+      "tag": "img",
+      "attribute": "src",
+      "url": "images/firefox-icon.png",
+      "line": 11,
+      "column": 5,
+      "snippet": "<img src=\"images/firefox-icon.png\" alt=\"The Firefox logo: a flaming fox surrounding the Earth.\">",
+      "duplicate": false,
+      "source": "index.html",
+      "status": "checked",
+      "reason": "local_target_exists",
+      "resolved_url": "https://site-link-inspector.invalid/images/firefox-icon.png",
+      "base_url": "https://site-link-inspector.invalid/index.html",
+      "query_ignored": "",
+      "target": "images/firefox-icon.png",
+      "fragment": ""
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "url": "https://www.mozilla.org/en-US/about/manifesto/",
+      "line": 23,
+      "column": 17,
+      "snippet": "<a href=\"https://www.mozilla.org/en-US/about/manifesto/\">",
+      "duplicate": false,
+      "source": "index.html",
+      "status": "skipped",
+      "reason": "external_network_disabled",
+      "resolved_url": "https://www.mozilla.org/en-US/about/manifesto/",
+      "base_url": "https://site-link-inspector.invalid/index.html",
+      "query_ignored": ""
+    }
+  ]
+}

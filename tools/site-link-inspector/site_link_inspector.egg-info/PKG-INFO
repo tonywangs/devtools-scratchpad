@@ -1,0 +1,87 @@
+Metadata-Version: 2.4
+Name: site-link-inspector
+Version: 0.1.0
+Summary: Offline static-site link checks with an explorable report
+License: MIT
+Requires-Python: >=3.10
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Dynamic: license-file
+
+# Site Link Inspector
+
+Inspect a built static website before deployment. The installable Python CLI checks local navigation, images, stylesheets, scripts, and HTML fragments without making network requests. Its self-contained offline report shows the responsible source tag, line/column, resolved URL, local target, and reason for every occurrence.
+
+## Try the real-site demo
+
+Requires Python 3.10 or newer; no runtime dependencies or network access:
+
+```sh
+python3 scripts/demo.py --open
+```
+
+If your environment cannot open a browser, open `build/demo/index.html` yourself. Choose the unchanged-site report, then the controlled-defect report. Select **Failed**, search `absent-anchor`, and expand the finding to see the source and resolution evidence. **Reset filters** restores all occurrences; **Download full JSON** saves the complete results regardless of filters. Reports work directly from `file://` without a server. The original site's own preview references an upstream Google Font; reports never load it.
+
+The demo builds a real [MDN beginner website](https://github.com/mdn/beginner-html-site-styled) from its bundled, pinned CC0 source. This is an intentionally small handwritten HTML/CSS site: its build copies the three deployable files without a compiler. The original has two local resources checked and two external URLs skipped. A **separate labeled copy** adds three deliberate defects (missing page, missing image, invalid anchor) and five valid controls. These are not upstream bugs. See [provenance and reproduction](examples/README.md).
+
+## Install and inspect your own site
+
+```sh
+python3 -m venv .venv
+. .venv/bin/activate
+python -m pip install .
+site-link-inspector /path/to/built/site --output /path/to/link-report
+```
+
+Open `/path/to/link-report/index.html`. JSON is at `report.json`. Output must be **outside** the site root so reports cannot contaminate subsequent scans. If your Python distribution lacks `venv`/`pip`, install those distribution components first. To run without installation, use `python3 -m site_link_inspector ROOT --output REPORT` from this checkout.
+
+- Exit **0**: no failed occurrences or scan errors; skipped/unsupported links can remain. This does **not** mean all links work.
+- Exit **1**: failed local links, or unsupported occurrences with `--strict`.
+- Exit **2**: invalid invocation, unreadable HTML, excluded HTML file symlinks, or no HTML inspected.
+- `--index home.htm` changes the single directory-index filename (default `index.html`). No extension guessing or rewrite rules are applied.
+
+## Resolution contract
+
+The root is the deployed URL root. Each `.html`/`.htm` file beneath it is scanned, including unlinked pages. HTML must be UTF-8 (an optional BOM is accepted). Source locations are **1-based start-tag locations**, not exact attribute offsets. JSON schema version 1 has `links`, `counts`, `total`, `html_files`, `scan_errors`, root, and index rule; each link occurrence includes its raw decoded HTML attribute, source location, status, reason, and available resolution evidence. Counts always sum to the number of discovered occurrences. Scan errors make coverage incomplete and the CLI exits 2.
+
+| Case | Rule |
+| --- | --- |
+| `guide/page.html` | Resolve relative to the document URL, or its first `base[href]`. |
+| `/images/logo.png` | Resolve beneath the explicit site root. |
+| Directory `guide/` or `guide` | Require the configured index file. Treat no-slash directory URLs as if the server redirects to its index. |
+| Query `?version=2` | Preserve in evidence; ignore for filesystem lookup. |
+| `%20`, Unicode fragments | Percent-decode once as UTF-8. Fragment and ID matching is case-sensitive; named `a[name]` anchors also work. Empty fragments and `#top` navigate to the document top. |
+| Ordinary `..` | URL normalization removes parent segments and clamps at URL root. Encoded parent segments and encoded `/`, `\`, NUL are unsupported to avoid deployment-dependent interpretation. |
+| `base[href]` | First value applies to all relative links, including fragment-only links; later base declarations are recorded as skipped. An external base makes relative references unchecked external links. |
+| Absolute/protocol-relative URLs | Always skipped, never checked over the network or mapped to local files. |
+| `mailto:`, `tel:`, `data:`, `javascript:`, other schemes | Skipped as non-navigation schemes; never executed. |
+| Fragment on non-HTML file; text fragments | Unsupported, because file existence alone cannot validate that target. |
+| Empty resource `src`, `poster`, or `data` | Unsupported; not a successful self-reference. Empty navigation `href` refers to the current document. |
+| `srcset`, form actions | Each attribute occurrence is explicitly unsupported; candidates/server behavior are not evaluated. |
+| Backslashes, malformed percent escapes, controls, duplicate attributes | Unsupported ambiguous syntax; the first duplicate attribute value is checked and later occurrences marked unsupported. |
+
+Discovered attributes: `a/area[href]`, `link[href]`, `img[src,srcset]`, `script[src]`, `iframe[src]`, `source[src,srcset]`, `audio[src]`, `video[src,poster]`, `object[data]`, `form[action]`, `input[src,formaction]`, `button[formaction]`, and `base[href]` (configuration, skipped). Comments and script text are not links. External and embedded resources count as **skipped**, not successful checks. Report text is rendered inertly; report viewing does not execute inspected scripts or follow inspected links.
+
+## Limits
+
+This is static analysis, not a browser crawler or an HTML conformance validator. It does not run JavaScript, parse CSS `url()`/`@import`, inspect `srcdoc`, meta refresh, arbitrary data attributes, SVG/XML link attributes, template-generated navigation, or recursively fetch external resources. It cannot emulate deployment rewrites, redirects, case-insensitive hosting, authentication, service workers, content negotiation, or server responses. A found file may still be invalid or fail to render. Inert template/noscript markup can produce static findings; malformed HTML is processed by Python's `HTMLParser`, not the browser HTML5 tree builder. Unsupported constructs need manual review.
+
+Directory symlinks are not traversed. HTML file symlinks are excluded with a scan error; local targets resolving outside the root are unsupported. All scanned documents and findings are held in memory; use this on bounded static builds. The report renders findings in batches of 100. Reports include local root paths and source snippets: review before sharing.
+
+## Verification
+
+```sh
+python3 -m unittest discover -s tests -v
+python3 scripts/demo.py
+npm ci
+npx playwright install chromium
+node scripts/check_browser.mjs
+```
+
+Playwright is a development-only dependency pinned in `package-lock.json`. On locked-down machines set `npm_config_cache` and `PLAYWRIGHT_BROWSERS_PATH` to writable directories. Linux also needs Chromium's shared-library dependencies. The browser script starts an ephemeral loopback server, independently checks all eight controlled links using HTTP and Chromium's DOM/URL handling, then exercises the report from `file://` with networking disabled. It verifies the real image and stylesheet, the three defects, five valid controls, filtering/search/reset, finding details, JSON download, and mobile overflow. It writes reproducible evidence to `results/browser.json` and screenshots; the browser version is recorded there. Temporary serving ends when the check finishes.
+
+See [results](results/README.md) for actual executed checks and scope. No claim is made that this tiny real fixture represents arbitrary production sites.
+
+## Existing work
+
+[Lychee](https://github.com/lycheeverse/lychee) is an established general link checker. This project makes no novelty claim; it provides a small dependency-free local CLI and an offline source-oriented report. Base handling follows the [documented first-base rule](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements/base), within the conservative URL rules above.

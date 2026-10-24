@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; img-src data:; base-uri 'none'; form-action 'none'">
+<title>Site Link Inspector • Offline report</title>
+<style>
+:root{font-family:system-ui,sans-serif;color:#e8edf5;background:#101622;color-scheme:dark}*{box-sizing:border-box}body{margin:0}header,main,footer{max-width:1200px;margin:auto;padding:28px}header{border-bottom:1px solid #344256}.eyebrow{color:#8edfd1;letter-spacing:.13em;font-size:12px;font-weight:700}h1{font-size:36px;margin:10px 0}p{line-height:1.6;color:#b9c7da}.stats{display:flex;flex-wrap:wrap;gap:12px;margin:22px 0}.stat{background:#1b2637;padding:16px 22px;border-radius:8px;min-width:125px}.stat strong{display:block;font-size:28px}.toolbar{display:flex;flex-wrap:wrap;gap:16px;align-items:end;margin-bottom:22px}label{display:grid;gap:6px;color:#c7d7e9;font-size:14px}input,select,button,.download{font:inherit;padding:10px 14px;border:1px solid #53677e;border-radius:5px;background:#1b2637;color:#fff}input{width:min(400px,80vw)}button,.download{cursor:pointer}.download{text-decoration:none;display:inline-block}.download:hover,button:hover{background:#30435a}#shown{color:#aabdd0}article{border:1px solid #344256;background:#172131;border-radius:7px;margin:12px 0}summary{cursor:pointer;padding:18px;overflow-wrap:anywhere;line-height:1.7}.badge{display:inline-block;padding:2px 8px;border-radius:4px;font-size:12px;font-weight:700;margin-right:10px;background:#30435a}.failed{background:#662d3c;color:#ffd8df}.checked{background:#174b44;color:#aaf3df}.unsupported{background:#5a4820;color:#ffe3a4}.detail{padding:0 20px 20px}dl{display:grid;grid-template-columns:150px 1fr;gap:8px;font-size:14px}dt{color:#9db3c9}dd{margin:0;overflow-wrap:anywhere}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#0c1420;padding:14px;border-radius:5px}code{font-family:ui-monospace,monospace}#errors{color:#ffb9c5}footer{color:#8fa5ba;font-size:13px}a{color:#8edfd1}:focus-visible{outline:3px solid #8edfd1;outline-offset:3px}@media(max-width:600px){header,main,footer{padding:18px}h1{font-size:29px}dl{grid-template-columns:1fr}dd{margin-bottom:8px}}
+</style></head><body>
+<header><div class="eyebrow">SITE LINK INSPECTOR / LOCAL AUDIT</div><h1>Find the break. See the reason.</h1><p>Every discovered occurrence is accounted for. External URLs are unchecked. This report works offline and never loads site content.</p><div id="scope"></div><div class="stats" id="stats"></div><a class="download" id="download" href="report.json" download="report.json">Download full JSON</a></header>
+<main><noscript>This interactive report needs JavaScript. Open report.json for the full machine-readable results.</noscript><div id="errors" role="alert"></div><div class="toolbar"><label>Status<select id="status"><option value="all">All occurrences</option><option value="failed">Failed</option><option value="checked">Checked locally</option><option value="skipped">Skipped / unchecked</option><option value="unsupported">Unsupported</option></select></label><label>Search source, URL, or reason<input id="search" type="search" placeholder="e.g. missing_anchor or images/"></label><button id="reset">Reset filters</button></div><p id="shown" role="status" aria-live="polite"></p><section id="findings" aria-label="Link occurrences"></section><button id="more" hidden>Show 100 more</button></main>
+<footer>Locations identify the start of the HTML tag (1-based line and column). Expand an occurrence for source context and resolution evidence. Static HTML only: no JavaScript navigation, CSS imports, or server rewrite emulation.</footer>
+<script id="data" type="application/json">{
+  "schema_version": 1,
+  "root": "/var/lib/dailybuilder/projects/site-link-inspector/build/demo/site",
+  "directory_index": "index.html",
+  "html_files": 1,
+  "total": 4,
+  "counts": {
+    "checked": 2,
+    "skipped": 2,
+    "unsupported": 0,
+    "failed": 0
+  },
+  "scan_errors": [],
+  "links": [
+    {
+      "tag": "link",
+      "attribute": "href",
+      "url": "http://fonts.googleapis.com/css?family=Open+Sans",
+      "line": 6,
+      "column": 5,
+      "snippet": "\u003clink href=\"http://fonts.googleapis.com/css?family=Open+Sans\" rel=\"stylesheet\" type=\"text/css\"\u003e",
+      "duplicate": false,
+      "source": "index.html",
+      "status": "skipped",
+      "reason": "external_network_disabled",
+      "resolved_url": "http://fonts.googleapis.com/css?family=Open+Sans",
+      "base_url": "https://site-link-inspector.invalid/index.html",
+      "query_ignored": "family=Open+Sans"
+    },
+    {
+      "tag": "link",
+      "attribute": "href",
+      "url": "styles/style.css",
+      "line": 7,
+      "column": 5,
+      "snippet": "\u003clink href=\"styles/style.css\" rel=\"stylesheet\" type=\"text/css\"\u003e",
+      "duplicate": false,
+      "source": "index.html",
+      "status": "checked",
+      "reason": "local_target_exists",
+      "resolved_url": "https://site-link-inspector.invalid/styles/style.css",
+      "base_url": "https://site-link-inspector.invalid/index.html",
+      "query_ignored": "",
+      "target": "styles/style.css",
+      "fragment": ""
+    },
+    {
+      "tag": "img",
+      "attribute": "src",
+      "url": "images/firefox-icon.png",
+      "line": 11,
+      "column": 5,
+      "snippet": "\u003cimg src=\"images/firefox-icon.png\" alt=\"The Firefox logo: a flaming fox surrounding the Earth.\"\u003e",
+      "duplicate": false,
+      "source": "index.html",
+      "status": "checked",
+      "reason": "local_target_exists",
+      "resolved_url": "https://site-link-inspector.invalid/images/firefox-icon.png",
+      "base_url": "https://site-link-inspector.invalid/index.html",
+      "query_ignored": "",
+      "target": "images/firefox-icon.png",
+      "fragment": ""
+    },
+    {
+      "tag": "a",
+      "attribute": "href",
+      "url": "https://www.mozilla.org/en-US/about/manifesto/",
+      "line": 23,
+      "column": 17,
+      "snippet": "\u003ca href=\"https://www.mozilla.org/en-US/about/manifesto/\"\u003e",
+      "duplicate": false,
+      "source": "index.html",
+      "status": "skipped",
+      "reason": "external_network_disabled",
+      "resolved_url": "https://www.mozilla.org/en-US/about/manifesto/",
+      "base_url": "https://site-link-inspector.invalid/index.html",
+      "query_ignored": ""
+    }
+  ]
+}</script>
+<script>
+'use strict';
+const report=JSON.parse(document.getElementById('data').textContent);
+document.getElementById('download').href=URL.createObjectURL(new Blob([JSON.stringify(report,null,2)+'\n'],{type:'application/json'}));
+const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n};
+document.getElementById('scope').textContent=`${report.html_files} HTML files · ${report.total} occurrences · index: ${report.directory_index}`;
+for(const [status,count] of Object.entries(report.counts)){const card=el('div',undefined,'stat');card.append(el('strong',String(count)),el('span',status));document.getElementById('stats').append(card)}
+const errors=document.getElementById('errors');
+if(!report.html_files)errors.append(el('p','No HTML documents were inspected. This is not a successful site check.'));
+for(const error of report.scan_errors)errors.append(el('p',`${error.source}: ${error.reason}. Coverage is incomplete.`));
+const status=document.getElementById('status'),search=document.getElementById('search'),findings=document.getElementById('findings'),more=document.getElementById('more');let limit=100;
+function render(){
+ const needle=search.value.toLowerCase();const matches=report.links.filter(x=>(status.value==='all'||x.status===status.value)&&[x.source,x.url,x.reason,x.target||''].join(' ').toLowerCase().includes(needle));
+ findings.replaceChildren();document.getElementById('shown').textContent=`${matches.length} of ${report.total} occurrences match · showing ${Math.min(matches.length,limit)}`;
+ if(!matches.length)findings.append(el('p','No occurrences match these filters.'));
+ for(const x of matches.slice(0,limit)){
+  const article=el('article'),details=el('details'),summary=el('summary');summary.append(el('span',x.status,'badge '+x.status),el('code',`${x.source}:${x.line}:${x.column}`),el('span',` — ${x.url || '(empty URL)'} · ${x.reason.replaceAll('_',' ')}`));
+  const body=el('div',undefined,'detail'),dl=el('dl');
+  for(const [name,value] of [['Element',`${x.tag}[${x.attribute}]`],['Reason',x.reason],['Base URL',x.base_url],['Resolved URL',x.resolved_url],['Local target',x.target],['Fragment',x.fragment],['Query ignored',x.query_ignored],['Directory index',x.directory_index],['Detail',x.detail]]){if(value!==undefined){dl.append(el('dt',name),el('dd',value||'(empty)'))}}
+  body.append(dl,el('pre',x.snippet));details.append(summary,body);article.append(details);findings.append(article);
+ }
+ more.hidden=matches.length<=limit;
+}
+status.addEventListener('change',()=>{limit=100;render()});search.addEventListener('input',()=>{limit=100;render()});document.getElementById('reset').addEventListener('click',()=>{status.value='all';search.value='';limit=100;render()});more.addEventListener('click',()=>{limit+=100;render()});render();
+</script></body></html>

@@ -1,0 +1,1 @@
+/* Static controlled fixture; no navigation. */

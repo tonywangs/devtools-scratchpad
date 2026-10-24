@@ -1,0 +1,2 @@
+[console_scripts]
+site-link-inspector = site_link_inspector.cli:main
