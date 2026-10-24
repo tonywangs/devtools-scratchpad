@@ -1,4 +1,4 @@
-# Switchyard
+# devtools-scratchpad
 
 Tools for inspecting code, APIs, dependencies, and web behavior.
 
